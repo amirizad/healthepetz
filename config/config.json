@@ -1,0 +1,23 @@
+{
+  "development": {
+    "username": "root",
+    "password": "password",
+    "database": "healthepetz_db",
+    "host": "127.0.0.1",
+    "dialect": "mysql"
+  },
+  "test": {
+    "username": "root",
+    "password": "password",
+    "database": "healthepetz_db",
+    "host": "127.0.0.1",
+    "dialect": "mysql"
+  },
+  "production": {
+    "username": "cdj7xzlcrm7b1zyt",
+    "password": "jlo8p3kzo6s9wvbu",
+    "database": "fy1oiq0nn0ib9b0m",
+    "host": "ko86t9azcob3a2f9.cbetxkdyhwsb.us-east-1.rds.amazonaws.com",
+    "dialect": "mysql"
+  }
+}
