@@ -15,7 +15,7 @@ primary key (id)
 #drop table owners;
 create table owners(
 id integer(11) auto_increment not null,
-user_id integer(11) not null,
+usersId integer(11) not null,
 owner_fname varchar(50) not null,
 owner_lname varchar(100) not null,
 owner_dob date, 
@@ -30,8 +30,8 @@ fax varchar(15),
 createdAt timestamp not null,
 updatedAt timestamp not null,
 primary key (id),
-key user_id (user_id), 
-constraint fk_user_id_users foreign key (user_id) references users  (id)
+key usersId (usersId), 
+constraint fk_user_id_users foreign key (usersId) references users  (id)
 );
 
 
@@ -39,7 +39,7 @@ constraint fk_user_id_users foreign key (user_id) references users  (id)
 
 create table pets (
 id integer(11) auto_increment not null,
-owner_id integer(11) not null,
+ownersId integer(11) not null,
 pet_name varchar(50) not null,
 pet_type varchar(50) not null,
 pet_breed varchar(100) not null,
@@ -81,47 +81,43 @@ vet2_fax varchar(15),
 createdAt timestamp not null,
 updatedAt timestamp not null,
 primary key (id),
-key owner_id (owner_id), 
-constraint fk_owner_id_owners foreign key (owner_id) references owners  (id)
+key ownersId (ownersId), 
+constraint fk_ownesId_owners foreign key (ownersId) references owners  (id)
 );
 
 #drop table medical_history;
 create table medical_history (
 id integer(11) auto_increment not null,
-pet_id integer(11) not null,
+petsId integer(11) not null,
 prov_name varchar(255) not null,
 cond1 varchar(255),
 svc_dt date not null,
 total_billed_amt decimal(11,2) not null default 0,
 total_paid_amt decimal(11,2) not null default 0,
 notes varchar(500),
-doc_type varchar(255),
+doc_type varchar(50),
 doc_image_url varchar(255),
 createdAt timestamp not null,
 updatedAt timestamp not null,
 primary key (id),
-key pet_id (pet_id), 
-constraint fk_pet_id_pets foreign key (pet_id) references pets  (id) 
+key petsId (petsId), 
+constraint fk_petsId_pets foreign key (petsId) references pets  (id) 
 );
 
 
 #drop table vaccinations;
 create table vaccinations (
 id integer(11) auto_increment not null,
-pet_id integer(11) not null,
+petsId integer(11) not null,
 vacc_name varchar(255),
 last_vacc_dt date not null,
 next_vacc_dt date,
 vacc_image_url varchar(255),
-create_dtm datetime default now() not null,
-last_update_dtm datetime default now() not null,
-last_update_by integer(11) default 0 not null,
-last_edit_id integer(11) default 0 not null,
 createdAt timestamp not null,
 updatedAt timestamp not null,
 primary key (id),
-key pet_id (pet_id), 
-constraint fk_vacc_pet_id_pets foreign key (pet_id) references pets  (id)
+key petsId (petsId), 
+constraint fk_vacc_petsId_pets foreign key (petsId) references pets  (id)
 );
 
 
