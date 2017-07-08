@@ -1,8 +1,28 @@
-module.exports = (express,passport,db)=>{
-    
-    //Declare router and auth variables
-    const router = express.Router();
-    const auth = require('./../config/passport/passport.js')(passport,db);
+var express = require("express");
+var path = require("path");
+var passport = require("passport");
+var db = require("db");
+
+var router = express.Router();
+const auth = require('./../config/passport/passport.js')(passport,db);
+
+router.get("/", (req,res) => {
+    //res.send("hello, world");
+        // Render home page
+        res.sendFile(path.join(__dirname + "/filestack-example.html"));
+    })
+    .get("/owner", (req,res) => {
+        res.send("hello, dashboard world");
+        // Query db for owner data
+        // Query db for all owner's pets
+        // Render owner page
+    })
+
+    .get("/pet-records", (req,res) => {
+        res.send("hello, pet-records world");
+        // Query db for pet data
+        // Render pet page
+});
 
     //Get home route only if user is Authenticated using middleware
     router.get('/',auth(),(req,res,next)=>{
@@ -33,6 +53,5 @@ module.exports = (express,passport,db)=>{
         res.redirect('/');
     });
 
-    //returns the router requsted
-    return router;
-};
+module.exports = router;
+
