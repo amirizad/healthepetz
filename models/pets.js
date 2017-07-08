@@ -1,6 +1,6 @@
 module.exports = function(sequelize, DataTypes) {
   var pets = sequelize.define("pets", {
-// Creates a "Chirp" model that matches up with DB
+      
    pet_name: {
     type: DataTypes.STRING,
     allowNull: false,
@@ -23,12 +23,10 @@ module.exports = function(sequelize, DataTypes) {
     },
    license_no: {
     type: DataTypes.STRING,
-    allowNull: false,
      validate: {len: [1,25]}
     },
    microchip_no: {
     type: DataTypes.STRING,
-    allowNull: false,
      validate: {len: [1,25]}
     },
    insur_name: {
@@ -59,29 +57,30 @@ module.exports = function(sequelize, DataTypes) {
     },
     pet_image_url: {
       type: DataTypes.STRING,
-      validate: {isUrl: true}
+      validate: {isUrl: true,
+      len: [1,255]}
     },
-  cond1: {
+   cond1: {
        type: DataTypes.STRING,
        validate: {len: [1,255]}
     },   
-  cond2: {
+   cond2: {
     type: DataTypes.STRING,
      validate: {len: [1,255]}
     },
-  cond3: {
+   cond3: {
     type: DataTypes.STRING,
      validate: {len: [1,255]}
     },
-  med1: {
+   med1: {
        type: DataTypes.STRING,
        validate: {len: [1,255]}
     },   
-  med2: {
+   med2: {
     type: DataTypes.STRING,
      validate: {len: [1,255]}
     },
-  med3: {
+   med3: {
     type: DataTypes.STRING,
      validate: {len: [1,255]}
     },

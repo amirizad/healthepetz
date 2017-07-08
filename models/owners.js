@@ -1,6 +1,6 @@
 module.exports = function(sequelize, DataTypes) {
   var owners = sequelize.define("owners", {
-// Creates a "Chirp" model that matches up with DB
+
     owner_fname: {
     type: DataTypes.STRING,
     allowNull: false,
