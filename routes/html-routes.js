@@ -1,10 +1,12 @@
 var express = require("express");
+var path = require("path");
 
 var router = express.Router();
 
 router.get("/", (req,res) => {
-    res.send("hello, world");
+    //res.send("hello, world");
         // Render home page
+        res.sendFile(path.join(__dirname + "/filestack-example.html"));
     })
     .get("/owner", (req,res) => {
         res.send("hello, dashboard world");
