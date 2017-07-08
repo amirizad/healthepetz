@@ -15,7 +15,7 @@ primary key (id)
 #drop table owners;
 create table owners(
 id integer(11) auto_increment not null,
-user_id integer(11) not null,
+usersId integer(11) not null,
 owner_fname varchar(50) not null,
 owner_lname varchar(100) not null,
 owner_dob date, 
@@ -39,7 +39,7 @@ constraint fk_user_id_users foreign key (user_id) references users  (id)
 
 create table pets (
 id integer(11) auto_increment not null,
-owner_id integer(11) not null,
+usersId integer(11) not null,
 pet_name varchar(50) not null,
 pet_type varchar(50) not null,
 pet_breed varchar(100) not null,
@@ -88,7 +88,7 @@ constraint fk_owner_id_owners foreign key (owner_id) references owners  (id)
 #drop table medical_history;
 create table medical_history (
 id integer(11) auto_increment not null,
-pet_id integer(11) not null,
+petsId integer(11) not null,
 prov_name varchar(255) not null,
 cond1 varchar(255),
 svc_dt date not null,
@@ -108,7 +108,7 @@ constraint fk_pet_id_pets foreign key (pet_id) references pets  (id)
 #drop table vaccinations;
 create table vaccinations (
 id integer(11) auto_increment not null,
-pet_id integer(11) not null,
+petsId integer(11) not null,
 vacc_name varchar(255),
 last_vacc_dt date not null,
 next_vacc_dt date,
