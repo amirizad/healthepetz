@@ -27,10 +27,6 @@ zip varchar(10),
 phone varchar(15),
 email varchar(255),
 fax varchar(15),
-create_dtm datetime default now() not null,
-last_update_dtm datetime default now() not null,
-last_update_by integer(11) default 0 not null,
-last_edit_id integer(11) default 0 not null,
 createdAt timestamp not null,
 updatedAt timestamp not null,
 primary key (id),
@@ -89,7 +85,7 @@ key owner_id (owner_id),
 constraint fk_owner_id_owners foreign key (owner_id) references owners  (id)
 );
 
-#drop table medical_bills;
+#drop table medical_history;
 create table medical_history (
 id integer(11) auto_increment not null,
 pet_id integer(11) not null,
