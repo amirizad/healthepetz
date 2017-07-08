@@ -23,7 +23,6 @@ module.exports = (express,passport,db,bcrypt)=>{
                         res.redirect('/');
                     });
                 }).catch((err)=>{
-                    console.log(err.errors);
                     res.render('register',{
                         username: req.body.username,
                         fname: req.body.fname,

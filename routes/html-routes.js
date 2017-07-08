@@ -3,8 +3,6 @@ module.exports = (express,passport,db)=>{
     const auth = require('./../config/passport/passport.js')(passport,db);
 
     router.get('/',auth(),(req,res,next)=>{
-        console.log(req.isAuthenticated());
-        console.log(req.user);
         res.render('index');
     });
 
@@ -12,7 +10,6 @@ module.exports = (express,passport,db)=>{
         if(req.isAuthenticated()){
             res.redirect('/');
         } else {
-            console.log(req.user);
             res.render('login',{
                 error:req.flash('error')
             });

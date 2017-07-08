@@ -9,8 +9,6 @@ module.exports = (passport,LocalStrategy,db,bcrypt)=>{
             if(results){
                 var hash = results.dataValues.password;
                 var userid = results.dataValues.id;
-                console.log(hash);
-                console.log(userid)
                 bcrypt.compare(password,hash,(err,res)=>{
                     if (res === true){
                         return done(null,userid);
