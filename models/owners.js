@@ -1,6 +1,5 @@
 module.exports = function(sequelize, DataTypes) {
   var owners = sequelize.define("owners", {
-
     owner_fname: {
     type: DataTypes.STRING,
     validate: {len: [1,50]}

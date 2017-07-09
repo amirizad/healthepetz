@@ -3,9 +3,10 @@ create database healthepetz_db;
 use healthepetz_db;
 create table users (
 id integer(11) auto_increment not null,
+username varchar(255) not null,
 email varchar(255) not null,
-`password` varchar(20) not null,
-role varchar(25) not null,
+password varchar(20) not null,
+role varchar(255) not null default 'user',
 createdAt timestamp not null,
 updatedAt timestamp not null,
 primary key (id)
