@@ -1,6 +1,5 @@
 module.exports = function(sequelize, DataTypes) {
   var owners = sequelize.define("owners", {
-
     owner_fname: {
     type: DataTypes.STRING,
     allowNull: false,
@@ -37,10 +36,6 @@ module.exports = function(sequelize, DataTypes) {
    phone: {
     type: DataTypes.STRING,
      validate: {len: [1,15]}
-  },
-   email: {
-    type: DataTypes.STRING,
-     validate: {isEmail: true}
   },
    fax: {
     type: DataTypes.STRING,
