@@ -2,6 +2,7 @@ module.exports = (express,passport,db,bcrypt)=>{
 
     //Declare router variable 
     const router = express.Router();
+    const auth = require('./../config/passport/passport.js')(passport,db);
 
     router.route('/login')
         .post(passport.authenticate('local',{
