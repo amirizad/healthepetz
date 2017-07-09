@@ -6,6 +6,21 @@ var bcrypt = require("bcrypt");
 var router = express.Router();
 
 router.route("/owner")
+    .get('/',auth(),(req,res,next)=>{
+        if (req.isAuthenticated()) {
+            db.owners.findOne({
+                where: {id: req.id,
+                include: [db.pets]
+            }}).then(function(results) {
+                res.render('owner-profile',{ownerPets: results});
+                })
+            }
+        else {
+             res.render('login',{
+                error:req.flash('error')
+            });
+        }
+    })
     .post((req, res) => {
         res.send("hello, world");
         // Create owner
