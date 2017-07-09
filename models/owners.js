@@ -36,10 +36,6 @@ module.exports = function(sequelize, DataTypes) {
     type: DataTypes.STRING,
      validate: {len: [1,15]}
   },
-   email: {
-    type: DataTypes.STRING,
-     validate: {isEmail: true}
-  },
    fax: {
     type: DataTypes.STRING,
      validate: {len: [1,15]}

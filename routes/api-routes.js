@@ -3,29 +3,7 @@ module.exports = (express,passport,db,bcrypt)=>{
     //Declare router variable 
     const router = express.Router();
 
-router.route("/owner")
-    .get(auth(),(req,res,next)=>{
-            db.owners.findOne({
-                where: {userId: req.id,
-                include: [db.pets]
-            }}).then(function(results) {
-                res.json(results);
-                })       
-    })
-    .post((req, res) => {
-        res.send("hello, world");
-        // Create owner
-        // Redirect to /owner
-    })
-    .put((req, res) => {
-    // Update owner
-    // Redirect to /owner
-    })
-    .delete((req, res) => {
-    // Delete owner
-            // Delete all owner's pets
-    // Redirect to "/"
-    });
+
 
 router.route("/pet/:pet-id?")
     .get(auth(), (req, res, next) => {
@@ -123,7 +101,7 @@ router.route("/pet/:pet-id?")
     
 
     router.route("/med-bill/:pet-id?")
-            .get(auth(), (req, res, next) => {
+        .get(auth(), (req, res, next) => {
             db.owners.findOne({
                 where: {userId: req.id,
                         petId: req.petId,
@@ -131,7 +109,7 @@ router.route("/pet/:pet-id?")
             }}).then(function(results) {
                 res.json(results);
                 }) 
-    })
+        })
         .post((req, res) => {
             // Create med bill
         })
