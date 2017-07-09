@@ -206,7 +206,7 @@
 									</div>
 									<div class="message" id="signup-err-msg">
 										<!--Signup Errors are going here.-->
-									</div>								
+									</div>
 									<div class="form-group form-footer text-center">
 										<button type="submit" id="signupbtn" class="btn btn-primary btn-xl submitbtn" value="signup">Register</button>
 									</div>
@@ -220,7 +220,6 @@
 							<div id="login" class="tab-pane fade topspace">
 								<form class="form-horizontal form-field register" action="/login" role="form" name="loginfrm" id="loginfrm" method="POST" autocomplete="off">
 									<input type="hidden" name="keeplogx" id="keeplogx" value="">
-									<span class="message" id="loginmsg" style="display:none;"></span>
 									<div class="form-group">
 										<label class="control-label col-xs-3" for="lemailx">Email:</label>
 										<div class="col-xs-11 col-sm-7">  
@@ -232,6 +231,9 @@
 										<div class="col-xs-11 col-sm-7">  
 											<input autocomplete="off" class="form-control reqfield" type="password" name="lpassx" id="lpassx" placeholder="Enter your password" value="" >
 										</div>
+									</div>
+									<div class="message" id="login-err-msg">
+										<!--Signup Errors are going here.-->
 									</div>
 									<div class="form-group form-footer text-center">
 										<p><input type="checkbox" name="keeplogin" id="keeplogin"> Keep me logged in</p>
@@ -247,14 +249,15 @@
 							<!--************************ Forgot **************************-->
 							<div id="forgot" class="tab-pane fade topspace">
 								<form class="form-horizontal form-field register" action="/forgot" role="form" name="forgotfrm" id="forgotfrm" method="POST" autocomplete="off">
-									<span class="message" id="remindermsg1" style="display:none;">Your login information has been sent to your email.</span>
-									<span class="message" id="remindermsg2" style="display:none;">There is no registered user with this email address.</span>
 									<div class="form-group">
 										<label class="control-label col-xs-3" for="reminderx">Email:</label>
 										<div class="col-xs-11 col-sm-7">          
 											<input class="form-control reqfield" type="email" name="reminderx" id="reminderx" tabindex="8" value="" placeholder="Enter your email address." pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,3}$">
 										</div>
 									</div>
+									<div class="message" id="forgot-err-msg">
+										<!--Signup Errors are going here.-->
+									</div>									
 									<div class="form-group form-footer text-center">
 										<button type="submit" id="forgotbtn" class="btn btn-primary btn-xl submitbtn" value="forgot">Send Reminder</button>
 									</div>
