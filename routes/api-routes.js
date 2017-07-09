@@ -59,12 +59,12 @@ module.exports = (express,passport,db,bcrypt)=>{
         });
 
     router.route("/owner")
-        .get(auth(),(req,res,next)=>{
+        .get(auth(), (req, res, next) => {
             db.owners.findOne({
-                where: {id: req.id}
-            }).then(function(results) {
-                res.render('owner-profile',{ownerPets: results});
-            })
+                where: {userId: req.id,
+            }}).then(function(results) {
+                res.json(results);
+            }); 
         })
         .post((req, res) => {
             res.send("hello, world");
@@ -80,36 +80,33 @@ module.exports = (express,passport,db,bcrypt)=>{
                 // Delete all owner's pets
         // Redirect to "/"
         });
-
-    router.route("/pet/:owner-id?/:pet-id?")
-        .get((req, res) => {
-            // Must be logged in to access
-            // Return data matching owner ID and pet ID.
-            // Return all pet data for owner if no pet ID specified
+    
+    router.route("/pet/:pet-id?")
+        .get(auth(), (req, res, next) => {
+            db.owners.findOne({
+                where: {userId: req.id,
+                        petId: req.petId,
+                include: [db.pets]
+            }}).then(function(results) {
+                res.json(results);
+            }); 
         })
         .post((req, res) => {
             // Create owner
             // Create pet
                 // Owner id must be included
         });
+    
 
-    router.route("/vaccination/:pet-id?")
-        .get((req, res) => {
-            // Return data for vaccination schedule
-        })
-        .post((req, res) => {
-            // Create pet vaccination record and schedule
-        })
-        .put((req, res) => {
-            // Update pet vaccination record and schedule 
-        })
-        .delete((req, res) => {
-            // Delete pet vaccination record and schedule
-        });
-
-    router.route("/med-bill/:owner-id/:pet-id?")
-        .get((req, res) => {
-            // Retreive med bill
+    router.route("/med-bill/:pet-id?")
+        .get(auth(), (req, res, next) => {
+            db.owners.findOne({
+                where: {userId: req.id,
+                        petId: req.petId,
+            include: [db.pets, db.medical_history]
+            }}).then(function(results) {
+                res.json(results);
+            }); 
         })
         .post((req, res) => {
             // Create med bill

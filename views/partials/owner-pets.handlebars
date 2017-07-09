@@ -1,0 +1,29 @@
+<div class='panel'>
+         <div class="panel-header">   
+            Pet Medical History
+        </div>
+       <div class='panel-body'>              
+		    <table id="tblOwnerPets" class="display table table-hover table-striped" cellspacing="0" width="100%">
+			    <thead>
+					<tr>
+						<th>ownerId</th>
+						<th>petId</th>
+						<th>Pet Name</th>
+						<th>Pet Type</th>
+						<th>Pet Age</th>
+					</tr>
+			    </thead>
+			    <tbody>
+                     {{#each ownerPets.pets}}
+				        <tr>
+                            <td>this.userId</td>
+                            <td>this.id</td>
+                            <td>this.pet_name</td>
+					        <td>this.pet_type</td>
+					        <td>this.pet_age</td>
+				        </tr>
+				    {{/each}}
+			    </tbody>
+		    </table>		
+	    </div>
+ </div>
