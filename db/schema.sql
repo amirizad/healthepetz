@@ -16,7 +16,7 @@ primary key (id)
 #drop table owners;
 create table owners(
 id integer(11) auto_increment not null,
-usersId integer(11) not null,
+userId integer(11) not null,
 owner_fname varchar(50) not null,
 owner_lname varchar(100) not null,
 owner_dob date, 
@@ -30,8 +30,8 @@ fax varchar(15),
 createdAt timestamp not null,
 updatedAt timestamp not null,
 primary key (id),
-key usersId (usersId), 
-constraint fk_user_id_users foreign key (usersId) references users  (id)
+key userId (userId), 
+constraint fk_user_id_users foreign key (userId) references users  (id)
 );
 
 
@@ -39,7 +39,7 @@ constraint fk_user_id_users foreign key (usersId) references users  (id)
 
 create table pets (
 id integer(11) auto_increment not null,
-ownersId integer(11) not null,
+ownerId integer(11) not null,
 pet_name varchar(50) not null,
 pet_type varchar(50) not null,
 pet_breed varchar(100) not null,
@@ -82,14 +82,14 @@ vet2_fax varchar(15),
 createdAt timestamp not null,
 updatedAt timestamp not null,
 primary key (id),
-key ownersId (ownersId), 
-constraint fk_ownesId_owners foreign key (ownersId) references owners  (id)
+key ownerId (ownerId), 
+constraint fk_ownesId_owners foreign key (ownerId) references owners  (id)
 );
 
 #drop table medical_history;
 create table medical_history (
 id integer(11) auto_increment not null,
-petsId integer(11) not null,
+petId integer(11) not null,
 prov_name varchar(255) not null,
 cond1 varchar(255),
 svc_dt date not null,
@@ -101,8 +101,8 @@ doc_image_url varchar(255),
 createdAt timestamp not null,
 updatedAt timestamp not null,
 primary key (id),
-key petsId (petsId), 
-constraint fk_petsId_pets foreign key (petsId) references pets  (id) 
+key petId (petId), 
+constraint fk_petId_pets foreign key (petId) references pets  (id) 
 );
 
 
@@ -117,8 +117,8 @@ vacc_image_url varchar(255),
 createdAt timestamp not null,
 updatedAt timestamp not null,
 primary key (id),
-key petsId (petsId), 
-constraint fk_vacc_petsId_pets foreign key (petsId) references pets  (id)
+key petsId (petId), 
+constraint fk_vacc_petId_pets foreign key (petId) references pets  (id)
 );
 
 
