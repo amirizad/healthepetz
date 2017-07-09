@@ -56,7 +56,7 @@ module.exports = function(sequelize, DataTypes) {
      validate: {len: [1]}
     },
    spayed_neutered_ind: {
-    type: DataTypes.boolean,
+    type: DataTypes.BOOLEAN,
      allowNull: false,
      defaultValue: 0
     },
