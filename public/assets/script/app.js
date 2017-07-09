@@ -1,5 +1,17 @@
 
 $(document).ready(function() {
+  $('.carousel').carousel()
+
+  $('a[data-toggle="tab"]').on('shown.bs.tab', function (e) {
+    var target = this.href.split('#');
+    $('.nav a').filter('[href="#'+target[1]+'"]').tab('show');
+  });
+  $("input.reqfield").prop("required",true);
+
+  $(".petstooltip").tooltipster({
+    theme: ['tooltipster-light', 'tooltipster-light-customized']
+  });
+
   $('table.display').DataTable( {
     "order": [[ 3, "desc" ]],
     "paging":   true,

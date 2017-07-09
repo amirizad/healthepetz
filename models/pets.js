@@ -55,6 +55,11 @@ module.exports = function(sequelize, DataTypes) {
     type: DataTypes.STRING,
      validate: {len: [1]}
     },
+   spayed_neutered_ind: {
+    type: DataTypes.boolean,
+     allowNull: false,
+     defaultValue: 0
+    },
     pet_image_url: {
       type: DataTypes.STRING,
       validate: {isUrl: true,
