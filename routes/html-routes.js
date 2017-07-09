@@ -1,16 +1,44 @@
-var express = require("express");
-var path = require("path");
-var passport = require("passport");
-var db = require("db");
+module.exports = (express,passport,db,path)=>{
 
-var router = express.Router();
-const auth = require('./../config/passport/passport.js')(passport,db);
+    //Declare router and auth variables
+    const router = express.Router();
+    const auth = require('./../config/passport/passport.js')(passport,db);
 
-router.get("/", (req,res) => {
-    //res.send("hello, world");
+    //Get home route only if user is Authenticated using middleware
+    router.get('/',auth(),(req,res,next)=>{
+        res.render('index');
+    })
+
+    //Get login page and verify that...
+    .get('/login',(req,res,next)=>{
+        //if the user is authenticated send them back to home
+        if(req.isAuthenticated()){
+            res.redirect('/');
+        } else {
+            //else render login page and if there is any flash msgs render them too
+            res.render('login',{
+                error:req.flash('error')
+            });
+        }
+    })
+
+    //Get logout will simply logout the user using logout();
+    .get('/logout',(req,res)=>{
+        req.logout();
+        res.redirect('/');
+    })
+
+    //Get register will render register
+    .get('/register',(req,res,next)=>{
+        res.render('register');
+    })
+
+    .get('/filestack',(req,res,next)=>{
+        //res.send("hello, world");
         // Render home page
         res.sendFile(path.join(__dirname + "/filestack-example.html"));
     })
+
     .get("/owner", (req,res) => {
         res.send("hello, dashboard world");
         // Query db for owner data
@@ -23,35 +51,8 @@ router.get("/", (req,res) => {
         // Query db for pet data
         // Render pet page
 });
-
-    //Get home route only if user is Authenticated using middleware
-    router.get('/',auth(),(req,res,next)=>{
-        res.render('index');
-    });
-
-    //Get login page and verify that...
-    router.get('/login',(req,res,next)=>{
-        //if the user is authenticated send them back to home
-        if(req.isAuthenticated()){
-            res.redirect('/');
-        } else {
-            //else render login page and if there is any flash msgs render them too
-            res.render('login',{
-                error:req.flash('error')
-            });
-        }
-    });
-
-    //Get register will render register
-    router.get('/register',(req,res,next)=>{
-        res.render('register');
-    });
-
-    //Get logout will simply logout the user using logout();
-    router.get('/logout',(req,res)=>{
-        req.logout();
-        res.redirect('/');
-    });
-
-module.exports = router;
+    
+    //returns the router requsted
+    return router;
+};
 
