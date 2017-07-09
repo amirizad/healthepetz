@@ -3,12 +3,10 @@ module.exports = function(sequelize, DataTypes) {
 
     owner_fname: {
     type: DataTypes.STRING,
-    allowNull: false,
     validate: {len: [1,50]}
   },
    owner_lname: {
     type: DataTypes.STRING,
-    allowNull: false,
      validate: {len: [1,100]}
   },
    owner_dob: {
