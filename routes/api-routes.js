@@ -3,22 +3,14 @@ module.exports = (express,passport,db,bcrypt)=>{
     //Declare router variable 
     const router = express.Router();
 
-<<<<<<< HEAD
 router.route("/owner")
-    .get('/',auth(),(req,res,next)=>{
-        if (req.isAuthenticated()) {
+    .get(auth(),(req,res,next)=>{
             db.owners.findOne({
-                where: {id: req.id,
+                where: {userId: req.id,
                 include: [db.pets]
             }}).then(function(results) {
-                res.render('owner-profile',{ownerPets: results});
-                })
-            }
-        else {
-             res.render('login',{
-                error:req.flash('error')
-            });
-        }
+                res.json(results);
+                })       
     })
     .post((req, res) => {
         res.send("hello, world");
@@ -35,18 +27,21 @@ router.route("/owner")
     // Redirect to "/"
     });
 
-router.route("/pet/:owner-id?/:pet-id?")
-    .get((req, res) => {
-        // Must be logged in to access
-        // Return data matching owner ID and pet ID.
-        // Return all pet data for owner if no pet ID specified
+router.route("/pet/:pet-id?")
+    .get(auth(), (req, res, next) => {
+            db.owners.findOne({
+                where: {userId: req.id,
+                        petId: req.petId,
+                include: [db.pets]
+            }}).then(function(results) {
+                res.json(results);
+                }) 
     })
     .post((req, res) => {
         // Create owner
         // Create pet
             // Owner id must be included
     });
-=======
     router.route('/login')
         .post(passport.authenticate('local',{
             //if valid redirect to home
@@ -55,7 +50,6 @@ router.route("/pet/:owner-id?/:pet-id?")
             failureRedirect:'/login',
             failureFlash:true
         }));
->>>>>>> ec4a2e9ac0162da5df772401a819faa19474279a
 
     //Post route for register
     router.route('/register')
@@ -104,6 +98,13 @@ router.route("/pet/:owner-id?/:pet-id?")
         });
 
     router.route("/owner")
+        .get(auth(), (req, res, next) => {
+            db.owners.findOne({
+                where: {userId: req.id,
+            }}).then(function(results) {
+                res.json(results);
+                }) 
+    })
         .post((req, res) => {
             res.send("hello, world");
             // Create owner
@@ -119,36 +120,18 @@ router.route("/pet/:owner-id?/:pet-id?")
         // Redirect to "/"
         });
 
-    router.route("/pet/:owner-id?/:pet-id?")
-        .get((req, res) => {
-            // Must be logged in to access
-            // Return data matching owner ID and pet ID.
-            // Return all pet data for owner if no pet ID specified
-        })
-        .post((req, res) => {
-            // Create owner
-            // Create pet
-                // Owner id must be included
-        });
+    
 
-    router.route("/vaccination/:pet-id?")
-        .get((req, res) => {
-            // Return data for vaccination schedule
-        })
-        .post((req, res) => {
-            // Create pet vaccination record and schedule
-        })
-        .put((req, res) => {
-            // Update pet vaccination record and schedule 
-        })
-        .delete((req, res) => {
-            // Delete pet vaccination record and schedule
-        });
-
-    router.route("/med-bill/:owner-id/:pet-id?")
-        .get((req, res) => {
-            // Retreive med bill
-        })
+    router.route("/med-bill/:pet-id?")
+            .get(auth(), (req, res, next) => {
+            db.owners.findOne({
+                where: {userId: req.id,
+                        petId: req.petId,
+            include: [{db.pets, db.medical_history}]
+            }}).then(function(results) {
+                res.json(results);
+                }) 
+    })
         .post((req, res) => {
             // Create med bill
         })
