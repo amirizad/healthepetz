@@ -4,6 +4,7 @@ module.exports = (express,passport,db,bcrypt)=>{
     const router = express.Router();
     const auth = require('./../config/passport/passport.js')(passport,db);
     
+
     router.route('/login')
         .post(passport.authenticate('local',{
             //if valid redirect to home
