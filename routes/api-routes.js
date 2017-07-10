@@ -13,47 +13,97 @@ module.exports = (express,passport,db,bcrypt)=>{
             failureFlash:true
         }));
 
+    //Get logout will simply logout the user using logout();
+    router.route('/logout')
+        .get((req,res)=>{
+            req.logout();
+            res.redirect('/');
+        });
+
     //Post route for register
     router.route('/register')
         .post((req,res,next)=>{
+            var user = req.body;
             //if the userpassword matches continue
-            if(req.body.password === req.body.repassword){
+            if(user.password === user.repassword){
                 //Declare number of salt rounds default:10
                 const saltRounds = 10;
                 //Hash the normal password for protected and pass it as hash
-                bcrypt.hash(req.body.password, saltRounds, (err, hash) =>{
+                bcrypt.hash(user.password, saltRounds, (err, hash) =>{
                     //Query the Users table and pass in the required fields including the hash pw
                     db.Users.create({
-                        "username": req.body.username,
-                        "first_name": req.body.fname,
-                        "last_name": req.body.lname,
-                        "email": req.body.email,
+                        "username": user.username,
+                        "email": user.email,
                         "password": hash
                     }).then((data)=>{
                         //When done grab the new user id and store it in a variable
-                        var user_id = data.dataValues.id;
-                        //login the user with the id and redirect to home page
-                        req.login(user_id,(err)=>{
-                            res.redirect('/');
-                        });
+                        var userID = data.dataValues.id;
+                        //create the user in owners table
+                        db.owners.create({
+                            "owner_fname": user.fname,
+                            "owner_lname": user.lname,
+                            "owner_dob": user.dob,
+                            "owner_sex": user.sex,
+                            "address": user.address,
+                            "city": user.city,
+                            "state": user.state,
+                            "zip": user.zip,
+                            "phone": user.phone,
+                            "fax": user.fax,
+                            "UserId": userID
+                        }).then((result)=>{
+                            //login the user with the id and redirect to dashboard
+                            req.login(userID,(err)=>{
+                                res.redirect('/dashboard');
+                            });
+                        }).catch((err)=>{
+                            console.log(err);
+                            //if there is any errors render register and pass in the error flash msgs
+                            res.render('index',{
+                                username: req.body.username,
+                                fname: req.body.fname,
+                                lname: req.body.lname,
+                                email: req.body.email,
+                                dob: req.body.dob,
+                                phone: req.body.phone,
+                                fax: req.body.fax,
+                                address: req.body.address,
+                                city: req.body.city,
+                                zip: req.body.zip,
+                                error:err.errors
+                            });
+                        })
                     }).catch((err)=>{
+                        console.log(err);
                         //if there is any errors render register and pass in the error flash msgs
-                        res.render('register',{
+                        res.render('index',{
                             username: req.body.username,
                             fname: req.body.fname,
                             lname: req.body.lname,
                             email: req.body.email,
+                            dob: req.body.dob,
+                            phone: req.body.phone,
+                            fax: req.body.fax,
+                            address: req.body.address,
+                            city: req.body.city,
+                            zip: req.body.zip,
                             error:err.errors
                         });
                     });
                 });
             } else {
                 //else render register page again with filled values and flash msg
-                res.render('register',{
+                res.render('index',{
                     username: req.body.username,
                     fname: req.body.fname,
                     lname: req.body.lname,
                     email: req.body.email,
+                    dob: req.body.dob,
+                    phone: req.body.phone,
+                    fax: req.body.fax,
+                    address: req.body.address,
+                    city: req.body.city,
+                    zip: req.body.zip,
                     error:[{"message": "Your passwords do not match. Try again."}]
                 });
             }
