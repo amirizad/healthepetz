@@ -63,7 +63,7 @@ module.exports = (express,passport,db,bcrypt)=>{
     router.route("/owner")
         .get(auth(), (req, res, next) => {
             db.owners.findOne({
-                where: {userId: req.id,
+                where: {userId: req.user,
             }}).then(function(results) {
                 res.json(results);
             }); 
@@ -83,15 +83,32 @@ module.exports = (express,passport,db,bcrypt)=>{
         // Redirect to "/"
         });
     
-    router.route("/pet/:pet-id?")
-        .get(auth(), (req, res, next) => {
-            db.owners.findOne({
-                where: {userId: req.id,
-                        petId: req.petId,
-                include: [db.pets]
-            }}).then(function(results) {
-                res.json(results);
-            }); 
+    router.route("/pet/:petId?")
+        .get(auth(),(req, res, next) => {
+                //console.log(req.query);
+             if (req.params.petId) {
+        
+                db.owners.findAll({
+                   where: {userId: req.user},
+                   include: {model: db.pets, required: true,
+                             where: {id: req.params.petId}
+                }}).then(function(results) {
+                    if (!results===[]) {
+                        res.json(results);
+                    }
+                    else {
+                        res.send("No pets found!");
+                    }
+                }); 
+            }
+            else {
+                 db.owners.findAll({
+                   where: {userId: req.user},
+                   include: {model: db.pets, required: true}
+                 }).then(function(results) {
+                        res.json(results);
+                }); 
+            }
         })
         .post((req, res) => {
             // Create owner
@@ -100,15 +117,67 @@ module.exports = (express,passport,db,bcrypt)=>{
         });
     
 
-    router.route("/med-bill/:pet-id?")
-        .get(auth(), (req, res, next) => {
-            db.owners.findOne({
-                where: {userId: req.id,
-                        petId: req.petId,
-            include: [db.pets, db.medical_history]
-            }}).then(function(results) {
-                res.json(results);
-            }); 
+    router.route("/med-history/:petId?")
+        .get(auth(),(req, res, next) => {
+                //console.log(req.query);
+             if (req.params.petId) {
+        
+                db.owners.findAll({
+                   where: {userId: req.user},
+                   include: {model: db.pets, required: true,
+                             where: {id: req.params.petId},
+                             include: {model: db.medical_history, required: true}
+                }}).then(function(results) {
+
+                        res.json(results);
+                }); 
+            }
+            else {
+                 db.owners.findAll({
+                   where: {userId: req.user},
+                   include: {model: db.pets, required: true,
+                   include: {model: db.medical_history, required: true}}
+                 }).then(function(results) {
+                        
+                        res.json(results);
+                }); 
+            }
+        })
+        .post((req, res) => {
+            // Create med bill
+        })
+        .put((req, res) => {
+            // Update med bill
+        })
+        .delete((req, res) => {
+            // delete med bill
+    });
+
+     router.route("/vaccinations/:petId?")
+        .get(auth(),(req, res, next) => {
+                //console.log(req.query);
+             if (req.params.petId) {
+        
+                db.owners.findAll({
+                   where: {userId: req.user},
+                   include: {model: db.pets, required: true,
+                             where: {id: req.params.petId},
+                             include: {model: db.vaccinations, required: true}
+                }}).then(function(results) {
+
+                        res.json(results);
+                }); 
+            }
+            else {
+                 db.owners.findAll({
+                   where: {userId: req.user},
+                   include: {model: db.pets, required: true,
+                   include: {model: db.vaccinations, required: true}}
+                 }).then(function(results) {
+                        
+                        res.json(results);
+                }); 
+            }
         })
         .post((req, res) => {
             // Create med bill
