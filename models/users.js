@@ -16,39 +16,6 @@ module.exports = (sequelize,DataTypes)=>{
                 }
             }
         },
-        first_name:{
-            type: DataTypes.STRING,
-            allowNull:false,
-            validate:{
-                len:{
-                    args:[1,50],
-                    msg:"First name cannot be empty."
-                },
-                isAlpha:{
-                    args:true,
-                    msg:"First name cannot contain special characters. Must be letters only."
-                }
-            }
-        },
-        last_name:{
-            type: DataTypes.STRING,
-            allowNull:false,
-            validate:{
-                len:{
-                    args:[1,50],
-                    msg:"Last name cannot be empty."
-                },
-                isAlpha:{
-                    args:true,
-                    msg:"Last name cannot contain special characters. Must be letters only."
-                }
-            }
-        },
-        privilege_level:{
-            type:DataTypes.STRING,
-            allowNull:false,
-            defaultValue: 'user'
-        },
         email:{
             type:DataTypes.STRING,
             allowNull:false,
@@ -72,8 +39,12 @@ module.exports = (sequelize,DataTypes)=>{
                     msg:'Password must be atleast 10 characters long.'
                 }
             }
+        },
+        role:{
+            type:DataTypes.STRING,
+            allowNull:false,
+            defaultValue: 'user'
         }
-        
     });
     return Users;
 };

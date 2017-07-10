@@ -5,6 +5,7 @@ const bodyParser = require("body-parser");
 const path = require("path");
 const hbs = require('express-handlebars');
 const db = require('./models');
+var methodOverride = require("method-override");
 
 // Authentication Dependencies
 // =============================================================
@@ -20,7 +21,7 @@ const flash = require('connect-flash');
 // =============================================================
 const app = express();
 const PORT = process.env.PORT || 3000;
-const index = require('./routes/html-routes.js')(express,passport,db);
+const index = require('./routes/html-routes.js')(express,passport,db,path);
 const API = require('./routes/api-routes.js')(express,passport,db,bcrypt);
 
 //Used to create the sessions table for authentication
@@ -42,6 +43,7 @@ app.use(bodyParser.text());
 app.use(bodyParser.json({ type: "application/vnd.api+json" }));
 app.use(cookieParser());
 app.use(flash());
+app.use(methodOverride("_method"));
 
 // Sets up the Handlebars as default view engine with express
 app.engine('handlebars', hbs({defaultLayout: 'main'}));
@@ -89,10 +91,8 @@ app.use(function(error, req, res) {
 
 // Sync Database and Start the Server
 // =============================================================
-db.sequelize.sync().then(()=>{
+db.sequelize.sync({force:true}).then(()=>{
     app.listen(PORT,()=>{
         console.log('SERVER STARTED ON PORT ' + PORT);
     });
 });
-
-

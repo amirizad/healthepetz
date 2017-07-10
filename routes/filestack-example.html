@@ -1,0 +1,25 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <title>filestack test</title>
+     <script src="https://static.filestackapi.com/v3/filestack.js"></script>
+</head>
+
+<body>
+<h1>hello world</h1>
+    <script type="text/javascript">
+        var client = filestack.init('PUT API KEY HERE');
+        
+        client.pick({
+            accept: 'image/*',
+            maxFiles: 5
+        }).then(function(result) {
+            console.log(JSON.stringify(result.filesUploaded));
+        });
+    </script>
+
+</body>
+
+</html>

@@ -24,6 +24,8 @@
     "cookie-parser": "^1.4.3",
     "express": "^4.15.3",
     "express-handlebars": "^3.0.0",
+    "handlebars": "^4.0.10",
+    "path": "^0.12.7",
     "express-mysql-session": "^1.2.1",
     "express-session": "^1.15.3",
     "method-override": "^2.3.9",
@@ -33,5 +35,6 @@
     "passport-local": "^1.0.0",
     "sequelize": "^4.2.1",
     "sequelize-cli": "^2.7.0"
+
   }
 }

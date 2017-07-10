@@ -1,38 +1,45 @@
-module.exports = (express,passport,db)=>{
-    
+module.exports = (express,passport,db,path)=>{
+
     //Declare router and auth variables
     const router = express.Router();
     const auth = require('./../config/passport/passport.js')(passport,db);
 
-    //Get home route only if user is Authenticated using middleware
-    router.get('/',auth(),(req,res,next)=>{
-        res.render('index');
-    });
-
-    //Get login page and verify that...
-    router.get('/login',(req,res,next)=>{
-        //if the user is authenticated send them back to home
+    //use router
+    router
+    
+    //get homepage render index
+    .get('/',(req,res,next)=>{
         if(req.isAuthenticated()){
-            res.redirect('/');
+            res.redirect('/dashboard');
         } else {
-            //else render login page and if there is any flash msgs render them too
-            res.render('login',{
-                error:req.flash('error')
+            var errors = req.flash('error');
+            res.render('index',{
+                loginError: errors
             });
         }
-    });
+    })
 
-    //Get register will render register
-    router.get('/register',(req,res,next)=>{
-        res.render('register');
-    });
+    //Get dashboard if user is authenticated
+    .get('/dashboard',auth(),(req,res,next)=>{
+        res.render('dashboard');
+        // Query db for owner data
+        // Query db for all owner's pets
+        // Render owner page
+    })
 
-    //Get logout will simply logout the user using logout();
-    router.get('/logout',(req,res)=>{
-        req.logout();
-        res.redirect('/');
-    });
+    .get('/petprofile',auth(),(req,res,next)=>{
+        res.render('petprofile');
+        // Query db for pet data
+        // Render pet page
+    })
 
+    .get('/filestack',(req,res,next)=>{
+        //res.send("hello, world");
+        // Render home page
+        res.sendFile(path.join(__dirname + "/filestack-example.html"));
+    })
+    
     //returns the router requsted
     return router;
 };
+
