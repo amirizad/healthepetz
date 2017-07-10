@@ -194,7 +194,11 @@
 										</div>
 									</div>
 									<div class="message" id="signup-err-msg">
-										<!--Signup Errors are going here.-->
+										{{#if regError}}
+											{{#each regError}}
+											<div class="alert alert-warning" role="alert"><button class="close" type="button" data-dismiss="alert" aria-hidden="true">&times;</button><strong>Error! </strong> {{this.message}}</div>
+											{{/each}}
+										{{/if}} 
 									</div>
 									<div class="form-group form-footer text-center">
 										<button type="submit" id="signupbtn" class="btn btn-primary btn-xl submitbtn" value="signup">Register</button>
@@ -222,7 +226,11 @@
 										</div>
 									</div>
 									<div class="message" id="login-err-msg">
-										<!--Signup Errors are going here.-->
+										{{#if loginError}}
+											{{#each loginError}}
+											<div class="alert alert-warning" role="alert"><button class="close" type="button" data-dismiss="alert" aria-hidden="true">&times;</button><strong>Error! </strong> {{this}}</div>
+											{{/each}}
+										{{/if}} 
 									</div>
 									<div class="form-group form-footer text-center">
 										<p><input type="checkbox" name="keeplogin" id="keeplogin"> Keep me logged in</p>

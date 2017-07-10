@@ -12,7 +12,10 @@ module.exports = (express,passport,db,path)=>{
         if(req.isAuthenticated()){
             res.redirect('/dashboard');
         } else {
-            res.render('index');
+            var errors = req.flash('error');
+            res.render('index',{
+                loginError: errors
+            });
         }
     })
 

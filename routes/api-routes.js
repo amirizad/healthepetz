@@ -72,7 +72,7 @@ module.exports = (express,passport,db,bcrypt)=>{
                                 address: req.body.address,
                                 city: req.body.city,
                                 zip: req.body.zip,
-                                error:err.errors
+                                regError:err.errors
                             });
                         })
                     }).catch((err)=>{
@@ -89,7 +89,7 @@ module.exports = (express,passport,db,bcrypt)=>{
                             address: req.body.address,
                             city: req.body.city,
                             zip: req.body.zip,
-                            error:err.errors
+                            regError:err.errors
                         });
                     });
                 });
@@ -106,7 +106,7 @@ module.exports = (express,passport,db,bcrypt)=>{
                     address: req.body.address,
                     city: req.body.city,
                     zip: req.body.zip,
-                    error:[{"message": "Your passwords do not match. Try again."}]
+                    regError:[{"message": "Your passwords do not match. Try again."}]
                 });
             }
         });
