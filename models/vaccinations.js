@@ -13,7 +13,7 @@ module.exports = function(sequelize, DataTypes) {
     next_vacc_dt: {
         type: DataTypes.DATEONLY,
     },
-    vac_image_url: {
+    vacc_image_url: {
         type: DataTypes.STRING,
         //validate: {isUrl: true,
         //len: [1,255]}
