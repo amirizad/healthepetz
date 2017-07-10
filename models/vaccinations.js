@@ -15,8 +15,8 @@ module.exports = function(sequelize, DataTypes) {
     },
     vac_image_url: {
         type: DataTypes.STRING,
-        validate: {isUrl: true,
-        len: [1,255]}
+        //validate: {isUrl: true,
+        //len: [1,255]}
     },
  
 });
