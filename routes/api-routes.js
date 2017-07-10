@@ -114,8 +114,8 @@ module.exports = (express,passport,db,bcrypt)=>{
     router.route("/owner")
         .get(auth(), (req, res, next) => {
             db.owners.findOne({
-                where: {userId: req.user,
-            }}).then(function(results) {
+                where: {userId: req.user}
+            }).then(function(results) {
                 res.json(results);
             }); 
         })
@@ -152,7 +152,6 @@ module.exports = (express,passport,db,bcrypt)=>{
     
     router.route("/pet/:petId?")
         .get(auth(),(req, res, next) => {
-                //console.log(req.query);
              if (req.params.petId) {
         
                 db.owners.findAll({
@@ -230,7 +229,6 @@ module.exports = (express,passport,db,bcrypt)=>{
 
     router.route("/med-history/:petId?")
         .get(auth(),(req, res, next) => {
-                //console.log(req.query);
              if (req.params.petId) {
         
                 db.owners.findAll({
@@ -255,7 +253,19 @@ module.exports = (express,passport,db,bcrypt)=>{
             }
         })
         .post((req, res) => {
-            // Create med bill
+              db.medical_history.create({
+                petId: req.body.petId,
+                prov_name: req.body.prov_name,
+                cond1: req.body.cond1,
+                svc_dt: req.body.svc_dt,
+                total_billed_amt: req.body.total_billed_amt,
+                total_paid_amt: req.body.total_paid_amt,
+                notes: req.body.notes,
+                doc_type: req.body.doc_type,
+                doc_image_url: req.body.doc_image_url,
+                createdAt: req.body.createdAt,
+                updatedAt: req.body.updatedAt
+            });
         })
         .put((req, res) => {
             // Update med bill
@@ -263,10 +273,9 @@ module.exports = (express,passport,db,bcrypt)=>{
         .delete((req, res) => {
             // delete med bill
     });
-
-     router.route("/vaccinations/:petId?")
+   
+    router.route("/vaccinations/:petId?")
         .get(auth(),(req, res, next) => {
-                //console.log(req.query);
              if (req.params.petId) {
         
                 db.owners.findAll({
@@ -291,39 +300,9 @@ module.exports = (express,passport,db,bcrypt)=>{
             }
         })
         .post((req, res) => {
-            // Create med bill
-            db.medical_history.create({
-                petId: req.body.petId,
-                prov_name: req.body.prov_name,
-                cond1: req.body.cond1,
-                svc_dt: req.body.svc_dt,
-                total_billed_amt: req.body.total_billed_amt,
-                total_paid_amt: req.body.total_paid_amt,
-                notes: req.body.notes,
-                doc_type: req.body.doc_type,
-                doc_image_url: req.body.doc_image_url,
-                createdAt: req.body.createdAt,
-                updatedAt: req.body.updatedAt
-            }).then((results) => {
-                res.json(results);
-            })
-        })
-        .put((req, res) => {
-            // Update med bill
-        })
-        .delete((req, res) => {
-            // delete med bill
-    });
-
-
-    router.route("/vaccinations/:pet-id?")
-        .get((req, res) => {
-            // Return vaccination
-        })
-        .post((req, res) => {
             // Create vaccination
             db.vaccinations.create({
-                petsId: req.body.petsId,
+                petsId: req.body.petId,
                 vacc_name: req.body.vacc_name,
                 last_vacc_dt: req.body.last_vacc_dt,
                 next_vacc_dt: req.body.next_vacc_dt,
@@ -339,7 +318,7 @@ module.exports = (express,passport,db,bcrypt)=>{
         })
         .delete((req, res) => {
             // Delete vaccination
-        })
+        });
         
     //returns router back to request
     return router;
