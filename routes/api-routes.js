@@ -8,9 +8,9 @@ module.exports = (express,passport,db,bcrypt)=>{
     router.route('/login')
         .post(passport.authenticate('local',{
             //if valid redirect to home
-            successRedirect:'/',
+            successRedirect:'/dashboard',
             //if not redirect back to login and pass in flash errors
-            failureRedirect:'/login',
+            failureRedirect:'/',
             failureFlash:true
         }));
 
@@ -25,6 +25,7 @@ module.exports = (express,passport,db,bcrypt)=>{
     router.route('/register')
         .post((req,res,next)=>{
             var user = req.body;
+            console.log(user);
             //if the userpassword matches continue
             if(user.password === user.repassword){
                 //Declare number of salt rounds default:10

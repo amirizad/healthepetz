@@ -2,42 +2,55 @@ module.exports = function(sequelize, DataTypes) {
   var owners = sequelize.define("owners", {
     owner_fname: {
     type: DataTypes.STRING,
-    validate: {len: [1,50]}
+    allowNull:false,
+    validate:{
+        len:{
+            args:[1,50],
+            msg:"First name cannot be empty."
+        },
+        isAlpha:{
+            args:true,
+            msg:"First name cannot contain special characters. Must be letters only."
+        }
+    }
   },
    owner_lname: {
     type: DataTypes.STRING,
-     validate: {len: [1,100]}
+    allowNull:false,
+     validate:{
+        len:{
+            args:[1,50],
+            msg:"Last name cannot be empty."
+        },
+        isAlpha:{
+            args:true,
+            msg:"Last name cannot contain special characters. Must be letters only."
+        }
+    }
   },
    owner_dob: {
     type: DataTypes.DATEONLY,
   },
    owner_sex: {
-    type: DataTypes.STRING,
-     validate: {len: [1]}
+    type: DataTypes.STRING
   },
    address: {
-    type: DataTypes.STRING,
-     validate: {len: [1,100]}
+    type: DataTypes.STRING
   },
    city: {
-    type: DataTypes.STRING,
-     validate: {len: [1,100]}
+    type: DataTypes.STRING
   },
    state: {
-    type: DataTypes.STRING,
-     validate: {len: [2]}
+    type: DataTypes.STRING
   },
    zip: {
-    type: DataTypes.STRING,
-     validate: {len: [1,10]}
+    type: DataTypes.STRING
   },
    phone: {
-    type: DataTypes.STRING,
-     validate: {len: [1,15]}
+    type: DataTypes.STRING
   },
    fax: {
-    type: DataTypes.STRING,
-     validate: {len: [1,15]}
+    type: DataTypes.STRING
   }
 });
 
