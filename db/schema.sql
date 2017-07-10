@@ -109,7 +109,7 @@ constraint fk_petId_pets foreign key (petId) references pets  (id)
 #drop table vaccinations;
 create table vaccinations (
 id integer(11) auto_increment not null,
-petsId integer(11) not null,
+petId integer(11) not null,
 vacc_name varchar(255),
 last_vacc_dt date not null,
 next_vacc_dt date,
