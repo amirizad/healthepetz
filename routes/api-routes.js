@@ -155,24 +155,23 @@ module.exports = (express,passport,db,bcrypt)=>{
              if (req.params.petId) {
         
                 db.owners.findAll({
+                    attributes: ['userId'],
                    where: {userId: req.user},
                    include: {model: db.pets, required: true,
-                             where: {id: req.params.petId}
+                             where: {id: req.params.petId},
+                             order: [[{model: db.pets}, 'pet_type'],[{model: db.pets}, 'pet_name']]
                 }}).then(function(results) {
-                    if (!results===[]) {
-                        res.json(results);
-                    }
-                    else {
-                        res.send("No pets found!");
-                    }
+                        res.json(results[0].pets);
                 }); 
             }
             else {
                  db.owners.findAll({
+                    attributes: ['userId'],
                    where: {userId: req.user},
-                   include: {model: db.pets, required: true}
-                 }).then(function(results) {
-                        res.json(results);
+                   include: {model: db.pets, required: true,
+                   order: [[{model: db.pets}, 'pet_type'],[{model: db.pets},'pet_name']]
+                 }}).then(function(results) {
+                        res.json(results[0].pets);
                 }); 
             }
         })
@@ -230,25 +229,33 @@ module.exports = (express,passport,db,bcrypt)=>{
     router.route("/med-history/:petId?")
         .get(auth(),(req, res, next) => {
              if (req.params.petId) {
-        
-                db.owners.findAll({
-                   where: {userId: req.user},
-                   include: {model: db.pets, required: true,
-                             where: {id: req.params.petId},
-                             include: {model: db.medical_history, required: true}
-                }}).then(function(results) {
 
-                        res.json(results);
-                }); 
-            }
+                db.owners.findAll({
+                    attributes: ['userId'],
+                    where: {userId: req.user},
+                    include: {model: db.pets, required: true,
+                                attributes: [['id','petId']],
+                                where: {id: req.params.petId},
+                                order: [[{model: db.pets}, 'ownerId']],
+                                include: {model: db.medical_history, required: true},
+                                order: [[{model: db.medical_history}, 'petId', 'ASC' ],[{model: db.medical_history}, 'svc_dt', 'DESC' ],[{model: db.medical_history}, 'prov_name', 'ASC' ]]
+                    }}).then(function(results) {
+
+                        res.json(results[0].pets[0].medical_histories);
+                    }); 
+                }
             else {
                  db.owners.findAll({
+                   attributes: ['userId'],
                    where: {userId: req.user},
                    include: {model: db.pets, required: true,
-                   include: {model: db.medical_history, required: true}}
-                 }).then(function(results) {
+                            attributes: [['id','petId']],
+                            order: [[{model: db.pets}, 'ownerId']],
+                            include: {model: db.medical_history, required: true},
+                            order: [[{model: db.medical_history}, 'petId', 'ASC' ],[{model: db.medical_history}, 'svc_dt', 'DESC' ],[{model: db.medical_history}, 'prov_name', 'ASC' ]]
+                    }}).then(function(results) {
                         
-                        res.json(results);
+                        res.json(results[0].pets);
                 }); 
             }
         })
@@ -279,23 +286,29 @@ module.exports = (express,passport,db,bcrypt)=>{
              if (req.params.petId) {
         
                 db.owners.findAll({
+                   attributes: ['userId'],
                    where: {userId: req.user},
                    include: {model: db.pets, required: true,
                              where: {id: req.params.petId},
-                             include: {model: db.vaccinations, required: true}
+                             attributes: [['id','petId']],
+                             include: {model: db.vaccinations, required: true,
+                             order: [[{model: db.vaccinations}, 'petId', 'ASC' ],[{model: db.vaccinations}, 'last_vacc_dt', 'DESC' ],[{model: db.vaccinations}, 'vacc_name', 'ASC' ]]}
                 }}).then(function(results) {
 
-                        res.json(results);
+                        res.json(results[0].pets[0].vaccinations);
                 }); 
             }
             else {
                  db.owners.findAll({
+                   attributes: ['userId'],
                    where: {userId: req.user},
                    include: {model: db.pets, required: true,
-                   include: {model: db.vaccinations, required: true}}
-                 }).then(function(results) {
+                   attributes: [['id','petId']],
+                   include: {model: db.vaccinations, required: true,
+                   order: [[{model: db.vaccinations}, 'petId', 'ASC' ],[{model: db.vaccinations}, 'last_vacc_dt', 'DESC' ],[{model: db.vaccinations}, 'vacc_name', 'ASC' ]]}
+                 }}).then(function(results) {
                         
-                        res.json(results);
+                        res.json(results[0].pets);
                 }); 
             }
         })
