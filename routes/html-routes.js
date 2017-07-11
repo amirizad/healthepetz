@@ -39,6 +39,9 @@ module.exports = (express,passport,db,path)=>{
         res.sendFile(path.join(__dirname + "/filestack-example.html"));
     })
     
+    .get('/table',(req,res,next)=>{
+        res.render('table');
+    })
     //returns the router requsted
     return router;
 };

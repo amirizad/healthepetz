@@ -116,12 +116,14 @@ module.exports = (express,passport,db,bcrypt)=>{
             db.owners.findOne({
                 where: {userId: req.user}
             }).then(function(results) {
-                res.json(results);
+                console.log(results);
+                res.json({"data":[results.dataValues]});
             }); 
         })
        .post((req, res) => {
             // Create owner
             // Redirect to /owner
+            console.log(req.body)
             db.owners.create({
                 userId: req.body.userId,
                 owner_fname: req.body.owner_fname,
@@ -171,7 +173,7 @@ module.exports = (express,passport,db,bcrypt)=>{
                    include: {model: db.pets, required: true,
                    order: [[{model: db.pets}, 'pet_type'],[{model: db.pets},'pet_name']]
                  }}).then(function(results) {
-                        res.json(results[0].pets);
+                        res.json({"data":results[0].pets});
                 }); 
             }
         })
