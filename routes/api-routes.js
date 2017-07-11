@@ -265,7 +265,7 @@ module.exports = (express,passport,db,bcrypt)=>{
             });
         })
         
-        .put((req, res) => {
+        .put(auth(),(req, res,next) => {
             db.pet.update(req.body, 
             { 
                 fields: Object.keys(req.body), 
@@ -347,7 +347,7 @@ module.exports = (express,passport,db,bcrypt)=>{
                 doc_image_url: req.body.doc_image_url
             });
         })
-        .put((req, res) => {
+        .put(auth(),(req, res, next) => {
             // Update med bill
             db.medical_history.update(req.body, 
                 { 
@@ -419,7 +419,7 @@ module.exports = (express,passport,db,bcrypt)=>{
                 res.json(results);
             });
         })
-        .put((req, res) => {
+        .put(auth(),(req, res, next) => {
             // Update med bill
             db.vaccinations.update(req.body, 
                 { 
