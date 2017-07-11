@@ -114,8 +114,8 @@ module.exports = (express,passport,db,bcrypt)=>{
     router.route("/owner")
         .get(auth(), (req, res, next) => {
             db.owners.findOne({
-                where: {userId: req.id,
-            }}).then(function(results) {
+                where: {userId: req.user}
+            }).then(function(results) {
                 res.json(results);
             }); 
         })
@@ -142,7 +142,16 @@ module.exports = (express,passport,db,bcrypt)=>{
         })
         .put((req, res) => {
         // Update owner
-        // Redirect to /owner
+            db.owners.update(req.body, 
+            { 
+                fields: Object.keys(req.body), 
+                where: {id: req.body.id} 
+            })
+            .then((results) => {
+                res.json(results)
+            }).catch(function(error) {
+                console.log(error);
+            });
         })
         .delete((req, res) => {
         // Delete owner
@@ -150,15 +159,30 @@ module.exports = (express,passport,db,bcrypt)=>{
         // Redirect to "/"
         });
     
-    router.route("/pet/:pet-id?")
-        .get(auth(), (req, res, next) => {
-            db.owners.findOne({
-                where: {userId: req.id,
-                        petId: req.petId,
-                include: [db.pets]
-            }}).then(function(results) {
-                res.json(results);
-            }); 
+    router.route("/pet/:petId?")
+        .get(auth(),(req, res, next) => {
+             if (req.params.petId) {
+        
+                db.owners.findAll({
+                    attributes: ['userId'],
+                   where: {userId: req.user},
+                   include: {model: db.pets, required: true,
+                             where: {id: req.params.petId},
+                             order: [[{model: db.pets}, 'pet_type'],[{model: db.pets}, 'pet_name']]
+                }}).then(function(results) {
+                        res.json(results[0].pets);
+                }); 
+            }
+            else {
+                 db.owners.findAll({
+                    attributes: ['userId'],
+                   where: {userId: req.user},
+                   include: {model: db.pets, required: true,
+                   order: [[{model: db.pets}, 'pet_type'],[{model: db.pets},'pet_name']]
+                 }}).then(function(results) {
+                        res.json(results[0].pets);
+                }); 
+            }
         })
         .post((req, res) => {
             // Create pet
@@ -208,22 +232,56 @@ module.exports = (express,passport,db,bcrypt)=>{
             }).then((results) => {
                 res.json(results);
             });
+        })
+        .put((req, res) => {
+            db.pet.update(req.body, 
+            { 
+                fields: Object.keys(req.body), 
+                where: {id: req.body.id} 
+            })
+            .then((results) => {
+                res.json(results)
+            }).catch(function(error) {
+                console.log(error);
+            });
         });
     
 
-    router.route("/med-bill/:pet-id?")
-        .get(auth(), (req, res, next) => {
-            db.owners.findOne({
-                where: {userId: req.id,
-                        petId: req.petId,
-            include: [db.pets, db.medical_history]
-            }}).then(function(results) {
-                res.json(results);
-            }); 
+    router.route("/med-history/:petId?")
+        .get(auth(),(req, res, next) => {
+             if (req.params.petId) {
+
+                db.owners.findAll({
+                    attributes: ['userId'],
+                    where: {userId: req.user},
+                    include: {model: db.pets, required: true,
+                                attributes: [['id','petId']],
+                                where: {id: req.params.petId},
+                                order: [[{model: db.pets}, 'ownerId']],
+                                include: {model: db.medical_history, required: true},
+                                order: [[{model: db.medical_history}, 'petId', 'ASC' ],[{model: db.medical_history}, 'svc_dt', 'DESC' ],[{model: db.medical_history}, 'prov_name', 'ASC' ]]
+                    }}).then(function(results) {
+
+                        res.json(results[0].pets[0].medical_histories);
+                    }); 
+                }
+            else {
+                 db.owners.findAll({
+                   attributes: ['userId'],
+                   where: {userId: req.user},
+                   include: {model: db.pets, required: true,
+                            attributes: [['id','petId']],
+                            order: [[{model: db.pets}, 'ownerId']],
+                            include: {model: db.medical_history, required: true},
+                            order: [[{model: db.medical_history}, 'petId', 'ASC' ],[{model: db.medical_history}, 'svc_dt', 'DESC' ],[{model: db.medical_history}, 'prov_name', 'ASC' ]]
+                    }}).then(function(results) {
+                        
+                        res.json(results[0].pets);
+                }); 
+            }
         })
         .post((req, res) => {
-            // Create med bill
-            db.medical_history.create({
+              db.medical_history.create({
                 petId: req.body.petId,
                 prov_name: req.body.prov_name,
                 cond1: req.body.cond1,
@@ -235,26 +293,60 @@ module.exports = (express,passport,db,bcrypt)=>{
                 doc_image_url: req.body.doc_image_url,
                 createdAt: req.body.createdAt,
                 updatedAt: req.body.updatedAt
-            }).then((results) => {
-                res.json(results);
-            })
+            });
         })
         .put((req, res) => {
             // Update med bill
+            db.medical_history.update(req.body, 
+                { 
+                    fields: Object.keys(req.body), 
+                    where: {id: req.body.id} 
+                })
+            .then((results) => {
+                res.json(results)
+            }).catch(function(error) {
+                console.log(error);
+            });
         })
         .delete((req, res) => {
             // delete med bill
     });
+   
+    router.route("/vaccinations/:petId?")
+        .get(auth(),(req, res, next) => {
+             if (req.params.petId) {
+        
+                db.owners.findAll({
+                   attributes: ['userId'],
+                   where: {userId: req.user},
+                   include: {model: db.pets, required: true,
+                             where: {id: req.params.petId},
+                             attributes: [['id','petId']],
+                             include: {model: db.vaccinations, required: true,
+                             order: [[{model: db.vaccinations}, 'petId', 'ASC' ],[{model: db.vaccinations}, 'last_vacc_dt', 'DESC' ],[{model: db.vaccinations}, 'vacc_name', 'ASC' ]]}
+                }}).then(function(results) {
 
-
-    router.route("/vaccinations/:pet-id?")
-        .get((req, res) => {
-            // Return vaccination
+                        res.json(results[0].pets[0].vaccinations);
+                }); 
+            }
+            else {
+                 db.owners.findAll({
+                   attributes: ['userId'],
+                   where: {userId: req.user},
+                   include: {model: db.pets, required: true,
+                   attributes: [['id','petId']],
+                   include: {model: db.vaccinations, required: true,
+                   order: [[{model: db.vaccinations}, 'petId', 'ASC' ],[{model: db.vaccinations}, 'last_vacc_dt', 'DESC' ],[{model: db.vaccinations}, 'vacc_name', 'ASC' ]]}
+                 }}).then(function(results) {
+                        
+                        res.json(results[0].pets);
+                }); 
+            }
         })
         .post((req, res) => {
             // Create vaccination
             db.vaccinations.create({
-                petsId: req.body.petsId,
+                petsId: req.body.petId,
                 vacc_name: req.body.vacc_name,
                 last_vacc_dt: req.body.last_vacc_dt,
                 next_vacc_dt: req.body.next_vacc_dt,
@@ -266,11 +358,21 @@ module.exports = (express,passport,db,bcrypt)=>{
             });
         })
         .put((req, res) => {
-            // Update vaccination
+            // Update med bill
+            db.vaccinations.update(req.body, 
+                { 
+                    fields: Object.keys(req.body), 
+                    where: {id: req.body.id} 
+                })
+            .then((results) => {
+                res.json(results)
+            }).catch(function(error) {
+                console.log(error);
+            });
         })
         .delete((req, res) => {
             // Delete vaccination
-        })
+        });
         
     //returns router back to request
     return router;

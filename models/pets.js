@@ -23,23 +23,23 @@ module.exports = function(sequelize, DataTypes) {
     },
    license_no: {
     type: DataTypes.STRING,
-     validate: {len: [1,25]}
+     //validate: {len: [1,25]}
     },
    microchip_no: {
     type: DataTypes.STRING,
-     validate: {len: [1,25]}
+     //validate: {len: [1,25]}
     },
    insur_name: {
     type: DataTypes.STRING,
-     validate: {len: [1,100]}
+     //validate: {len: [1,100]}
     },
    insur_id: {
     type: DataTypes.STRING,
-     validate: {len: [1,100]}
+     //validate: {len: [1,100]}
     },
    insur_phone: {
     type: DataTypes.STRING,
-     validate: {len: [2]}
+     //validate: {len: [2]}
     },
    pet_dob: {
     type: DataTypes.DATEONLY,
@@ -49,117 +49,117 @@ module.exports = function(sequelize, DataTypes) {
     },
    pet_age: {
     type: DataTypes.STRING,
-     validate: {len: [1]}
+     //validate: {len: [1]}
     },
    pet_sex: {
     type: DataTypes.STRING,
-     validate: {len: [1]}
+     //validate: {len: [1]}
     },
    spayed_neutered_ind: {
     type: DataTypes.BOOLEAN,
-     allowNull: false,
+     //allowNull: false,
      defaultValue: 0
     },
     pet_image_url: {
       type: DataTypes.STRING,
-      validate: {isUrl: true,
-      len: [1,255]}
+      //validate: {isUrl: true,
+      //len: [1,255]}
     },
    cond1: {
        type: DataTypes.STRING,
-       validate: {len: [1,255]}
+      // validate: {len: [1,255]}
     },   
    cond2: {
     type: DataTypes.STRING,
-     validate: {len: [1,255]}
+     //validate: {len: [1,255]}
     },
    cond3: {
     type: DataTypes.STRING,
-     validate: {len: [1,255]}
+     //validate: {len: [1,255]}
     },
    med1: {
        type: DataTypes.STRING,
-       validate: {len: [1,255]}
+       //validate: {len: [1,255]}
     },   
    med2: {
     type: DataTypes.STRING,
-     validate: {len: [1,255]}
+    //validate: {len: [1,255]}
     },
    med3: {
     type: DataTypes.STRING,
-     validate: {len: [1,255]}
+     //validate: {len: [1,255]}
     },
   vet1_name: {
     type: DataTypes.STRING,
-     validate: {len: [1,255]}
+     //validate: {len: [1,255]}
   },
   vet1_specialty: {
     type: DataTypes.STRING,
-     validate: {len: [1,100]}
+     //validate: {len: [1,100]}
   },
   vet1_address: {
     type: DataTypes.STRING,
-     validate: {len: [1,100]}
+     //validate: {len: [1,100]}
   },
    vet1_city: {
     type: DataTypes.STRING,
-     validate: {len: [1,100]}
+     //validate: {len: [1,100]}
   },
    vet1_state: {
     type: DataTypes.STRING,
-     validate: {len: [2]}
+     //validate: {len: [2]}
   },
    vet1_zip: {
     type: DataTypes.STRING,
-     validate: {len: [1,10]}
+    // validate: {len: [1,10]}
   },
    vet1_phone: {
     type: DataTypes.STRING,
-     validate: {len: [1,15]}
+    // validate: {len: [1,15]}
   },
    vet1_email: {
     type: DataTypes.STRING,
-     validate: {isEmail: true}
+     //validate: {isEmail: true}
   },
    vet1_fax: {
     type: DataTypes.STRING,
-     validate: {len: [1,15]}
+     //validate: {len: [1,15]}
   },
   vet2_name: {
     type: DataTypes.STRING,
-     validate: {len: [1,255]}
+     //validate: {len: [1,255]}
   },
   vet2_specialty: {
     type: DataTypes.STRING,
-     validate: {len: [1,100]}
+     //validate: {len: [1,100]}
   },
   vet2_address: {
     type: DataTypes.STRING,
-     validate: {len: [1,100]}
+     //validate: {len: [1,100]}
   },
    vet2_city: {
     type: DataTypes.STRING,
-     validate: {len: [1,100]}
+     //validate: {len: [1,100]}
   },
    vet2_state: {
     type: DataTypes.STRING,
-     validate: {len: [2]}
+     //validate: {len: [2]}
   },
    vet2_zip: {
     type: DataTypes.STRING,
-     validate: {len: [1,10]}
+     //validate: {len: [1,10]}
   },
    vet2_phone: {
     type: DataTypes.STRING,
-     validate: {len: [1,15]}
+     //validate: {len: [1,15]}
   },
    vet2_email: {
     type: DataTypes.STRING,
-     validate: {isEmail: true}
+     //validate: {isEmail: true}
   },
    vet2_fax: {
     type: DataTypes.STRING,
-     validate: {len: [1,15]}
+     //validate: {len: [1,15]}
   }
 });
 
@@ -168,8 +168,16 @@ pets.associate = function(models) {
     // Can also simply do Task.belongsTo(models.User);
     pets.belongsTo(models.owners, {
       foreignKey: {
-        allowNull: true
+        allowNull: false
       }
+    });
+
+    pets.hasMany(models.medical_history,  {
+            onDelete: "cascade"
+    });
+
+      pets.hasMany(models.vaccinations,  {
+            onDelete: "cascade"
     });
   }
 

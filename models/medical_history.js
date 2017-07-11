@@ -29,7 +29,7 @@ module.exports = function(sequelize, DataTypes) {
     },
     notes: {
         type: DataTypes.STRING,
-        validate: {len: [1,500]}
+        //validate: {len: [1,500]}
     },
     doc_type: {
         type: DataTypes.STRING,
@@ -38,8 +38,8 @@ module.exports = function(sequelize, DataTypes) {
     },
     doc_image_url: {
         type: DataTypes.STRING,
-        validate: {isUrl: true,
-        len: [1,255]}
+        //validate: {isUrl: true,
+       // len: [1,255]}
     },
  
 });

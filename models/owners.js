@@ -32,25 +32,32 @@ module.exports = function(sequelize, DataTypes) {
     type: DataTypes.DATEONLY,
   },
    owner_sex: {
-    type: DataTypes.STRING
+    type: DataTypes.STRING,
+     //validate: {len: [1]}
   },
    address: {
-    type: DataTypes.STRING
+    type: DataTypes.STRING,
+     //validate: {len: [1,100]}
   },
    city: {
-    type: DataTypes.STRING
+    type: DataTypes.STRING,
+     //validate: {len: [1,100]}
   },
    state: {
-    type: DataTypes.STRING
+    type: DataTypes.STRING,
+     //validate: {len: [2]}
   },
    zip: {
-    type: DataTypes.STRING
+    type: DataTypes.STRING,
+     //validate: {len: [1,10]}
   },
    phone: {
-    type: DataTypes.STRING
+    type: DataTypes.STRING,
+     //validate: {len: [1,15]}
   },
    fax: {
-    type: DataTypes.STRING
+    type: DataTypes.STRING,
+     //validate: {len: [1,15]}
   }
 });
 
@@ -62,7 +69,12 @@ owners.associate = function(models) {
         allowNull: true
       }
     });
+
+    owners.hasMany(models.pets,  {
+            onDelete: "cascade"});
   }
+
+
 
 // Syncs with DB
  return owners;
