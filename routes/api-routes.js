@@ -27,7 +27,7 @@ module.exports = (express,passport,db,bcrypt)=>{
             var user = req.body;
             console.log(user);
             //if the userpassword matches continue
-            if(user.password === user.repassword){
+            if(user.password === user.confirmpass){
                 //Declare number of salt rounds default:10
                 const saltRounds = 10;
                 //Hash the normal password for protected and pass it as hash
@@ -46,12 +46,12 @@ module.exports = (express,passport,db,bcrypt)=>{
                             "owner_lname": user.lname,
                             "owner_dob": user.dob,
                             "owner_sex": user.sex,
+                            "phone": user.phone,
+                            "fax": user.fax,
                             "address": user.address,
                             "city": user.city,
                             "state": user.state,
                             "zip": user.zip,
-                            "phone": user.phone,
-                            "fax": user.fax,
                             "UserId": userID
                         }).then((result)=>{
                             //login the user with the id and redirect to dashboard
@@ -140,7 +140,16 @@ module.exports = (express,passport,db,bcrypt)=>{
         })
         .put(auth(),(req, res, next) => {
         // Update owner
-        // Redirect to /owner
+            db.owners.update(req.body, 
+            { 
+                fields: Object.keys(req.body), 
+                where: {id: req.body.id} 
+            })
+            .then((results) => {
+                res.json(results)
+            }).catch(function(error) {
+                console.log(error);
+            });
         })
         .delete(auth(),(req, res, next) => {
 
@@ -255,8 +264,18 @@ module.exports = (express,passport,db,bcrypt)=>{
                 res.json(results);
             });
         })
-        .put(auth(),(req, res, next) => {
-            // Update med bill
+        
+        .put((req, res) => {
+            db.pet.update(req.body, 
+            { 
+                fields: Object.keys(req.body), 
+                where: {id: req.body.id} 
+            })
+            .then((results) => {
+                res.json(results)
+            }).catch(function(error) {
+                console.log(error);
+            });
         })
         .delete(auth(),(req, res,next) => {
             db.vaccinations.destroy({
@@ -269,11 +288,9 @@ module.exports = (express,passport,db,bcrypt)=>{
                     where: {id: parseInt(req.params.petId)}
                     }).then((results) => {
                     res.json(results);
-                    })
+                    });
                 });
-
-            });
-        });
+            })});    
     
 
     router.route("/med-history/:petId?")
@@ -332,6 +349,16 @@ module.exports = (express,passport,db,bcrypt)=>{
         })
         .put((req, res) => {
             // Update med bill
+            db.medical_history.update(req.body, 
+                { 
+                    fields: Object.keys(req.body), 
+                    where: {id: req.body.id} 
+                })
+            .then((results) => {
+                res.json(results)
+            }).catch(function(error) {
+                console.log(error);
+            });
         })
         .delete(auth(),(req, res,next) => {
              db.medical_history.destroy({
@@ -393,7 +420,17 @@ module.exports = (express,passport,db,bcrypt)=>{
             });
         })
         .put((req, res) => {
-            // Update vaccination
+            // Update med bill
+            db.vaccinations.update(req.body, 
+                { 
+                    fields: Object.keys(req.body), 
+                    where: {id: req.body.id} 
+                })
+            .then((results) => {
+                res.json(results)
+            }).catch(function(error) {
+                console.log(error);
+            });
         })
         .delete(auth(),(req, res, next) => {
             db.vaccinations.destroy({
