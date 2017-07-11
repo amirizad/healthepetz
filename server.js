@@ -35,7 +35,6 @@ const sessionStore = new MySQLStore({
 
 //Custom Section Helper for Views
 var hbs = exphbs.create({
-
         defaultLayout:'main',
         helpers: {
             section: function(name, options){ 
