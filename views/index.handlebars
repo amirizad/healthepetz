@@ -85,7 +85,7 @@
 									<div class="col-xs-11 col-sm-7">
 										<input class="form-control reqfield" type="email" name="email" id="email" tabindex="5" value="" placeholder="Enter your contact email address." pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,3}$">
 									</div>
-									<span><a href="#loginsec" class="petstooltip page-scroll" title="This will be use for communications."><img id="route-input-help" src="/assets/css/icons/info-blue.png" class="info-icon" ></a></span>
+									<span><a href="#loginsec" class="petstooltip page-scroll" title="This will be used for communications."><img id="route-input-help" src="/assets/css/icons/info-blue.png" class="info-icon" ></a></span>
 								</div>
 								<div class="form-group">
 									<label class="control-label col-xs-3" for="phone">Phone:</label>
@@ -181,14 +181,14 @@
 									<div class="col-xs-11 col-sm-7">          
 										<input class="form-control reqfield" type="text" name="username" id="username" tabindex="12" value="" placeholder="Please enter your desired username." pattern="^[a-z][a-z0-9]{6,10}$">
 									</div>
-									<span><a href="#loginsec" class="petstooltip page-scroll" title="Username should only contain lowercase letters and numbers, starting with a letter, at least six upto 10 characters."><img id="route-input-help" src="/assets/css/icons/info-blue.png" class="info-icon" ></a></span>
+									<span><a href="#loginsec" class="petstooltip page-scroll" title="Username should only contain lowercase letters and numbers, starting with a letter, at least 6 upto 10 characters."><img id="route-input-help" src="/assets/css/icons/info-blue.png" class="info-icon" ></a></span>
 								</div>
 								<div class="form-group">
 									<label class="control-label col-xs-3" for="password">Password:</label>
 									<div class="col-xs-11 col-sm-7">
 										<input class="form-control reqfield" type="password" name="password" id="password" tabindex="13" value="" placeholder="Choose a password for your account." pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{6,}" onchange="form.confirmpass.pattern = this.value;">
 									</div>
-									<span><a href="#loginsec" class="petstooltip page-scroll" title="Must be at least six upto 16 characters including one number, one lowercase and one uppercase letter."><img id="route-input-help" src="/assets/css/icons/info-blue.png" class="info-icon" ></a></span>
+									<span><a href="#loginsec" class="petstooltip page-scroll" title="Must be at least 6 upto 16 characters including one number, one lowercase and one uppercase letter."><img id="route-input-help" src="/assets/css/icons/info-blue.png" class="info-icon" ></a></span>
 								</div>
 								<div class="form-group">
 									<label class="control-label col-xs-3" for="confirmpass">Confirm Password:</label>
@@ -217,9 +217,9 @@
 							<form class="form-horizontal form-field register" action="/api/login" role="form" name="loginfrm" id="loginfrm" method="POST" autocomplete="off">
 								<input type="hidden" name="logedin" id="logedin" value="">
 								<div class="form-group">
-									<label class="control-label col-xs-3" for="login-id">Email:</label>
+									<label class="control-label col-xs-3" for="login-id">User ID:</label>
 									<div class="col-xs-11 col-sm-7">
-										<input autocomplete="off" class="form-control reqfield" type="email" name="login-id" id="login-id" placeholder="Enter your user id" value="" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,3}$">
+										<input autocomplete="off" class="form-control reqfield" type="email" name="login-id" id="login-id" placeholder="Enter your user id" value="" pattern="^[a-z][a-z0-9]{6,10}$">
 									</div>
 								</div>
 								<div class="form-group">
