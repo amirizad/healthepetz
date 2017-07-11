@@ -1,4 +1,3 @@
-
 $(document).ready(function() {
   $('.carousel').carousel()
 
@@ -12,13 +11,13 @@ $(document).ready(function() {
     theme: ['tooltipster-light', 'tooltipster-light-customized']
   });
 
-  $('table.display').DataTable( {
-    "order": [[ 3, "desc" ]],
-    "paging":   true,
-    "ordering": true,
-    "info":     true,
-    "lengthMenu": [[5, 10, 25, -1], [5, 10, 25, "All"]],
-    stateSave: true
+  // $('table.display').DataTable( {
+  //   "order": [[ 3, "desc" ]],
+  //   "paging":   true,
+  //   "ordering": true,
+  //   "info":     true,
+  //   "lengthMenu": [[5, 10, 25, -1], [5, 10, 25, "All"]],
+  //   stateSave: true
     // ,"columnDefs": [
     //         {
     //             "targets": [ 2 ],

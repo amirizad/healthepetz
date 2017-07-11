@@ -13,15 +13,15 @@ module.exports = (passport,LocalStrategy,db,bcrypt)=>{
                 var hash = results.dataValues.password;
                 var userid = results.dataValues.id;
                 //Compare the user inputted password hashed to the db hashed pw
-                bcrypt.compare(password,hash,(err,res)=>{
+                //bcrypt.compare(password,hash,(err,res)=>{
                     //if it matches login the user and pass the id to the auth
-                    if (res === true){
+                    if (hash === password){
                         return done(null,userid);
                     } else {
                     //if it doesn't pass in flash and send a flash error message
                         return done(null,false,{message:'Sorry. The password is incorrect. Please try again.'});
                     }
-                });
+                //});
             } else {
                 //if no returns return false and send flsah error message
                 return done(null,false,{message:'The username you provided was not found.'});
