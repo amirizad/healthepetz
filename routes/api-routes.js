@@ -142,7 +142,16 @@ module.exports = (express,passport,db,bcrypt)=>{
         })
         .put((req, res) => {
         // Update owner
-        // Redirect to /owner
+            db.owners.update(req.body, 
+            { 
+                fields: Object.keys(req.body), 
+                where: {id: req.body.id} 
+            })
+            .then((results) => {
+                res.json(results)
+            }).catch(function(error) {
+                console.log(error);
+            });
         })
         .delete((req, res) => {
         // Delete owner
@@ -223,6 +232,18 @@ module.exports = (express,passport,db,bcrypt)=>{
             }).then((results) => {
                 res.json(results);
             });
+        })
+        .put((req, res) => {
+            db.pet.update(req.body, 
+            { 
+                fields: Object.keys(req.body), 
+                where: {id: req.body.id} 
+            })
+            .then((results) => {
+                res.json(results)
+            }).catch(function(error) {
+                console.log(error);
+            });
         });
     
 
@@ -276,6 +297,16 @@ module.exports = (express,passport,db,bcrypt)=>{
         })
         .put((req, res) => {
             // Update med bill
+            db.medical_history.update(req.body, 
+                { 
+                    fields: Object.keys(req.body), 
+                    where: {id: req.body.id} 
+                })
+            .then((results) => {
+                res.json(results)
+            }).catch(function(error) {
+                console.log(error);
+            });
         })
         .delete((req, res) => {
             // delete med bill
@@ -327,7 +358,17 @@ module.exports = (express,passport,db,bcrypt)=>{
             });
         })
         .put((req, res) => {
-            // Update vaccination
+            // Update med bill
+            db.vaccinations.update(req.body, 
+                { 
+                    fields: Object.keys(req.body), 
+                    where: {id: req.body.id} 
+                })
+            .then((results) => {
+                res.json(results)
+            }).catch(function(error) {
+                console.log(error);
+            });
         })
         .delete((req, res) => {
             // Delete vaccination
