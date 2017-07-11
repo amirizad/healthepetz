@@ -111,15 +111,15 @@ module.exports = (express,passport,db,bcrypt)=>{
             }
         });
 
-    router.route("/owner")
+    router.route("/owner/:ownerId?")
         .get(auth(), (req, res, next) => {
             db.owners.findOne({
-                where: {userId: req.user}
+                where: {userId: req.user},
             }).then(function(results) {
                 res.json(results);
             }); 
         })
-       .post((req, res) => {
+       .post(auth(),(req, res, next) => {
             // Create owner
             // Redirect to /owner
             db.owners.create({
@@ -133,49 +133,82 @@ module.exports = (express,passport,db,bcrypt)=>{
                 state: req.body.state,
                 zip: req.body.zip,
                 phone: req.body.phone,
-                fax: req.body.fax,
-                createdAt: req.body.createdAt,
-                updatedAt: req.body.updatedAt
+                fax: req.body.fax
             }).then((results) => {
                 res.json(results)
             });
         })
-        .put((req, res) => {
+        .put(auth(),(req, res, next) => {
         // Update owner
         // Redirect to /owner
         })
-        .delete((req, res) => {
-        // Delete owner
-                // Delete all owner's pets
-        // Redirect to "/"
-        });
+        .delete(auth(),(req, res, next) => {
+
+            db.owners.findOne({
+                attributes: ['id'],
+                where: {userId: parseInt(req.user)},
+            }).then((results) => {
+                 var tempOwnerId=results.id
+                 
+                 var tempSQL = db.sequelize.dialect.QueryGenerator.selectQuery('pets',
+                        {attribute: ['id'], where: {ownerId: results.id}}).slice(0,-1); // to remove the ';' from the end of the SQL
+               
+                tempSQL=tempSQL.replace('*','id')
+                
+                db.medical_history.destroy({
+                    where: {petId: {$in: db.sequelize.literal('(' + tempSQL + ')')}}
+            }).then((results) => {
+                db.vaccinations.destroy({
+                    where: {petId: {$in: db.sequelize.literal('(' + tempSQL + ')')}}
+            }).then((results) => {
+                db.pets.destroy({
+                    where: {ownerId: tempOwnerId}
+            }).then((results) => {
+                db.owners.destroy({
+                    where: {id: tempOwnerId}
+            }).then((results) => {
+                    res.json(results);
+            })});})});});});
+
     
     router.route("/pet/:petId?")
         .get(auth(),(req, res, next) => {
              if (req.params.petId) {
-        
+          
                 db.owners.findAll({
                     attributes: ['userId'],
-                   where: {userId: req.user},
+                   where: {userId: parseInt(req.user)},
                    include: {model: db.pets, required: true,
-                             where: {id: req.params.petId},
+                             where: {id: parseInt(req.params.petId)},
                              order: [[{model: db.pets}, 'pet_type'],[{model: db.pets}, 'pet_name']]
                 }}).then(function(results) {
+                    console.log(results.length);
+                    if (results.length===0) {
+                        res.json(results);
+                    }
+                    else {
                         res.json(results[0].pets);
+                    }    
                 }); 
             }
             else {
                  db.owners.findAll({
                     attributes: ['userId'],
-                   where: {userId: req.user},
+                   where: {userId: parseInt(req.user)},
                    include: {model: db.pets, required: true,
                    order: [[{model: db.pets}, 'pet_type'],[{model: db.pets},'pet_name']]
                  }}).then(function(results) {
+                     if (results.length===0) {
+                        res.json(results);
+                    }
+                    else {
                         res.json(results[0].pets);
+                    }    
+                    
                 }); 
             }
         })
-        .post((req, res) => {
+        .post(auth(),(req, res, next) => {
             // Create pet
             db.pets.create({
                 ownerId: req.body.ownerId,
@@ -217,11 +250,28 @@ module.exports = (express,passport,db,bcrypt)=>{
                 vet2_zip: req.body.zip,
                 vet2_phone: req.body.vet2_phone,
                 vet2_email: req.body.vet2_email,
-                vet2_fax: req.body.vet2_fax,
-                createdAt: req.body.createdAt,
-                updatedAt: req.body.updatedAt,
+                vet2_fax: req.body.vet2_fax
             }).then((results) => {
                 res.json(results);
+            });
+        })
+        .put(auth(),(req, res, next) => {
+            // Update med bill
+        })
+        .delete(auth(),(req, res,next) => {
+            db.vaccinations.destroy({
+                where: {petId: parseInt(req.params.petId)}
+            }).then((results) => {
+                db.medical_history.destroy({
+                where: {petId: parseInt(req.params.petId)}
+            }).then((results) => {
+                    db.pets.destroy({
+                    where: {id: parseInt(req.params.petId)}
+                    }).then((results) => {
+                    res.json(results);
+                    })
+                });
+
             });
         });
     
@@ -232,34 +282,42 @@ module.exports = (express,passport,db,bcrypt)=>{
 
                 db.owners.findAll({
                     attributes: ['userId'],
-                    where: {userId: req.user},
+                    where: {userId: parseInt(req.user)},
                     include: {model: db.pets, required: true,
                                 attributes: [['id','petId']],
-                                where: {id: req.params.petId},
+                                where: {id: parseInt(req.params.petId)},
                                 order: [[{model: db.pets}, 'ownerId']],
                                 include: {model: db.medical_history, required: true},
                                 order: [[{model: db.medical_history}, 'petId', 'ASC' ],[{model: db.medical_history}, 'svc_dt', 'DESC' ],[{model: db.medical_history}, 'prov_name', 'ASC' ]]
                     }}).then(function(results) {
-
-                        res.json(results[0].pets[0].medical_histories);
+                        if (results.length===0  || results[0].length===0) {
+                            res.json(results);
+                        }
+                        else {
+                            res.json(results[0].pets[0].medical_histories);
+                        }
                     }); 
                 }
             else {
                  db.owners.findAll({
                    attributes: ['userId'],
-                   where: {userId: req.user},
+                   where: {userId: parseInt(req.user)},
                    include: {model: db.pets, required: true,
                             attributes: [['id','petId']],
                             order: [[{model: db.pets}, 'ownerId']],
                             include: {model: db.medical_history, required: true},
                             order: [[{model: db.medical_history}, 'petId', 'ASC' ],[{model: db.medical_history}, 'svc_dt', 'DESC' ],[{model: db.medical_history}, 'prov_name', 'ASC' ]]
                     }}).then(function(results) {
-                        
+                        if (results.length===0) {
+                               res.json(results);
+                        }
+                        else {
                         res.json(results[0].pets);
+                        }
                 }); 
             }
         })
-        .post((req, res) => {
+        .post(auth(),(req, res, next) => {
               db.medical_history.create({
                 petId: req.body.petId,
                 prov_name: req.body.prov_name,
@@ -269,17 +327,19 @@ module.exports = (express,passport,db,bcrypt)=>{
                 total_paid_amt: req.body.total_paid_amt,
                 notes: req.body.notes,
                 doc_type: req.body.doc_type,
-                doc_image_url: req.body.doc_image_url,
-                createdAt: req.body.createdAt,
-                updatedAt: req.body.updatedAt
+                doc_image_url: req.body.doc_image_url
             });
         })
         .put((req, res) => {
             // Update med bill
         })
-        .delete((req, res) => {
-            // delete med bill
-    });
+        .delete(auth(),(req, res,next) => {
+             db.medical_history.destroy({
+                where: {id: parseInt(req.params.petId)}
+            }).then((results) => {
+                res.json(results);
+            });
+        });
    
     router.route("/vaccinations/:petId?")
         .get(auth(),(req, res, next) => {
@@ -287,41 +347,47 @@ module.exports = (express,passport,db,bcrypt)=>{
         
                 db.owners.findAll({
                    attributes: ['userId'],
-                   where: {userId: req.user},
+                   where: {userId: parseInt(req.user)},
                    include: {model: db.pets, required: true,
-                             where: {id: req.params.petId},
+                             where: {id: parseInt(req.params.petId)},
                              attributes: [['id','petId']],
                              include: {model: db.vaccinations, required: true,
                              order: [[{model: db.vaccinations}, 'petId', 'ASC' ],[{model: db.vaccinations}, 'last_vacc_dt', 'DESC' ],[{model: db.vaccinations}, 'vacc_name', 'ASC' ]]}
                 }}).then(function(results) {
-
-                        res.json(results[0].pets[0].vaccinations);
+                        if(results.length===0 || results[0].pets[0].length===0) {
+                            res.json(results);
+                        }
+                        else {
+                         res.json(results[0].pets[0].vaccinations);
+                        }
                 }); 
             }
             else {
                  db.owners.findAll({
                    attributes: ['userId'],
-                   where: {userId: req.user},
+                   where: {userId: parseInt(req.user)},
                    include: {model: db.pets, required: true,
                    attributes: [['id','petId']],
                    include: {model: db.vaccinations, required: true,
                    order: [[{model: db.vaccinations}, 'petId', 'ASC' ],[{model: db.vaccinations}, 'last_vacc_dt', 'DESC' ],[{model: db.vaccinations}, 'vacc_name', 'ASC' ]]}
                  }}).then(function(results) {
-                        
-                        res.json(results[0].pets);
+                        if (results.length===0 ||  results[0].pets.length===0) {
+                            res.json(results);
+                        }
+                        else {
+                            res.json(results[0].pets);
+                        }
                 }); 
             }
         })
-        .post((req, res) => {
+        .post(auth(),(req, res, next) => {
             // Create vaccination
             db.vaccinations.create({
                 petsId: req.body.petId,
                 vacc_name: req.body.vacc_name,
                 last_vacc_dt: req.body.last_vacc_dt,
                 next_vacc_dt: req.body.next_vacc_dt,
-                vacc_image_url: req.body.vacc_image_url,
-                createdAt: req.body.createdAt,
-                updatedAt: req.body.updatedAt,
+                vacc_image_url: req.body.vacc_image_url
             }).then((results) => {
                 res.json(results);
             });
@@ -329,7 +395,12 @@ module.exports = (express,passport,db,bcrypt)=>{
         .put((req, res) => {
             // Update vaccination
         })
-        .delete((req, res) => {
+        .delete(auth(),(req, res, next) => {
+            db.vaccinations.destroy({
+                where: {id: parseInt(req.params.petId)}
+            }).then((results) => {
+                res.json(results);
+            });
             // Delete vaccination
         });
         
