@@ -27,7 +27,7 @@ module.exports = (express,passport,db,bcrypt)=>{
             var user = req.body;
             console.log(user);
             //if the userpassword matches continue
-            if(user.password === user.repassword){
+            if(user.password === user.confirmpass){
                 //Declare number of salt rounds default:10
                 const saltRounds = 10;
                 //Hash the normal password for protected and pass it as hash
@@ -46,12 +46,12 @@ module.exports = (express,passport,db,bcrypt)=>{
                             "owner_lname": user.lname,
                             "owner_dob": user.dob,
                             "owner_sex": user.sex,
+                            "phone": user.phone,
+                            "fax": user.fax,
                             "address": user.address,
                             "city": user.city,
                             "state": user.state,
                             "zip": user.zip,
-                            "phone": user.phone,
-                            "fax": user.fax,
                             "UserId": userID
                         }).then((result)=>{
                             //login the user with the id and redirect to dashboard
