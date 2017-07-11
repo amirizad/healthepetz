@@ -172,7 +172,7 @@ module.exports = (express,passport,db,bcrypt)=>{
                    where: {userId: req.user},
                    include: {model: db.pets, required: true}
                  }).then(function(results) {
-                        res.json(results);
+                        res.json({"data":results[0].pets});
                 }); 
             }
         })

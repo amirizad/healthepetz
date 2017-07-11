@@ -3,7 +3,7 @@
 const express = require("express");
 const bodyParser = require("body-parser");
 const path = require("path");
-const hbs = require('express-handlebars');
+const exphbs = require('express-handlebars');
 const db = require('./models');
 var methodOverride = require("method-override");
 
@@ -33,6 +33,19 @@ const sessionStore = new MySQLStore({
     database:'healthepetz_db'
 });
 
+//Custom Section Helper for Views
+var hbs = exphbs.create({
+
+        defaultLayout:'main',
+        helpers: {
+            section: function(name, options){ 
+                if(!this._sections) this._sections = {};
+                this._sections[name] = options.fn(this); 
+                return null;
+            } 
+        }    
+    });
+
 // START Configuring Express App
 // ========================================================================================
 
@@ -45,8 +58,8 @@ app.use(cookieParser());
 app.use(flash());
 app.use(methodOverride("_method"));
 
-// Sets up the Handlebars as default view engine with express
-app.engine('handlebars', hbs({defaultLayout: 'main'}));
+app.set('views', path.join(__dirname, 'views'));
+app.engine('handlebars', hbs.engine);
 app.set('view engine', 'handlebars');
 
 //Creates the sessions table that will authenticate user sessions
