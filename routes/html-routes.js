@@ -10,10 +10,13 @@ module.exports = (express,passport,db,path)=>{
     //get homepage render index
     .get('/',(req,res,next)=>{
         if(req.isAuthenticated()){
-            res.redirect('/dashboard');
+            res.render('index',{
+                loggedIn:1
+            });
         } else {
             var errors = req.flash('error');
             res.render('index',{
+                loggedIn:0,
                 loginError: errors
             });
         }
@@ -39,11 +42,15 @@ module.exports = (express,passport,db,path)=>{
         res.sendFile(path.join(__dirname + "/filestack-example.html"));
     })
     
-    .get('/table',(req,res,next)=>{
-        res.render('table',{
+    .get('/petst',(req,res,next)=>{
+        res.render('petsTable',{
             petId:2
         });
     })
+
+    .get('/medt',(req,res,next)=>{
+        res.render('medTable');
+    });
     //returns the router requsted
     return router;
 };

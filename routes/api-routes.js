@@ -8,7 +8,7 @@ module.exports = (express,passport,db,bcrypt)=>{
     router.route('/login')
         .post(passport.authenticate('local',{
             //if valid redirect to home
-            successRedirect:'/dashboard',
+            successRedirect:'/',
             //if not redirect back to login and pass in flash errors
             failureRedirect:'/',
             failureFlash:true
