@@ -130,14 +130,22 @@ var hPetz = {
 	},
 
 	updateNavbar: function(logedIn){
+		$('li.navto.active').removeClass('active');
+		$('section').removeClass('show');
 		if ( logedIn == 1){
 			$('#loginsecnav').addClass('hide');
 			$('#profilesecnav').removeClass('hide');
 			$('#logoutnav').removeClass('hide');
+			$('#profilesecnav').addClass('active');
+			$('#profilesec').addClass('show')
+			$('#activesec').val('profilesec');
 		} else{
 			$('#loginsecnav').removeClass('hide');
 			$('#profilesecnav').addClass('hide');
 			$('#logoutnav').addClass('hide');
+			$('#homesecnav').addClass('active');
+			$('#homesec').addClass('show')
+			$('#activesec').val('homesec');
 		}
 	},
 
