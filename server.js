@@ -103,7 +103,7 @@ app.use(function(error, req, res) {
 
 // Sync Database and Start the Server
 // =============================================================
-db.sequelize.sync(false).then(()=>{
+db.sequelize.sync().then(()=>{
     app.listen(PORT,()=>{
         console.log('SERVER STARTED ON PORT ' + PORT);
     });

@@ -1,7 +1,7 @@
 use healthepetz_db;
 
 #users table seeds
-INSERT INTO users (`username`, `email`, `password`, `role`, `createdAt`, `updatedAt`) VALUES ('yledner', 'wmoen@example.net', '9db6ab190a9196d96373', 'user', '1972-09-03 17:31:06', '1981-05-24 16:27:29');
+INSERT INTO users (`username`, `email`, `password`, `role`, `createdAt`, `updatedAt`) VALUES ('test', 'test@test.com', 'test', 'user', '1972-09-03 17:31:06', '1981-05-24 16:27:29');
 INSERT INTO users (`username`, `email`, `password`, `role`, `createdAt`, `updatedAt`) VALUES ('schuppe.santos', 'maximillia.mertz@example.org', 'c9eb40484a9b4916599e', 'user', '1982-05-28 17:30:10', '1986-04-27 04:26:10');
 INSERT INTO users (`username`, `email`, `password`, `role`, `createdAt`, `updatedAt`) VALUES ('marcelo45', 'jfritsch@example.com', 'e935a9af3fd892533f72', 'user', '1975-04-28 00:18:38', '1984-06-25 23:30:40');
 INSERT INTO users (`username`, `email`, `password`, `role`, `createdAt`, `updatedAt`) VALUES ('roma.gerlach', 'kiehn.hudson@example.com', 'e165674e4c5fd6fc8622', 'user', '1982-12-21 22:12:32', '2007-08-03 13:02:48');
