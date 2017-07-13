@@ -1,83 +1,124 @@
 @import url('https://fonts.googleapis.com/css?family=Merriweather');
-body{
+body {
   padding-bottom: 50px;
   font-family: 'Merriweather', serif;
 }
 
 .required_notification {
-    color: #d45252;
-    margin: 5px 5px 10px 0;
-    display: inline;
-    float: right;
+  color: #d45252;
+  margin: 5px 5px 10px 0;
+  display: inline;
+  float: right;
 }
+
 .tab-content {
-    padding: 40px 10px 20px 10px;
+  padding: 40px 10px 20px 10px;
 }
+
 .form-horizontal .control-label {
-    display: none;
+  display: none;
 }
-.form-field input:required {
-    background: #fff url(../img/icons/red_asterisk.png) no-repeat 98% center;
+
+
+/* === HTML5 validation styles === */
+
+.form-field input:required,
+.form-field textarea:required {
+  background: #fff url(icons/red_asterisk.png) no-repeat 98% center;
 }
+
+.form-field input:required:valid,
+.form-field textarea:required:valid {
+  background: #fff url(icons/valid.png) no-repeat 98% center;
+  box-shadow: 0 0 5px #5cd053;
+  border-color: #28921f;
+}
+
+.form-field input:focus:invalid,
+.form-field textarea:focus:invalid {
+  background: #fff url(icons/invalid.png) no-repeat 98% center;
+  box-shadow: 0 0 5px #d45252;
+  border-color: #b03535
+}
+
 .form-group {
-    margin-bottom: 10px;
+  margin-bottom: 10px;
 }
-.carousel-control, .carousel-caption {
-    color: #FFD700;
+
+.carousel-control,
+.carousel-caption {
+  color: #FFD700;
 }
-.carousel-indicators li{
-    border: 1px solid #FFD700;
+
+.carousel-indicators li {
+  border: 1px solid #FFD700;
 }
-.carousel-indicators .active{
-    background-color: #FFD700;
+
+.carousel-indicators .active {
+  background-color: #FFD700;
 }
+
 .info-icon {
-    width: 17px;
-    height: 17px;
-    margin: 8px 0;
-    cursor: pointer;
+  width: 17px;
+  height: 17px;
+  margin: 8px 0;
+  cursor: pointer;
 }
 
 .tooltipster-sidetip.tooltipster-light.tooltipster-light-customized .tooltipster-box {
-	background: #eef2c4;
-	border: 1px solid #a58c4a;
-	border-radius: 6px;
-	box-shadow: 5px 5px 2px 0 rgba(0,0,0,0.3);
+  background: #eef2c4;
+  border: 1px solid #a58c4a;
+  border-radius: 6px;
+  box-shadow: 5px 5px 2px 0 rgba(0, 0, 0, 0.3);
 }
 
 .tooltipster-sidetip.tooltipster-light.tooltipster-light-customized .tooltipster-content {
-	color: #000066;
-    font-size: 12px;
-	padding: 8px;
+  color: #000066;
+  font-size: 12px;
+  padding: 8px;
 }
 
-@media (min-width: 768px){
+.message {
+	font-size: 14px;
+	color: red;
+	background-color: rgba(255, 0, 0, 0.1);
+	padding: 10px;
+	margin-bottom: 20px;
+	border-radius: 10px;
+	text-align: center;
+	font-weight: bold;
+}
+
+@media (min-width: 768px) {
   .required_notification {
-      margin: 5px 0 0 0;
+	margin: 5px 0 0 0;
   }
   .tab-content {
-      padding: 70px 0 40px 0;
-      min-height: 590px;
+	padding: 70px 0 40px 0;
+	min-height: 590px;
   }
   .form-horizontal .control-label {
-      padding-top: 7px;
-      margin-bottom: 0;
-      text-align: right;
-      display: block;
-      margin: 0 auto;
+	padding-top: 7px;
+	margin-bottom: 0;
+	text-align: right;
+	display: block;
+	margin: 0 auto;
   }
-  .form-field input, .form-field select, .form-field textarea {
-      border: 1px solid #aaa;
-      box-shadow: 0px 0px 3px #ccc, 0 10px 15px #eee inset;
-      border-radius: 2px;
-      padding-right: 30px;
-      -moz-transition: padding .25s;
-      -webkit-transition: padding .25s;
-      -o-transition: padding .25s;
-      transition: padding .25s;
+  .form-field input[type=text],
+  .form-field input[type=email],
+  .form-field input[type=password],
+  .form-field select,
+  .form-field textarea {
+	border: 1px solid #aaa;
+	box-shadow: 0px 0px 3px #ccc, 0 10px 15px #eee inset;
+	border-radius: 2px;
+	padding-right: 30px;
+	-moz-transition: padding .25s;
+	-webkit-transition: padding .25s;
+	-o-transition: padding .25s;
+	transition: padding .25s;
   }
 }
-
 
 
 /*DataTable*/

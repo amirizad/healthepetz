@@ -40,7 +40,9 @@ module.exports = (express,passport,db,path)=>{
     })
     
     .get('/table',(req,res,next)=>{
-        res.render('table');
+        res.render('table',{
+            petId:2
+        });
     })
     //returns the router requsted
     return router;
