@@ -1,274 +1,252 @@
-<header>
-	<div id="pets-carousel" class="carousel slide" data-ride="carousel">
-		<ol class="carousel-indicators">
-			<li data-target="#pets-carousel" data-slide-to="0" class="active"></li>
-			<li data-target="#pets-carousel" data-slide-to="1"></li>
-			<li data-target="#pets-carousel" data-slide-to="2"></li>
-		</ol>
-		<div class="carousel-inner" role="listbox">
-			<div class="item active">
-				<img src="/assets/img/slide1.jpg" alt="">
-				<div class="carousel-caption">
-				</div>
-			</div>
-			<div class="item">
-				<img src="/assets/img/slide2.jpg" alt="">
-				<div class="carousel-caption">
-					<span>Some Text Here</span>
-				</div>
-			</div>
-			<div class="item">
-				<img src="/assets/img/slide3.jpg" alt="">
-				<div class="carousel-caption">
-					<span>Some Text Here</span>
-				</div>
-			</div>
-		</div>
-		<a class="left carousel-control" href="#pets-carousel" role="button" data-slide="prev">
-			<span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
-			<span class="sr-only">Previous</span>
-		</a>
-		<a class="right carousel-control" href="#pets-carousel" role="button" data-slide="next">
-			<span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
-			<span class="sr-only">Next</span>
-		</a>
-	</div>
-</header>
+<!-- Login/Signup Section -->
 <section id="loginsec">
-	<div class="midvalignform">
-		<div class="container">
-			<div class="row">
-				<span class="message" id="tabsmsg" style="display:none;"></span>
-				<div id="tabs">
-					<ul id="ultabs" class="nav nav-tabs" role="tablist">
-						<li id="logintab"><a href="#login" aria-controls="login" role="tab" data-toggle="tab">Login</a></li>
-						<li id="signuptab" class="active"><a href="#signup" aria-controls="signup" role="tab" data-toggle="tab">Sign up</a></li>
-						<li id="forgottab"><a href="#forgot" aria-controls="forgot" role="tab" data-toggle="tab">Forgot</a></li>
-					</ul>
-					<span class="required_notification">* Denotes Required Field</span>
-					<div class="tab-content">
-						<!--************************ Register **************************-->
-						<div id="signup" class="tab-pane fade in active">
-							<form class="form-horizontal form-field register" action="/api/register" role="form" name="registerfrm" id="registerfrm" method="POST" autocomplete="off">
-								<div class="form-group">
-									<label class="control-label col-xs-3" for="fname">First Name:</label>
-									<div class="col-xs-11 col-sm-7">
-										<input class="form-control reqfield" type="text" name="fname" id="fname" tabindex="1" value="" placeholder="Enter your first name." pattern=".{2,}">
-									</div>
+	<div class="container">
+		<div class="row">
+			<div id="tabs">
+				<ul id="ultabs" class="nav nav-tabs" role="tablist">
+					<li id="logintab" class="active"><a href="#login" aria-controls="login" role="tab" data-toggle="tab">Login</a></li>
+					<li id="signuptab"><a href="#signup" aria-controls="signup" role="tab" data-toggle="tab">Sign up</a></li>
+					<li id="forgottab"><a href="#forgot" aria-controls="forgot" role="tab" data-toggle="tab">Forgot</a></li>
+				</ul>
+				<span class="required_notification">* Denotes Required Field</span>
+				<div class="tab-content">
+					<!--************************ Register **************************-->
+					<div id="signup" class="tab-pane fade">
+						<form class="form-horizontal form-field register" action="/api/register" role="form" name="registerfrm" id="registerfrm" method="POST" autocomplete="off">
+							<div class="form-group">
+								<label class="control-label col-xs-3" for="o-fname">First Name:</label>
+								<div class="col-xs-11 col-sm-7">
+									<input class="form-control reqfield" type="text" name="o-fname" id="o-fname" tabindex="1" value="" placeholder="Enter your first name." pattern=".{2,}">
 								</div>
-								<div class="form-group">
-									<label class="control-label col-xs-3" for="lname">Last Name:</label>
-									<div class="col-xs-11 col-sm-7">
-										<input class="form-control reqfield" type="text" name="lname" id="lname" tabindex="2" value="" placeholder="Enter your last name." pattern=".{2,}">
-									</div>
+							</div>
+							<div class="form-group">
+								<label class="control-label col-xs-3" for="o-lname">Last Name:</label>
+								<div class="col-xs-11 col-sm-7">
+									<input class="form-control reqfield" type="text" name="o-lname" id="o-lname" tabindex="2" value="" placeholder="Enter your last name." pattern=".{2,}">
 								</div>
-								<div class="form-group">
-									<label class="control-label col-xs-3" for="dob">Date of Birth:</label>
-									<div class="col-xs-11 col-sm-7">
-										<input class="form-control" type="text" name="dob" id="dob" tabindex="3" value="" placeholder="Enter your date of birth." pattern="(0[1-9]|1[012])[- /.](0[1-9]|[12][0-9]|3[01])[- /.](19|20)\d\d">
-									</div>
-										<span><a href="#loginsec" class="petstooltip page-scroll" title="Date Format: MM/DD/YYYY"><img id="route-input-help" src="/assets/css/icons/info-blue.png" class="info-icon" ></a></span>
+							</div>
+							<div class="form-group">
+								<label class="control-label col-xs-3" for="o-bd">Date of Birth:</label>
+								<div class="col-xs-11 col-sm-7">
+									<input class="form-control" type="text" name="o-bd" id="o-bd" tabindex="3" value="" placeholder="Enter your date of birth." pattern="(0[1-9]|1[012])[- /.](0[1-9]|[12][0-9]|3[01])[- /.](19|20)\d\d">
 								</div>
-								<div class="form-group">
-									<label class="control-label col-xs-3">Sex:</label>
-									<div class="col-xs-11 col-sm-7">
-										<label class="radio-inline">
-											<input type="radio" tabindex="4" name="sex" id="male" value="M"> Male
-										</label>
-										<label class="radio-inline">
-											<input type="radio" name="sex" id="female" value="F"> Female
-										</label>
-									</div>
+								<span><a href="#loginsec" class="petstooltip page-scroll" title="Date Format: MM/DD/YYYY"><img id="route-input-help" src="assets/css/icons/info-blue.png" class="info-icon" ></a></span>
+							</div>
+							<div class="form-group">
+								<label class="control-label col-xs-3">Sex:</label>
+								<div class="col-xs-11 col-sm-7">
+									<label class="radio-inline">
+										<input type="radio" name="sex" id="male" tabindex="4" value="M"> Male
+									</label>
+									<label class="radio-inline">
+										<input type="radio" name="sex" id="female" value="F"> Female
+									</label>
 								</div>
-								<div class="form-group">
-									<label class="control-label col-xs-3" for="email">Email:</label>
-									<div class="col-xs-11 col-sm-7">
-										<input class="form-control reqfield" type="email" name="email" id="email" tabindex="5" value="" placeholder="Enter your contact email address." pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,3}$">
-									</div>
-									<span><a href="#loginsec" class="petstooltip page-scroll" title="This will be used for communications."><img id="route-input-help" src="/assets/css/icons/info-blue.png" class="info-icon" ></a></span>
+							</div>
+							<div class="form-group">
+								<label class="control-label col-xs-3" for="o-email">Email:</label>
+								<div class="col-xs-11 col-sm-7">
+									<input class="form-control reqfield" type="email" name="o-email" id="o-email" tabindex="5" value="" placeholder="Enter your contact email address." pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,3}$">
 								</div>
-								<div class="form-group">
-									<label class="control-label col-xs-3" for="phone">Phone:</label>
-									<div class="col-xs-11 col-sm-7">
-										<input class="form-control" type="text" name="phone" id="phone" tabindex="6" value="" placeholder="Enter your contact phone number." pattern="(?:\(\d{3}\)|\d{3})[- ]?\d{3}[- ]?\d{4}">
-									</div>
+								<span><a href="#loginsec" class="petstooltip page-scroll" title="This will be used for communications."><img id="route-input-help" src="assets/css/icons/info-blue.png" class="info-icon" ></a></span>
+							</div>
+							<div class="form-group">
+								<label class="control-label col-xs-3" for="o-phone">Phone:</label>
+								<div class="col-xs-11 col-sm-7">
+									<input class="form-control" type="text" name="o-phone" id="o-phone" tabindex="6" value="" placeholder="Enter your contact phone number." pattern="(?:\(\d{3}\)|\d{3})[- ]?\d{3}[- ]?\d{4}">
 								</div>
-								<div class="form-group">
-									<label class="control-label col-xs-3" for="fax">Fax:</label>
-									<div class="col-xs-11 col-sm-7">
-										<input class="form-control" type="text" name="fax" id="fax" tabindex="7" value="" placeholder="Enter your contact fax number." pattern="(?:\(\d{3}\)|\d{3})[- ]?\d{3}[- ]?\d{4}">
-									</div>
+							</div>
+							<div class="form-group">
+								<label class="control-label col-xs-3" for="o-fax">Fax:</label>
+								<div class="col-xs-11 col-sm-7">
+									<input class="form-control" type="text" name="o-fax" id="o-fax" tabindex="7" value="" placeholder="Enter your contact fax number." pattern="(?:\(\d{3}\)|\d{3})[- ]?\d{3}[- ]?\d{4}">
 								</div>
-								<div class="form-group">
-									<label class="control-label col-xs-3" for="address">Address:</label>
-									<div class="col-xs-11 col-sm-7">
-										<input class="form-control" type="text" name="address" id="address" tabindex="8" value="" placeholder="Enter your contact address." pattern="[0-9()-]{13}">
-									</div>
+							</div>
+							<div class="form-group">
+								<label class="control-label col-xs-3" for="o-address">Address:</label>
+								<div class="col-xs-11 col-sm-7">
+									<input class="form-control" type="text" name="o-address" id="o-address" tabindex="8" value="" placeholder="Enter your contact address." pattern="[0-9()-]{13}">
 								</div>
-								<div class="form-group">
-									<label class="control-label col-xs-3">City - State - Zip:</label>
-									<div class="col-xs-11 col-sm-7">
-										<div class="row">
-											<div class="col-xs-4">
-												<input type="text" tabindex="9" class="form-control" name="city" id="city" placeholder="City">
-											</div>
-											<div class="col-xs-4">
-												<select class="form-control" tabindex="10" name="state" id="state">
-													<option value="" disabled selected>Select one ...</option>
-													<option value="AL">Alabama</option>
-													<option value="AL">Alabama</option>
-													<option value="AK">Alaska</option>
-													<option value="AZ">Arizona</option>
-													<option value="AR">Arkansas</option>
-													<option value="CA">California</option>
-													<option value="CO">Colorado</option>
-													<option value="CT">Connecticut</option>
-													<option value="DE">Delaware</option>
-													<option value="DC">District Of Columbia</option>
-													<option value="FL">Florida</option>
-													<option value="GA">Georgia</option>
-													<option value="HI">Hawaii</option>
-													<option value="ID">Idaho</option>
-													<option value="IL">Illinois</option>
-													<option value="IN">Indiana</option>
-													<option value="IA">Iowa</option>
-													<option value="KS">Kansas</option>
-													<option value="KY">Kentucky</option>
-													<option value="LA">Louisiana</option>
-													<option value="ME">Maine</option>
-													<option value="MD">Maryland</option>
-													<option value="MA">Massachusetts</option>
-													<option value="MI">Michigan</option>
-													<option value="MN">Minnesota</option>
-													<option value="MS">Mississippi</option>
-													<option value="MO">Missouri</option>
-													<option value="MT">Montana</option>
-													<option value="NE">Nebraska</option>
-													<option value="NV">Nevada</option>
-													<option value="NH">New Hampshire</option>
-													<option value="NJ">New Jersey</option>
-													<option value="NM">New Mexico</option>
-													<option value="NY">New York</option>
-													<option value="NC">North Carolina</option>
-													<option value="ND">North Dakota</option>
-													<option value="OH">Ohio</option>
-													<option value="OK">Oklahoma</option>
-													<option value="OR">Oregon</option>
-													<option value="PA">Pennsylvania</option>
-													<option value="RI">Rhode Island</option>
-													<option value="SC">South Carolina</option>
-													<option value="SD">South Dakota</option>
-													<option value="TN">Tennessee</option>
-													<option value="TX">Texas</option>
-													<option value="UT">Utah</option>
-													<option value="VT">Vermont</option>
-													<option value="VA">Virginia</option>
-													<option value="WA">Washington</option>
-													<option value="WV">West Virginia</option>
-													<option value="WI">Wisconsin</option>
-													<option value="WY">Wyoming</option>
-												</select>
-											</div>
-											<div class="col-xs-4">
-												<input type="text" tabindex="11" class="form-control" name="zip" id="zip" placeholder="Zip" PATTERN="(\d{5}([\-]\d{4})?)">
-											</div>
+							</div>
+							<div class="form-group">
+								<label class="control-label col-xs-3">City - State - Zip:</label>
+								<div class="col-xs-11 col-sm-7">
+									<div class="row">
+										<div class="col-xs-4">
+											<input type="text" tabindex="9" class="form-control" name="o-city" id="o-city" placeholder="City">
+										</div>
+										<div class="col-xs-4">
+											<select class="form-control" tabindex="10" name="o-state" id="o-state">
+												<option value="" disabled selected>Select one ...</option>
+												<option value="AL">Alabama</option>
+												<option value="AL">Alabama</option>
+												<option value="AK">Alaska</option>
+												<option value="AZ">Arizona</option>
+												<option value="AR">Arkansas</option>
+												<option value="CA">California</option>
+												<option value="CO">Colorado</option>
+												<option value="CT">Connecticut</option>
+												<option value="DE">Delaware</option>
+												<option value="DC">District Of Columbia</option>
+												<option value="FL">Florida</option>
+												<option value="GA">Georgia</option>
+												<option value="HI">Hawaii</option>
+												<option value="ID">Idaho</option>
+												<option value="IL">Illinois</option>
+												<option value="IN">Indiana</option>
+												<option value="IA">Iowa</option>
+												<option value="KS">Kansas</option>
+												<option value="KY">Kentucky</option>
+												<option value="LA">Louisiana</option>
+												<option value="ME">Maine</option>
+												<option value="MD">Maryland</option>
+												<option value="MA">Massachusetts</option>
+												<option value="MI">Michigan</option>
+												<option value="MN">Minnesota</option>
+												<option value="MS">Mississippi</option>
+												<option value="MO">Missouri</option>
+												<option value="MT">Montana</option>
+												<option value="NE">Nebraska</option>
+												<option value="NV">Nevada</option>
+												<option value="NH">New Hampshire</option>
+												<option value="NJ">New Jersey</option>
+												<option value="NM">New Mexico</option>
+												<option value="NY">New York</option>
+												<option value="NC">North Carolina</option>
+												<option value="ND">North Dakota</option>
+												<option value="OH">Ohio</option>
+												<option value="OK">Oklahoma</option>
+												<option value="OR">Oregon</option>
+												<option value="PA">Pennsylvania</option>
+												<option value="RI">Rhode Island</option>
+												<option value="SC">South Carolina</option>
+												<option value="SD">South Dakota</option>
+												<option value="TN">Tennessee</option>
+												<option value="TX">Texas</option>
+												<option value="UT">Utah</option>
+												<option value="VT">Vermont</option>
+												<option value="VA">Virginia</option>
+												<option value="WA">Washington</option>
+												<option value="WV">West Virginia</option>
+												<option value="WI">Wisconsin</option>
+												<option value="WY">Wyoming</option>
+											</select>
+										</div>
+										<div class="col-xs-4">
+											<input type="text" tabindex="11" class="form-control" name="o-zip" id="o-zip" placeholder="Zip" PATTERN="(\d{5}([\-]\d{4})?)">
 										</div>
 									</div>
 								</div>
-								<hr>
-								<div class="form-group">
-									<label class="control-label col-xs-3" for="username">Username:</label>
-									<div class="col-xs-11 col-sm-7">          
-										<input class="form-control reqfield" type="text" name="username" id="username" tabindex="12" value="" placeholder="Please enter your desired username." pattern="^[a-z][a-z0-9]{6,10}$">
-									</div>
-									<span><a href="#loginsec" class="petstooltip page-scroll" title="Username should only contain lowercase letters and numbers, starting with a letter, at least 6 upto 10 characters."><img id="route-input-help" src="/assets/css/icons/info-blue.png" class="info-icon" ></a></span>
+							</div>
+							<hr>
+							<div class="form-group">
+								<label class="control-label col-xs-3" for="username">Username:</label>
+								<div class="col-xs-11 col-sm-7">
+									<input class="form-control reqfield" type="text" name="username" id="username" tabindex="12" value="" placeholder="Please enter your desired username." pattern="^[a-z][a-z0-9]{6,10}$">
 								</div>
-								<div class="form-group">
-									<label class="control-label col-xs-3" for="password">Password:</label>
-									<div class="col-xs-11 col-sm-7">
-										<input class="form-control reqfield" type="password" name="password" id="password" tabindex="13" value="" placeholder="Choose a password for your account." pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{6,}" onchange="form.confirmpass.pattern = this.value;">
-									</div>
-									<span><a href="#loginsec" class="petstooltip page-scroll" title="Must be at least 6 upto 16 characters including one number, one lowercase and one uppercase letter."><img id="route-input-help" src="/assets/css/icons/info-blue.png" class="info-icon" ></a></span>
+								<span><a href="#loginsec" class="petstooltip page-scroll" title="Username should only contain lowercase letters and numbers, starting with a letter, at least 6 upto 10 characters."><img id="route-input-help" src="assets/css/icons/info-blue.png" class="info-icon" ></a></span>
+							</div>
+							<div class="form-group">
+								<label class="control-label col-xs-3" for="password">Password:</label>
+								<div class="col-xs-11 col-sm-7">
+									<input class="form-control reqfield" type="password" name="password" id="password" tabindex="13" value="" placeholder="Choose a password for your account." pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{6,}" onchange="form.confirmpass.pattern = this.value;">
 								</div>
-								<div class="form-group">
-									<label class="control-label col-xs-3" for="confirmpass">Confirm Password:</label>
-									<div class="col-xs-11 col-sm-7">
-										<input class="form-control reqfield" type="password" name="confirmpass" id="confirmpass" tabindex="14" value="" placeholder="Retype the password to confirm." pattern="">
-									</div>
+								<span><a href="#loginsec" class="petstooltip page-scroll" title="Must be at least 6 upto 16 characters including one number, one lowercase and one uppercase letter."><img id="route-input-help" src="assets/css/icons/info-blue.png" class="info-icon" ></a></span>
+							</div>
+							<div class="form-group">
+								<label class="control-label col-xs-3" for="confirmpass">Confirm Password:</label>
+								<div class="col-xs-11 col-sm-7">
+									<input class="form-control reqfield" type="password" name="confirmpass" id="confirmpass" tabindex="14" value="" placeholder="Retype the password to confirm." pattern="">
 								</div>
-								<div class="message" id="signup-err-msg">
-									{{#if regError}}
-										{{#each regError}}
-										<div class="alert alert-warning" role="alert"><button class="close" type="button" data-dismiss="alert" aria-hidden="true">&times;</button><strong>Error! </strong> {{this.message}}</div>
-										{{/each}}
-									{{/if}} 
+							</div>
+							<div class="message frontmsg hide" id="signup-err-msg"></div>
+							{{#if regError}}
+								<div class="message">
+								{{#each regError}}
+									<div class="alert alert-warning" role="alert"><button class="close" type="button" data-dismiss="alert" aria-hidden="true">&times;</button><strong>Error! </strong> {{this.message}}</div>
+								{{/each}}
 								</div>
-								<div class="form-group form-footer text-center">
-									<button type="submit" tabindex="15" id="signupbtn" class="btn btn-primary btn-xl submitbtn" value="signup">Register</button>
-								</div>
-								<div class="form-group form-footer text-center">
-									<p>Already Registered? <b>Log in <a href="#login" aria-controls="login" role="tab" data-toggle="tab">here</a></b></p>
-								</div>
-							</form>
-						</div>
+							{{/if}} 
+							<div class="form-group form-footer text-center">
+								<button type="submit" tabindex="15" id="signupbtn" class="btn btn-primary btn-xl submitbtn" value="signup">Register</button>
+							</div>
+							<div class="form-group form-footer text-center">
+								<p>Already Registered? <b>Log in <a href="#login" aria-controls="login" role="tab" data-toggle="tab">here</a></b></p>
+							</div>
+						</form>
+					</div>
 
-						<!--************************ Login **************************-->
-						<div id="login" class="tab-pane fade topspace">
-							<form class="form-horizontal form-field register" action="/api/login" role="form" name="loginfrm" id="loginfrm" method="POST" autocomplete="off">
-								<input type="hidden" name="logedin" id="logedin" value="">
-								<div class="form-group">
-									<label class="control-label col-xs-3" for="login-id">User ID:</label>
-									<div class="col-xs-11 col-sm-7">
-										<input autocomplete="off" class="form-control reqfield" type="email" name="login-id" id="login-id" placeholder="Enter your user id" value="" pattern="^[a-z][a-z0-9]{6,10}$">
-									</div>
+					<!--************************ Login **************************-->
+					<div id="login" class="tab-pane fade in active">
+						<form class="form-horizontal form-field register" action="/api/login" role="form" name="loginfrm" id="loginfrm" method="POST" autocomplete="off">
+							<div class="form-group">
+								<label class="control-label col-xs-3" for="login-id">User ID:</label>
+								<div class="col-xs-11 col-sm-7">
+									<input autocomplete="off" class="form-control reqfield" type="email" name="login-id" id="login-id" placeholder="Enter your user id" value="" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,3}$">
 								</div>
-								<div class="form-group">
-									<label class="control-label col-xs-3" for="login-pass">Password:</label>
-									<div class="col-xs-11 col-sm-7">
-										<input autocomplete="off" class="form-control reqfield" type="password" name="login-pass" id="login-pass" placeholder="Enter your password" value="">
-									</div>
+							</div>
+							<div class="form-group">
+								<label class="control-label col-xs-3" for="login-pass">Password:</label>
+								<div class="col-xs-11 col-sm-7">
+									<input autocomplete="off" class="form-control reqfield" type="password" name="login-pass" id="login-pass" placeholder="Enter your password" value="">
 								</div>
-								<div class="message" id="login-err-msg">
-									{{#if loginError}}
-										{{#each loginError}}
-										<div class="alert alert-warning" role="alert"><button class="close" type="button" data-dismiss="alert" aria-hidden="true">&times;</button><strong>Error! </strong> {{this}}</div>
-										{{/each}}
-									{{/if}} 
+							</div>
+							<div class="message frontmsg hide" id="login-err-msg"></div>
+							{{#if loginError}}
+								<div class="message">
+								{{#each loginError}}
+									<div class="alert alert-warning" role="alert"><button class="close" type="button" data-dismiss="alert" aria-hidden="true">&times;</button><strong>Error! </strong> {{this}}</div>
+								{{/each}}
 								</div>
-								<div class="form-group form-footer text-center">
-									<p><input type="checkbox" name="keeplogin" id="keeplogin"> Keep me logged in</p>
-									<button type="submit" id="loginbtn" class="btn btn-primary btn-xl submitbtn" value="login">Login</button>
-								</div>
-								<div class="form-group form-footer text-center">
-									<p>Forgot your password? Retrieve your password <b><a href="#forgot" aria-controls="forgot" role="tab" data-toggle="tab">here</a></b></p>
-									<p>You don't have an account yet? Register <b><a href="#signup" aria-controls="signup" role="tab" data-toggle="tab">here</a></b></p>
-								</div>
-							</form>
-						</div>
+							{{/if}}	
+							<div class="form-group form-footer text-center">
+								<p><input type="checkbox" name="keeplogin" id="keeplogin"> Keep me logged in</p>
+								<button type="submit" id="loginbtn" class="btn btn-primary btn-xl submitbtn" value="login">Login</button>
+							</div>
+							<!-- <div class="input-group-addon link-icon openmap" data-toggle="modal" data-target="#mapmodal">
+								<span class="fa fa-location-arrow"></span>
+							</div> -->
+							<div class="form-group form-footer text-center">
+								<p>Forgot your password? Retrieve your password <b><a href="#forgot" aria-controls="forgot" role="tab" data-toggle="tab">here</a></b></p>
+								<p>You don't have an account yet? Register <b><a href="#signup" aria-controls="signup" role="tab" data-toggle="tab">here</a></b></p>
+							</div>
+						</form>
+					</div>
 
-						<!--************************ Forgot **************************-->
-						<div id="forgot" class="tab-pane fade topspace">
-							<form class="form-horizontal form-field register" action="/forgot" role="form" name="forgotfrm" id="forgotfrm" method="POST" autocomplete="off">
-								<div class="form-group">
-									<label class="control-label col-xs-3" for="forgotemail">Email:</label>
-									<div class="col-xs-11 col-sm-7">
-										<input class="form-control reqfield" type="email" name="forgotemail" id="forgotemail" tabindex="8" value="" placeholder="Enter your email address." pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,3}$">
-									</div>
+					<!--************************ Forgot **************************-->
+					<div id="forgot" class="tab-pane fade">
+						<form class="form-horizontal form-field register" action="/forgot" role="form" name="forgotfrm" id="forgotfrm" method="POST" autocomplete="off">
+							<div class="form-group">
+								<label class="control-label col-xs-3" for="forgotemail">Email:</label>
+								<div class="col-xs-11 col-sm-7">
+									<input class="form-control reqfield" type="email" name="forgotemail" id="forgotemail" tabindex="8" value="" placeholder="Enter your email address." pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,3}$">
 								</div>
-								<div class="message" id="forgot-err-msg">
-									<!--Forgot Password Errors are going here.-->
+							</div>
+							<div class="message frontmsg hide" id="login-err-msg"></div>
+							{{#if forgotError}}
+								<div class="message">
+								{{#each forgotError}}
+									<div class="alert alert-warning" role="alert"><button class="close" type="button" data-dismiss="alert" aria-hidden="true">&times;</button><strong>Error! </strong> {{this}}</div>
+								{{/each}}
 								</div>
-								<div class="form-group form-footer text-center">
-									<button type="submit" id="forgotbtn" class="btn btn-primary btn-xl submitbtn" value="forgot">Send Reminder</button>
-								</div>
-								<div class="form-group form-footer text-center">
-									<p>Suddenly remebered? Log in <b><a href="#login" aria-controls="login" role="tab" data-toggle="tab">here</a></b></p>
-								</div>
-							</form>
-						</div>
+							{{/if}} 
+							<div class="form-group form-footer text-center">
+								<button type="submit" id="forgotbtn" class="btn btn-primary btn-xl submitbtn" value="forgot">Send Reminder</button>
+							</div>
+							<div class="form-group form-footer text-center">
+								<p>Suddenly remebered? Log in <b><a href="#login" aria-controls="login" role="tab" data-toggle="tab">here</a></b></p>
+							</div>
+						</form>
 					</div>
 				</div>
 			</div>
 		</div>
 	</div>
 </section>
+
+<!-- Profile Section -->
+<section id="profilesec">
+</section>
+
+<!--If loged in value="1" Else value="0"-->
+<input type="hidden" name="logedin" id="logedin" value="0">
