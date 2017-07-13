@@ -35,6 +35,5 @@
     "passport-local": "^1.0.0",
     "sequelize": "^4.2.1",
     "sequelize-cli": "^2.7.0"
-
   }
 }

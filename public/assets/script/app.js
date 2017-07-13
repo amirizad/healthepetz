@@ -1,6 +1,6 @@
 $(document).ready(function() {
 
-	hPetz.updateNavbar($('#logedin').val());
+	hPetz.updateNavbar($('#loggedin').val());
 
 	$('.navto').click(function(){
 		hPetz.changePage($(this).attr('id'));
@@ -129,10 +129,10 @@ var hPetz = {
 		$('#signuptab').addClass('hide');
 	},
 
-	updateNavbar: function(logedIn){
+	updateNavbar: function(loggedIn){
 		$('li.navto.active').removeClass('active');
 		$('section').removeClass('show');
-		if ( logedIn == 1){
+		if ( loggedIn == 1){
 			$('#loginsecnav').addClass('hide');
 			$('#profilesecnav').removeClass('hide');
 			$('#logoutnav').removeClass('hide');
