@@ -5,7 +5,8 @@ var baseInfo = {
 	lat: 33.644906,
 	lng: -117.834748,
 	add: '510 E Peltason Dr, Irvine, CA 92697, USA',
-	rad: 3
+	rad: 3,
+	lim: 10
 };
 
 var hPetz = {
@@ -83,6 +84,7 @@ var hPetz = {
 		//Map
 		$('#vetfinderbtn').click(function(event){
 			event.preventDefault();
+			hPetz.findVets();
 		});
 
 		$('#findlocation').on('click', function() { hPetz.findLocation() });
@@ -177,19 +179,19 @@ var hPetz = {
 
 	},
 
-	findVet: function(info){
-		var lat = info.lat;
-		var long = info.long;
-		var rad = info.rad;
-		var apiURL = `http://www.petmd.com/servicefinderapi/select?lat=${lat}&lng=${long}&radius=2`;
+	findVets: function(){
+		var lat = baseInfo.lat;
+		var long = baseInfo.lng;
+		var rad = baseInfo.rad;
+		var apiURL = `http://www.petmd.com/servicefinderapi/select?lat=${lat}&lng=${long}&radius=${rad}`;
 		$.getJSON(apiURL, function() {
 			console.log('success');
 		})
 		.done(function(data) {
 			vets = data.response.docs;
-			vets = sortJSON(vets);
+			vets.sort(function(a, b){ return a.distance - b.distance; });
 			if(vets.length){
-				hPetz.pinVets();
+				hPetz.pinVets(vets);
 			} else {
 
 			}
@@ -197,7 +199,12 @@ var hPetz = {
 		.fail(function(error) {
 			console.log(error);
 		});
-		// http://www.petmd.com/servicefinderapi/select?lat=33.644949&lng=-117.834808&radius=3
+	},
+
+	pinVets: function(vets){
+		for ( i = 0 ; i < baseInfo.lim ; i++){
+			console.log(vets.title);
+		}
 	},
 
 	initMap: function() {
