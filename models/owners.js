@@ -64,7 +64,7 @@ module.exports = function(sequelize, DataTypes) {
 owners.associate = function(models) {
     // Using additional options like CASCADE etc for demonstration
     // Can also simply do Task.belongsTo(models.User);
-    owners.belongsTo(models.Users, {
+    owners.belongsTo(models.users, {
       foreignKey: {
         allowNull: true
       }
