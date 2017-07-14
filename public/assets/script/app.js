@@ -1,131 +1,17 @@
-$(document).ready(function() {
-
-	hPetz.updateNavbar($('#loggedin').val());
-
-	$('.navto').click(function(){
-		hPetz.changePage($(this).attr('id'));
-	})
-
-  $('.carousel').carousel({ interval: 7000 })
-
-  $('a[data-toggle="tab"]').on('shown.bs.tab', function (e) {
-    var target = this.href.split('#');
-    $('.nav a').filter('[href="#'+target[1]+'"]').tab('show');
-  });
-  $("input.reqfield").prop("required",true);
-
-  $(".petstooltip").tooltipster({
-    theme: ['tooltipster-light', 'tooltipster-light-customized']
-  });
-
-  // $('table.display').DataTable( {
-  //   "order": [[ 3, "desc" ]],
-  //   "paging":   true,
-  //   "ordering": true,
-  //   "info":     true,
-  //   "lengthMenu": [[5, 10, 25, -1], [5, 10, 25, "All"]],
-  //   stateSave: true
-    // ,"columnDefs": [
-    //         {
-    //             "targets": [ 2 ],
-    //             "visible": false,
-    //             "searchable": false
-    //         },
-    //         {
-    //             "targets": [ 3 ],
-    //             "visible": false
-    //         }
-    //     ]
-		// });
-		
-	$(".submitbtn").click(function(event){
-		event.preventDefault();
-		$('.message').addClass('hide');
-		var verified=1;
-		var $error="";
-		var $form = $(this).closest('form');
-		var formId = $form.attr("id");
-		var $action = $form.attr("action");
-		var $errmsg = $form.find('.frontmsg').attr('id');
-		$('#' + formId + ' [required]').each(function(){
-			var elemval=$.trim($(this).val());
-			var elempatt=$(this).attr('pattern');
-			if (elemval === "" || !elemval.match(elempatt)){
-				verified=0;
-				$error=$(this).attr('id');
-				return false;
-			};
-		});
-		if(verified===1){
-			$('#signup-err-msg').addClass('hide');
-			$.post($action, $(this.form).serialize() , function(data, status){
-				if(status="success"){
-					var stat = data;
-					if(stat.length>3){
-						$("#user_idx").val(stat);
-						$("#submitbtn").val("login");
-						$("#portalx").val("system");
-						$form.submit();						
-					}
-				};
-			});
-		}
-		else{
-			$("#"+$errmsg).html('Please fill in the required fields (*)');
-			$("#"+$errmsg).removeClass('hide');
-			$("#"+$error).focus();
-		};
-	});
-
-	//Map
-	$('#vetfinderbtn').click(function(event){
-		event.preventDefault();
-	});
-
-	// $('#mapmodal').on('shown.bs.modal', function() {
-	// 	hPetz.initMap();
-	// 	if ($('#addresstext').val().trim() !== ''){
-	// 			hPetz.findLocation();
-	// 	};
-	// });
-
-	// $('#mapmodal').on('hidden.bs.modal', function() {
-	// 	$('#addresstext').val('');
-	// 	myLatLong = { lat: 33.644906, lng: -117.834748 };
-	// });
-
-	$('#findlocation').on('click', function() { hPetz.findLocation() });
-
-	$('#loc-confirm').on('click', function() {
-			var latLong = hPetz.getLatLng();
-			// You can use latLong object variable to store
-			// the location information here.
-			// latLong.lat & latLong.lng & latLong.add
-			if($('#data-input').val() !== ''){
-				var dataInput = $('#data-input').val();
-				$('#' + dataInput).attr({
-						'data-address': latLong.add,
-						'data-lat': latLong.lat,
-						'data-long': latLong.lng
-				});
-				$('#data-input').val('');
-			};
-			// $('#mapmodal').modal('hide');
-	});
-
-	// $('.openmap').click(function() {
-	// 		var $id = $(this).prev().attr('id');
-	// 		$('#data-input').val($id);
-	// 		// $('#mapmodal').modal('show');
-	// });
-	
-});
-
+var returnUser = false;
 var vets = [];
 var myLatLong = { lat: 33.644906, lng: -117.834748 };
+var baseInfo = {
+	lat: 33.644906,
+	lng: -117.834748,
+	add: '510 E Peltason Dr, Irvine, CA 92697, USA',
+	rad: 3,
+	lim: 10
+};
+
 var hPetz = {
 
-	signupTab: function(){
+	noSignupTab: function(){
 		$('#signuptab').addClass('hide');
 	},
 
@@ -139,6 +25,7 @@ var hPetz = {
 			$('#profilesecnav').addClass('active');
 			$('#profilesec').addClass('show')
 			$('#activesec').val('profilesec');
+			hPetz.loadProfJS();
 		} else{
 			$('#loginsecnav').removeClass('hide');
 			$('#profilesecnav').addClass('hide');
@@ -146,6 +33,7 @@ var hPetz = {
 			$('#homesecnav').addClass('active');
 			$('#homesec').addClass('show')
 			$('#activesec').val('homesec');
+			hPetz.loadLoginJS();
 		}
 	},
 
@@ -192,22 +80,118 @@ var hPetz = {
 		}
 	},
 
+	loadJS: function(){
+		//Map
+		$('#vetfinderbtn').click(function(event){
+			event.preventDefault();
+			hPetz.findVets();
+		});
+
+		$('#findlocation').on('click', function() { hPetz.findLocation() });
+
+		$('#loc-confirm').on('click', function() {
+				var latLong = hPetz.getLatLng();
+				// You can use latLong object variable to store
+				// the location information here.
+				// latLong.lat & latLong.lng & latLong.add
+				if($('#data-input').val() !== ''){
+					var dataInput = $('#data-input').val();
+					$('#' + dataInput).attr({
+						'data-address': latLong.add,
+						'data-lat': latLong.lat,
+						'data-long': latLong.lng
+					});
+					$('#data-input').val('');
+				};
+		});
+	},
+
+	loadProfJS: function(){
+		$('table.display').DataTable( {
+			"order": [[ 3, "desc" ]],
+			"paging":   true,
+			"ordering": true,
+			"info":     true,
+			"lengthMenu": [[5, 10, 25, -1], [5, 10, 25, "All"]],
+			stateSave: true
+			// ,"columnDefs": [
+			// 				{
+			// 						"targets": [ 2 ],
+			// 						"visible": false,
+			// 						"searchable": false
+			// 				},
+			// 				{
+			// 						"targets": [ 3 ],
+			// 						"visible": false
+			// 				}
+			// 		]
+		});		
+	},
+
+	loadLoginJS: function(){
+		$("input.reqfield").prop("required",true);
+
+		$(".petstooltip").tooltipster({
+			theme: ['tooltipster-light', 'tooltipster-light-customized']
+		});
+
+		$(".submitbtn").click(function(event){
+			event.preventDefault();
+			$('.message').addClass('hide');
+			var verified=1;
+			var $error="";
+			var $form = $(this).closest('form');
+			var formId = $form.attr("id");
+			var $action = $form.attr("action");
+			var $errmsg = $form.find('.frontmsg').attr('id');
+			$('#' + formId + ' [required]').each(function(){
+				var elemval=$.trim($(this).val());
+				var elempatt=$(this).attr('pattern');
+				if (elemval === "" || !elemval.match(elempatt)){
+					verified=0;
+					$error=$(this).attr('id');
+					return false;
+				};
+			});
+			if(verified===1){
+				$('#signup-err-msg').addClass('hide');
+				$.post($action, $(this.form).serialize() , function(data, status){
+					if(status="success"){
+						var stat = data;
+						if(stat.length>3){
+							$("#user_idx").val(stat);
+							$("#submitbtn").val("login");
+							$("#portalx").val("system");
+							$form.submit();						
+						}
+					};
+				});
+			}
+			else{
+				$("#"+$errmsg).html('Please fill in the required fields (*)');
+				$("#"+$errmsg).removeClass('hide');
+				$("#"+$error).focus();
+			};
+		});		
+	},
+
 	logOut: function(){
 
 	},
 
-	findVet: function(info){
-		var lat = info.lat;
-		var long = info.long;
-		// var rad = info.rad;
-		var apiURL = `http://www.petmd.com/servicefinderapi/select?lat=${lat}&lng=${long}&radius=2`;
+	findVets: function(){
+		var lat = baseInfo.lat;
+		var long = baseInfo.lng;
+		var rad = baseInfo.rad;
+		var apiURL = `http://www.petmd.com/servicefinderapi/select?lat=${lat}&lng=${long}&radius=${rad}`;
 		$.getJSON(apiURL, function() {
 			console.log('success');
 		})
 		.done(function(data) {
 			vets = data.response.docs;
+			vets.sort(function(a, b){ return a.distance - b.distance; });
 			if(vets.length){
-				hPetz.pinVets();
+				hPetz.pinVets(vets);
 			} else {
 
 			}
@@ -215,23 +199,12 @@ var hPetz = {
 		.fail(function(error) {
 			console.log(error);
 		});
-		// http://www.petmd.com/servicefinderapi/select?lat=33.644949&lng=-117.834808&radius=3
 	},
 
-	getLocation: function() {
-			if (navigator.geolocation) {
-					navigator.geolocation.getCurrentPosition(showPosition);
-			} else { 
-					var x = "Geolocation is not supported by this browser.";
-					return x;
-			}
-	},
-
-	showPosition: function(position) {
-		myLatLong = {
-			lat: position.coords.latitude,
-			lng: position.coords.longitude
-		};
+	pinVets: function(vets){
+		for ( i = 0 ; i < baseInfo.lim ; i++){
+			console.log(vets.title);
+		}
 	},
 
 	initMap: function() {
@@ -262,6 +235,23 @@ var hPetz = {
 		});
 	},
 
+	
+	getLocation: function() {
+			if (navigator.geolocation) {
+					navigator.geolocation.getCurrentPosition(showPosition);
+			} else { 
+					var x = "Geolocation is not supported by this browser.";
+					return x;
+			}
+	},
+
+	showPosition: function(position) {
+		myLatLong = {
+			lat: position.coords.latitude,
+			lng: position.coords.longitude
+		};
+	},
+
 	findLocation: function() {
 		var address = $('#addresstext').val().trim();
 		if (address.length > 0) {
@@ -290,32 +280,30 @@ var hPetz = {
 		var addressInfo = "";
 		var geocoder = new google.maps.Geocoder;
 		geocoder.geocode({ 'location': myLatLong }, function(results, status) {
-		    if (status === 'OK') {
-			if (results[1]) {
-			    addressInfo = results[1].formatted_address;
+		  if (status === 'OK') {
+				if (results[1]) {
+					addressInfo = results[1].formatted_address;
+				} else {
+					addressInfo = 'No results found';
+				};
 			} else {
-			    addressInfo = 'No results found';
-			}
-		    } else {
-			addressInfo = 'Geocoder failed due to: ' + status;
-		    };
-		    $('#clicklat').text(myLatLong.lat.toFixed(4))
-			.attr('data-lat', myLatLong.lat);
-		    $('#clicklng').text(myLatLong.lng.toFixed(4))
-			.attr('data-long', myLatLong.lng);
-		    if ($('#address').text() === '') {
-			$('#address').text(addressInfo);
-		    };
+				addressInfo = 'Geocoder failed due to: ' + status;
+			};
+			$('#baselat').text(myLatLong.lat.toFixed(4)).attr('data-lat', myLatLong.lat);
+			$('#baselng').text(myLatLong.lng.toFixed(4)).attr('data-long', myLatLong.lng);
+			if ($('#address').text() === '') {
+				$('#address').text(addressInfo);
+			};
 		});
 	},
 
 	getLatLng: function() {
-		var lat = parseFloat($('#clicklat').attr('data-lat'));
-		var long = parseFloat($('#clicklng').attr('data-long'));
+		var lat = parseFloat($('#baselat').attr('data-lat'));
+		var long = parseFloat($('#baselng').attr('data-long'));
 		var address = $('#address').text();
 		var latLong = { lat: lat, lng: long, add: address };
-		$('#clicklat').removeAttr('data-lat').text('');
-		$('#clicklng').removeAttr('data-long').text('');
+		$('#baselat').removeAttr('data-lat').text('');
+		$('#baselng').removeAttr('data-long').text('');
 		$('#address').text('');
 		return latLong;
 	},
@@ -324,5 +312,22 @@ var hPetz = {
 	// 	var $address = $(this).attr('data-address');
 	// 	$('#addresstext').val($address);
 	// },
-
 };
+
+$(document).ready(function() {
+
+	hPetz.updateNavbar($('#loggedin').val());
+	hPetz.loadJS();
+
+	$('.navto').click(function(){
+		hPetz.changePage($(this).attr('id'));
+	})
+
+  $('.carousel').carousel({ interval: 7000 })
+
+  $('a[data-toggle="tab"]').on('shown.bs.tab', function (e) {
+    var target = this.href.split('#');
+    $('.nav a').filter('[href="#'+target[1]+'"]').tab('show');
+	});
+
+});
