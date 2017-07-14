@@ -191,6 +191,31 @@ section {
   font-size: 14px
 }
 
+.panel-title {
+  width: 50%;
+  font-size: 19px;
+  color: #000066;
+}
+
+.panel-title img,
+.panel-title i {
+  margin-right: 10px;
+}
+
+.borderless tbody>tr>td,
+.borderless tbody>tr>th {
+  border-top: none;
+  border-bottom: none;
+}
+
+.borderless tbody>tr>td {
+  color: #000066;
+}
+
+.borderless tbody>tr>td+td {
+  color: #333;
+}
+
 .footer p {
   margin: 0;
 }
