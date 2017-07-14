@@ -26,11 +26,11 @@ const API = require('./routes/api-routes.js')(express,passport,db,bcrypt);
 
 //Used to create the sessions table for authentication
 const sessionStore = new MySQLStore({
-    host:'localhost',
+    host:'ko86t9azcob3a2f9.cbetxkdyhwsb.us-east-1.rds.amazonaws.com',
     port:'3306',
-    user:'root',
-    password:'root',
-    database:'healthepetz_db'
+    user:'cdj7xzlcrm7b1zyt',
+    password:'jlo8p3kzo6s9wvbu',
+    database:'fy1oiq0nn0ib9b0m'
 });
 
 //Custom Section Helper for Views
