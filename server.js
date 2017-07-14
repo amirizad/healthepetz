@@ -44,6 +44,7 @@ var hbs = exphbs.create({
             } 
         }    
     });
+    
 
 // START Configuring Express App
 // ========================================================================================
@@ -60,7 +61,7 @@ app.use(methodOverride("_method"));
 app.set('views', path.join(__dirname, 'views'));
 app.engine('handlebars', hbs.engine);
 app.set('view engine', 'handlebars');
-
+app.set('partials',__dirname + 'views/partials')
 //Creates the sessions table that will authenticate user sessions
 app.use(session({
     //random string that gets hashed to validate a real session and not a spoof

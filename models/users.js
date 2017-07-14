@@ -1,7 +1,7 @@
 //Creates the users table with validation and error handling
 //=============================================================================================
 module.exports = (sequelize,DataTypes)=>{
-	const Users = sequelize.define('Users',{
+	const Users = sequelize.define('users',{
 		username:{
 			type:DataTypes.STRING,
 			allowNull:false,

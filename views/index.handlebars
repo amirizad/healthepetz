@@ -182,7 +182,7 @@
 							<div class="form-group">
 								<label class="control-label col-xs-3" for="login-id">User ID:</label>
 								<div class="col-xs-11 col-sm-7">
-									 <input autocomplete="off" class="form-control reqfield" type="email" name="username" id="login-id" placeholder="Enter your user id" value="{{username}}"> <!--pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,3}$"-->
+									 <input autocomplete="off" class="form-control reqfield" name="username" id="login-id" placeholder="Enter your user id" value="{{username}}"> <!--pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,3}$"-->
 								</div>
 							</div>
 							<div class="form-group">
@@ -245,8 +245,13 @@
 </section>
 
 <!-- Profile Section -->
+{{#if loggedIn}}
 <section id="profilesec">
+	         {{> petsTable}}       
+	   {{> medTable}} 
+	    {{> vacTable}}      
 </section>
+{{/if}}
 
 <!--If loged in value="1" Else value="0"-->
 <input type="hidden" name="logedin" id="loggedin" value="{{loggedIn}}">

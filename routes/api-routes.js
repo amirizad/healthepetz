@@ -34,7 +34,7 @@ module.exports = (express,passport,db,bcrypt)=>{
                 bcrypt.hash(user.password, saltRounds, (err, hash) =>{
                     var userID;
                     //Query the Users table and pass in the required fields including the hash pw
-                    db.Users.create({
+                    db.users.create({
                         "username": user.username,
                         "email": user.email,
                         "password": hash
@@ -61,7 +61,7 @@ module.exports = (express,passport,db,bcrypt)=>{
                             });
                         }).catch((err)=>{
                             console.log(err);
-                            db.Users.destroy({
+                            db.users.destroy({
                                 where:{
                                     id:userID
                                 }
