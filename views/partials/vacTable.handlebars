@@ -70,7 +70,7 @@ $(document).ready(function() {
         table: '#vacTable',
         
         fields: [
-            {label: 'id', name: 'id', type:"hidden"},
+            {label: 'id', name: 'id'},
             {label: 'Pet ID', name: 'petId'},
             {label: 'Vaccination Name', name: 'vacc_name'},
             {label: 'Last Vaccination Date', name: 'last_vacc_dt'},
@@ -81,10 +81,10 @@ $(document).ready(function() {
         ]
     } );
 
-    
-$('#vacTable').on( 'click', 'tbody td:not(:first-child)', function (e) {
+    //Edit with bubble
+    $('#vacTable').on( 'click', 'tbody td:not(:first-child)', function (e) {
         vacTable.bubble( this );
-    } );
+    });
 
     var vTable = $('#vacTable').DataTable( {
         ajax: {

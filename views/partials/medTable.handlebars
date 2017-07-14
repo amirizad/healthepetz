@@ -74,7 +74,7 @@ $(document).ready(function() {
         table: '#medTable',
         
         fields: [
-            {label: 'id', name: 'id', type:"hidden"},
+            {label: 'id', name: 'id'},
             {label: 'Pet ID', name: 'petId'},
             {label: 'Prov Name', name: 'prov_name'},
             {label: 'Condition', name: 'cond1'},
@@ -89,9 +89,14 @@ $(document).ready(function() {
         ]
     } );
 
-    
-$('#medTable').on( 'click', 'tbody td:not(:first-child)', function (e) {
+    //Bubble Edit
+    /*$('#medTable').on( 'click', 'tbody td:not(:first-child)', function (e) {
         medTable.bubble( this );
+    });*/
+
+    //Inline Edit
+    $('#medTable').on( 'click', 'tbody td:not(:first-child)', function (e) {
+        medTable.inline( this );
     } );
 
     var mTable = $('#medTable').DataTable( {
@@ -99,7 +104,7 @@ $('#medTable').on( 'click', 'tbody td:not(:first-child)', function (e) {
             url:'/api/med-history/' + {{petId}},
             dataSrc:''
         },
-        dom: 'Bfrtip',
+        dom: '<"toolbar">Bfrtip',
         columns: [
             {
                 data: null,
@@ -195,6 +200,8 @@ $('#medTable').on( 'click', 'tbody td:not(:first-child)', function (e) {
             'selectNone'
         ]
     } );
+    //Table Header
+    $("div.toolbar").html('<b>Pet Medical History</b>');
 
     // Edit record
     $('#medTable').on('click', 'a.editor_edit', function (e) {
