@@ -163,7 +163,7 @@
 							{{#if regError}}
 								{{#each regError}}
 								<div class="message">
-									<div class="alert alert-warning" role="alert"><button class="close" type="button" data-dismiss="alert" aria-hidden="true">&times;</button><strong>Error! </strong> {{this.message}}</div>
+									{{this.message}}
 								</div>
 								{{/each}}
 							{{/if}} 
@@ -195,7 +195,7 @@
 							{{#if loginError}}
 								{{#each loginError}}
 								<div class="message">
-									<div class="alert alert-warning" role="alert"><button class="close" type="button" data-dismiss="alert" aria-hidden="true">&times;</button><strong>Error! </strong> {{this}}</div>
+									 {{this}}
 								</div>
 								{{/each}}
 							{{/if}}	
