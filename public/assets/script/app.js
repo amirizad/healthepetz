@@ -25,7 +25,7 @@ var hPetz = {
 			$('#profilesecnav').addClass('active');
 			$('#profilesec').addClass('show')
 			$('#activesec').val('profilesec');
-			hPetz.loadProfJS();
+			// hPetz.loadProfJS();
 		} else{
 			$('#loginsecnav').removeClass('hide');
 			$('#profilesecnav').addClass('hide');
@@ -308,16 +308,16 @@ var hPetz = {
 		return latLong;
 	},
 	
-	// retrieveAddress: function() {
-	// 	var $address = $(this).attr('data-address');
-	// 	$('#addresstext').val($address);
-	// },
+	retrieveAddress: function() {
+		var $address = $(this).attr('data-address');
+		$('#addresstext').val($address);
+	},
 };
 
 $(document).ready(function() {
 
 	hPetz.updateNavbar($('#loggedin').val());
-	hPetz.loadJS();
+	// hPetz.loadJS();
 
 	$('.navto').click(function(){
 		hPetz.changePage($(this).attr('id'));
