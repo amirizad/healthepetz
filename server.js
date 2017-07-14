@@ -5,6 +5,9 @@ const bodyParser = require("body-parser");
 const path = require("path");
 const exphbs = require('express-handlebars');
 const db = require('./models');
+
+// use it before all route definitions
+
 var methodOverride = require("method-override");
 
 // Authentication Dependencies
@@ -56,7 +59,6 @@ app.use(bodyParser.json({ type: "application/vnd.api+json" }));
 app.use(cookieParser());
 app.use(flash());
 app.use(methodOverride("_method"));
-
 app.set('views', path.join(__dirname, 'views'));
 app.engine('handlebars', hbs.engine);
 app.set('view engine', 'handlebars');
