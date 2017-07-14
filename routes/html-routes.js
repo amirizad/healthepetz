@@ -12,7 +12,7 @@ module.exports = (express,passport,db,path)=>{
         if(req.isAuthenticated()){
             res.render('index',{
                 loggedIn:1,
-                petId:6
+                petId:1
             });
         } else {
             var errors = req.flash('error');
