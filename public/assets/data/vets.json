@@ -1,0 +1,3210 @@
+[{
+    "entity_id": "181",
+    "title": "4 Friendly P.A.W.S",
+    "path_alias": "4-friendly-paws",
+    "description": "",
+    "dvm": null,
+    "phone": "+1-(323)-6977874",
+    "fax": null,
+    "address_1": "1249 W. 60th place",
+    "city": "Los Angeles",
+    "state": "CA",
+    "zipcode": "90044",
+    "website": null,
+    "latitude": "33.95374",
+    "longitude": "-118.291889",
+    "source": null,
+    "avg_rating": "0.0000",
+    "total_reviews": "0",
+    "distance": "33.82863194189848",
+    "categories": [
+      "Pet Day Care"
+    ],
+    "autocomplete": [
+      "4 Friendly P.A.W.S",
+      "Pet Day Care"
+    ],
+    "spell": [
+      "",
+      "Pet Day Care"
+    ],
+    "label": "4 Friendly P.A.W.S"
+  },
+  {
+    "entity_id": "191",
+    "title": "4 Paws Flying Doggie Daycare",
+    "path_alias": "4-paws-flying-doggie-daycare",
+    "description": "",
+    "dvm": null,
+    "phone": "+1-(619)-6675131",
+    "fax": null,
+    "address_1": "9402 Blossom Valley Road",
+    "city": "El Cajon",
+    "state": "CA",
+    "zipcode": "92021",
+    "website": null,
+    "latitude": "32.85666",
+    "longitude": "-116.841436",
+    "source": null,
+    "avg_rating": "0.0000",
+    "total_reviews": "0",
+    "distance": "79.12624684796658",
+    "categories": [
+      "Pet Day Care"
+    ],
+    "autocomplete": [
+      "4 Paws Flying Doggie Daycare",
+      "Pet Day Care"
+    ],
+    "spell": [
+      "",
+      "Pet Day Care"
+    ],
+    "label": "4 Paws Flying Doggie Daycare"
+  },
+  {
+    "entity_id": "192",
+    "title": "4 Paws Flying Pet Resort - Play & Loved All Day Boarding-Training-Day Care It'",
+    "path_alias": "4-paws-flying-pet-resort--play--loved-all-day-boarding-training-day-care-it",
+    "description": "",
+    "dvm": null,
+    "phone": "+1-(619)-4434271",
+    "fax": null,
+    "address_1": "9400 Blossom Valley Road",
+    "city": "El Cajon",
+    "state": "CA",
+    "zipcode": "92021",
+    "website": null,
+    "latitude": "32.85666",
+    "longitude": "-116.841436",
+    "source": null,
+    "avg_rating": "0.0000",
+    "total_reviews": "0",
+    "distance": "79.12624684796658",
+    "categories": [
+      null
+    ],
+    "autocomplete": [
+      "4 Paws Flying Pet Resort - Play & Loved All Day Boarding-Training-Day Care It'",
+      null
+    ],
+    "spell": [
+      "",
+      null
+    ],
+    "label": "4 Paws Flying Pet Resort - Play & Loved All Day Boarding-Training-Day Care It'"
+  },
+  {
+    "entity_id": "200",
+    "title": "4 Paws Pet Hospital",
+    "path_alias": "4-paws-pet-hospital",
+    "description": "",
+    "dvm": "Mukand S Sandhu Dvm",
+    "phone": "+1-(661)-3973767",
+    "fax": null,
+    "address_1": "4201 Mexicali Dr",
+    "city": "Bakersfield",
+    "state": "CA",
+    "zipcode": "93313",
+    "website": null,
+    "latitude": "35.317376",
+    "longitude": "-119.081779",
+    "source": null,
+    "avg_rating": "0.0000",
+    "total_reviews": "0",
+    "distance": "135.6431324146009",
+    "categories": [
+      "Veterinarians"
+    ],
+    "autocomplete": [
+      "4 Paws Pet Hospital",
+      "Veterinarians"
+    ],
+    "spell": [
+      "",
+      "Veterinarians"
+    ],
+    "label": "4 Paws Pet Hospital"
+  },
+  {
+    "entity_id": "221",
+    "title": "5 Star Doggy Inn",
+    "path_alias": "5-star-doggy-inn",
+    "description": "",
+    "dvm": "",
+    "phone": "+1-(310)-6705200",
+    "fax": null,
+    "address_1": "519 South Hindry Ave",
+    "city": "Los Angeles",
+    "state": "CA",
+    "zipcode": "0",
+    "website": null,
+    "latitude": "33.96728",
+    "longitude": "-118.374819",
+    "source": null,
+    "avg_rating": "0.0000",
+    "total_reviews": "0",
+    "distance": "38.17962815695706",
+    "categories": [
+      "Pet Day Care"
+    ],
+    "autocomplete": [
+      "5 Star Doggy Inn",
+      "Pet Day Care"
+    ],
+    "spell": [
+      "",
+      "Pet Day Care"
+    ],
+    "label": "5 Star Doggy Inn"
+  },
+  {
+    "entity_id": "255",
+    "title": "A B C Veterinary Group",
+    "path_alias": "a-b-c-veterinary-group",
+    "description": "",
+    "dvm": null,
+    "phone": "+1-(619)-2996020",
+    "fax": null,
+    "address_1": "4054 Normal Street",
+    "city": "San Diego",
+    "state": "CA",
+    "zipcode": "92103",
+    "website": null,
+    "latitude": "32.751793",
+    "longitude": "-117.148369",
+    "source": null,
+    "avg_rating": "0.0000",
+    "total_reviews": "0",
+    "distance": "73.37077981252565",
+    "categories": [
+      "Veterinarians"
+    ],
+    "autocomplete": [
+      "A B C Veterinary Group",
+      "Veterinarians"
+    ],
+    "spell": [
+      "",
+      "Veterinarians"
+    ],
+    "label": "A B C Veterinary Group"
+  },
+  {
+    "entity_id": "266",
+    "title": "A Black Mountain Road Pet Clinic",
+    "path_alias": "a-black-mountain-road-pet-clinic",
+    "description": "",
+    "dvm": "Sudeep Dhillon Dvm",
+    "phone": "+1-(619)-4845000",
+    "fax": " ",
+    "address_1": "13161-1 Black Mountain Road",
+    "city": "San Diego",
+    "state": "CA",
+    "zipcode": "92129",
+    "website": null,
+    "latitude": "32.957301",
+    "longitude": "-117.128261",
+    "source": null,
+    "avg_rating": "0.0000",
+    "total_reviews": "0",
+    "distance": "62.626043374722826",
+    "categories": [
+      "Veterinarians"
+    ],
+    "autocomplete": [
+      "A Black Mountain Road Pet Clinic",
+      "Veterinarians"
+    ],
+    "spell": [
+      "",
+      "Veterinarians"
+    ],
+    "label": "A Black Mountain Road Pet Clinic"
+  },
+  {
+    "entity_id": "267",
+    "title": "A Breed Apart Animal Hospital",
+    "path_alias": "a-breed-apart-animal-hospital",
+    "description": "",
+    "dvm": "Arnold Wittstein Dvm",
+    "phone": "+1-(626)-7954444",
+    "fax": " ",
+    "address_1": "777 S Arroyo Pwy Ste 106",
+    "city": "Pasadena",
+    "state": "CA",
+    "zipcode": "91105",
+    "website": null,
+    "latitude": "34.132327",
+    "longitude": "-118.165789",
+    "source": null,
+    "avg_rating": "0.0000",
+    "total_reviews": "0",
+    "distance": "38.66352631424606",
+    "categories": [
+      "Veterinarians"
+    ],
+    "autocomplete": [
+      "A Breed Apart Animal Hospital",
+      "Veterinarians"
+    ],
+    "spell": [
+      "",
+      "Veterinarians"
+    ],
+    "label": "A Breed Apart Animal Hospital"
+  },
+  {
+    "entity_id": "307",
+    "title": "A Dog's Life - Dog Walking and Pet Sitting",
+    "path_alias": "a-dogs-life--dog-walking-and-pet-sitting",
+    "description": "",
+    "dvm": null,
+    "phone": "+1-(805)-2983598",
+    "fax": null,
+    "address_1": "809 Paseo Tosamar",
+    "city": "Camarillo",
+    "state": "CA",
+    "zipcode": "93012",
+    "website": null,
+    "latitude": "34.21458",
+    "longitude": "-119.032004",
+    "source": null,
+    "avg_rating": "0.0000",
+    "total_reviews": "0",
+    "distance": "79.12571460390824",
+    "categories": [
+      null
+    ],
+    "autocomplete": [
+      "A Dog's Life - Dog Walking and Pet Sitting",
+      null
+    ],
+    "spell": [
+      "",
+      null
+    ],
+    "label": "A Dog's Life - Dog Walking and Pet Sitting"
+  },
+  {
+    "entity_id": "340",
+    "title": "A Little Touch of Love for Your Pet",
+    "path_alias": "a-little-touch-of-love-for-your-pet",
+    "description": "",
+    "dvm": null,
+    "phone": "+1-(562)-4393951",
+    "fax": null,
+    "address_1": "185 Quincy Ave",
+    "city": "Long Beach",
+    "state": "CA",
+    "zipcode": "90802",
+    "website": null,
+    "latitude": "33.766425",
+    "longitude": "-118.192394",
+    "source": null,
+    "avg_rating": "0.0000",
+    "total_reviews": "0",
+    "distance": "22.206902763670804",
+    "categories": [
+      "Pet Day Care"
+    ],
+    "autocomplete": [
+      "A Little Touch of Love for Your Pet",
+      "Pet Day Care"
+    ],
+    "spell": [
+      "",
+      "Pet Day Care"
+    ],
+    "label": "A Little Touch of Love for Your Pet"
+  },
+  {
+    "entity_id": "346",
+    "title": "A Lucky Dog?",
+    "path_alias": "a-lucky-dog",
+    "description": "",
+    "dvm": "",
+    "phone": "+1-(866)-4658259",
+    "fax": null,
+    "address_1": "12717 Mitchell Ave. #6",
+    "city": "Los Angeles",
+    "state": "CA",
+    "zipcode": "90066",
+    "website": null,
+    "latitude": "34.001859",
+    "longitude": "-118.432162",
+    "source": null,
+    "avg_rating": "0.0000",
+    "total_reviews": "0",
+    "distance": "42.241892676866335",
+    "categories": [
+      "Pet Walkers"
+    ],
+    "autocomplete": [
+      "A Lucky Dog?",
+      "Pet Walkers"
+    ],
+    "spell": [
+      "",
+      "Pet Walkers"
+    ],
+    "label": "A Lucky Dog?"
+  },
+  {
+    "entity_id": "347",
+    "title": "A M H Of Spring Valley",
+    "path_alias": "a-m-h-of-spring-valley",
+    "description": "",
+    "dvm": "Terry K Kaiser Dvm",
+    "phone": "+1-(619)-4645125",
+    "fax": " ",
+    "address_1": "704 Grand Avenue",
+    "city": "Spring Valley",
+    "state": "CA",
+    "zipcode": "91977",
+    "website": null,
+    "latitude": "32.709988",
+    "longitude": "-116.997603",
+    "source": null,
+    "avg_rating": "0.0000",
+    "total_reviews": "0",
+    "distance": "80.72855887840616",
+    "categories": [
+      "Veterinarians"
+    ],
+    "autocomplete": [
+      "A M H Of Spring Valley",
+      "Veterinarians"
+    ],
+    "spell": [
+      "",
+      "Veterinarians"
+    ],
+    "label": "A M H Of Spring Valley"
+  },
+  {
+    "entity_id": "406",
+    "title": "A To Z Home Services",
+    "path_alias": "a-to-z-home-services",
+    "description": "",
+    "dvm": null,
+    "phone": "+1-(714)-5274357",
+    "fax": null,
+    "address_1": "224 South Monument Street",
+    "city": "Anaheim",
+    "state": "CA",
+    "zipcode": "92804",
+    "website": null,
+    "latitude": "33.81885",
+    "longitude": "-117.974384",
+    "source": null,
+    "avg_rating": "0.0000",
+    "total_reviews": "0",
+    "distance": "14.451494122434168",
+    "categories": [
+      "Pet Day Care"
+    ],
+    "autocomplete": [
+      "A To Z Home Services",
+      "Pet Day Care"
+    ],
+    "spell": [
+      "",
+      "Pet Day Care"
+    ],
+    "label": "A To Z Home Services"
+  },
+  {
+    "entity_id": "411",
+    "title": "A Valley Animal Hospital",
+    "path_alias": "a-valley-animal-hospital",
+    "description": "",
+    "dvm": "",
+    "phone": "+1-(818)-7855483",
+    "fax": null,
+    "address_1": "7721 Sepulveda",
+    "city": "Van Nuys",
+    "state": "CA",
+    "zipcode": "91405",
+    "website": null,
+    "latitude": "34.210563",
+    "longitude": "-118.466383",
+    "source": null,
+    "avg_rating": "3.0000",
+    "total_reviews": "1",
+    "distance": "53.282996266545844",
+    "categories": [
+      "Pet Day Care"
+    ],
+    "autocomplete": [
+      "A Valley Animal Hospital",
+      "Pet Day Care"
+    ],
+    "spell": [
+      "",
+      "Pet Day Care"
+    ],
+    "label": "A Valley Animal Hospital"
+  },
+  {
+    "entity_id": "424",
+    "title": "A+ Pet Patrol",
+    "path_alias": "a-pet-patrol",
+    "description": "",
+    "dvm": null,
+    "phone": "+1-(951)-6543434",
+    "fax": null,
+    "address_1": "P.O. Box 5416",
+    "city": "Hemet",
+    "state": "CA",
+    "zipcode": "92544",
+    "website": null,
+    "latitude": "33.708458",
+    "longitude": "-116.922682",
+    "source": null,
+    "avg_rating": "0.0000",
+    "total_reviews": "0",
+    "distance": "52.62861774275816",
+    "categories": [
+      "Pet Day Care"
+    ],
+    "autocomplete": [
+      "A+ Pet Patrol",
+      "Pet Day Care"
+    ],
+    "spell": [
+      "",
+      "Pet Day Care"
+    ],
+    "label": "A+ Pet Patrol"
+  },
+  {
+    "entity_id": "433",
+    "title": "A-1 Vet Service Inc",
+    "path_alias": "a-1-vet-service-inc",
+    "description": "",
+    "dvm": "Jack Donahue Dvm",
+    "phone": "+1-(661)-2557767",
+    "fax": " ",
+    "address_1": "23015 Solidad Canyon Rd",
+    "city": "Santa Clarita",
+    "state": "CA",
+    "zipcode": "91350",
+    "website": null,
+    "latitude": "34.422408",
+    "longitude": "-118.538448",
+    "source": null,
+    "avg_rating": "0.0000",
+    "total_reviews": "0",
+    "distance": "67.15539319896145",
+    "categories": [
+      "Veterinarians"
+    ],
+    "autocomplete": [
+      "A-1 Vet Service Inc",
+      "Veterinarians"
+    ],
+    "spell": [
+      "",
+      "Veterinarians"
+    ],
+    "label": "A-1 Vet Service Inc"
+  },
+  {
+    "entity_id": "434",
+    "title": "A-1 Vet Services Inc",
+    "path_alias": "a-1-vet-services-inc",
+    "description": "",
+    "dvm": "John Donahue Dvm",
+    "phone": "+1-(818)-3665004",
+    "fax": null,
+    "address_1": "10142 Balboa Blvd",
+    "city": "Granada Hills",
+    "state": "CA",
+    "zipcode": "91344",
+    "website": null,
+    "latitude": "34.254852",
+    "longitude": "-118.502195",
+    "source": null,
+    "avg_rating": "0.0000",
+    "total_reviews": "0",
+    "distance": "56.91942908466909",
+    "categories": [
+      "Veterinarians"
+    ],
+    "autocomplete": [
+      "A-1 Vet Services Inc",
+      "Veterinarians"
+    ],
+    "spell": [
+      "",
+      "Veterinarians"
+    ],
+    "label": "A-1 Vet Services Inc"
+  },
+  {
+    "entity_id": "438",
+    "title": "A-o-k Kennels",
+    "path_alias": "a-o-k-kennels",
+    "description": "",
+    "dvm": "",
+    "phone": "+1-(626)-2863258",
+    "fax": null,
+    "address_1": "4943 Encinita Avenue",
+    "city": "Temple City",
+    "state": "CA",
+    "zipcode": "91780",
+    "website": null,
+    "latitude": "34.090633",
+    "longitude": "-118.067936",
+    "source": null,
+    "avg_rating": "0.0000",
+    "total_reviews": "0",
+    "distance": "33.5789801809194",
+    "categories": [
+      "Pet Day Care"
+    ],
+    "autocomplete": [
+      "A-o-k Kennels",
+      "Pet Day Care"
+    ],
+    "spell": [
+      "",
+      "Pet Day Care"
+    ],
+    "label": "A-o-k Kennels"
+  },
+  {
+    "entity_id": "454",
+    "title": "Aaa Animal Clinic",
+    "path_alias": "aaa-animal-clinic",
+    "description": "",
+    "dvm": "N Nasre Dvm",
+    "phone": "+1-(714)-5366537",
+    "fax": null,
+    "address_1": "21632 Newland Avenue",
+    "city": "Huntington Beach",
+    "state": "CA",
+    "zipcode": "92646",
+    "website": null,
+    "latitude": "33.648959",
+    "longitude": "-117.979424",
+    "source": null,
+    "avg_rating": "0.0000",
+    "total_reviews": "0",
+    "distance": "8.326691457700287",
+    "categories": [
+      "Veterinarians"
+    ],
+    "autocomplete": [
+      "Aaa Animal Clinic",
+      "Veterinarians"
+    ],
+    "spell": [
+      "",
+      "Veterinarians"
+    ],
+    "label": "Aaa Animal Clinic"
+  },
+  {
+    "entity_id": "456",
+    "title": "Aaa Animal Hospital",
+    "path_alias": "aaa-animal-hospital",
+    "description": "",
+    "dvm": "",
+    "phone": "+1-(951)-3717117",
+    "fax": null,
+    "address_1": "425 E 6Th St",
+    "city": "Corona",
+    "state": "CA",
+    "zipcode": "92879",
+    "website": null,
+    "latitude": "33.875088",
+    "longitude": "-117.562242",
+    "source": null,
+    "avg_rating": "0.0000",
+    "total_reviews": "0",
+    "distance": "22.316519088165155",
+    "categories": [
+      "Veterinarians"
+    ],
+    "autocomplete": [
+      "Aaa Animal Hospital",
+      "Veterinarians"
+    ],
+    "spell": [
+      "",
+      "Veterinarians"
+    ],
+    "label": "Aaa Animal Hospital"
+  },
+  {
+    "entity_id": "461",
+    "title": "Aaa Pet Care",
+    "path_alias": "aaa-pet-care",
+    "description": "",
+    "dvm": "",
+    "phone": "+1-(619)-5798301",
+    "fax": null,
+    "address_1": "2565 Sawgrass St.",
+    "city": "San Diego",
+    "state": "CA",
+    "zipcode": "0",
+    "website": null,
+    "latitude": "32.715685",
+    "longitude": "-117.161724",
+    "source": null,
+    "avg_rating": "0.0000",
+    "total_reviews": "0",
+    "distance": "75.08238432920739",
+    "categories": [
+      "Pet Day Care"
+    ],
+    "autocomplete": [
+      "Aaa Pet Care",
+      "Pet Day Care"
+    ],
+    "spell": [
+      "",
+      "Pet Day Care"
+    ],
+    "label": "Aaa Pet Care"
+  },
+  {
+    "entity_id": "474",
+    "title": "Aacacia Animal Hospital Inc",
+    "path_alias": "aacacia-animal-hospital-inc",
+    "description": "",
+    "dvm": "Ks Bhullar Dvm",
+    "phone": "+1-(909)-3711002",
+    "fax": null,
+    "address_1": "939 W 6Th St",
+    "city": "Corona",
+    "state": "CA",
+    "zipcode": "92882",
+    "website": null,
+    "latitude": "33.876828",
+    "longitude": "-117.578542",
+    "source": null,
+    "avg_rating": "0.0000",
+    "total_reviews": "0",
+    "distance": "21.758264499999264",
+    "categories": [
+      "Veterinarians"
+    ],
+    "autocomplete": [
+      "Aacacia Animal Hospital Inc",
+      "Veterinarians"
+    ],
+    "spell": [
+      "",
+      "Veterinarians"
+    ],
+    "label": "Aacacia Animal Hospital Inc"
+  },
+  {
+    "entity_id": "482",
+    "title": "Aardvark & Others",
+    "path_alias": "aardvark--others",
+    "description": "",
+    "dvm": "Sterling Corley Dvm",
+    "phone": "+1-(909)-6818340",
+    "fax": " ",
+    "address_1": "5151 Camino Real",
+    "city": "Riverside",
+    "state": "CA",
+    "zipcode": "92509",
+    "website": null,
+    "latitude": "33.994749",
+    "longitude": "-117.447889",
+    "source": null,
+    "avg_rating": "0.0000",
+    "total_reviews": "0",
+    "distance": "32.82584598019713",
+    "categories": [
+      "Veterinarians"
+    ],
+    "autocomplete": [
+      "Aardvark & Others",
+      "Veterinarians"
+    ],
+    "spell": [
+      "",
+      "Veterinarians"
+    ],
+    "label": "Aardvark & Others"
+  },
+  {
+    "entity_id": "483",
+    "title": "Aardvark Animal Health",
+    "path_alias": "aardvark-animal-health",
+    "description": "",
+    "dvm": "William R Robertson Dvm",
+    "phone": "+1-(760)-4387766",
+    "fax": null,
+    "address_1": "6986 El Camino Real #I",
+    "city": "Carlsbad",
+    "state": "CA",
+    "zipcode": "92009",
+    "website": null,
+    "latitude": "33.102854",
+    "longitude": "-117.266343",
+    "source": null,
+    "avg_rating": "0.0000",
+    "total_reviews": "0",
+    "distance": "49.78535564746135",
+    "categories": [
+      "Veterinarians"
+    ],
+    "autocomplete": [
+      "Aardvark Animal Health",
+      "Veterinarians"
+    ],
+    "spell": [
+      "",
+      "Veterinarians"
+    ],
+    "label": "Aardvark Animal Health"
+  },
+  {
+    "entity_id": "527",
+    "title": "Abc Animal Clinic",
+    "path_alias": "abc-animal-clinic",
+    "description": "",
+    "dvm": null,
+    "phone": "+1-(760)-2563330",
+    "fax": null,
+    "address_1": "1238 East Main Street",
+    "city": "Barstow",
+    "state": "CA",
+    "zipcode": "92311",
+    "website": null,
+    "latitude": "34.897341",
+    "longitude": "-117.009291",
+    "source": null,
+    "avg_rating": "5.0000",
+    "total_reviews": "1",
+    "distance": "98.54259436461003",
+    "categories": [
+      "Veterinarians"
+    ],
+    "autocomplete": [
+      "Abc Animal Clinic",
+      "Veterinarians"
+    ],
+    "spell": [
+      "",
+      "Veterinarians"
+    ],
+    "label": "Abc Animal Clinic"
+  },
+  {
+    "entity_id": "528",
+    "title": "Abc Animal Hospital",
+    "path_alias": "abc-animal-hospital",
+    "description": "",
+    "dvm": "Devendra Kumar",
+    "phone": "+1-(714)-9958033",
+    "fax": null,
+    "address_1": "9121 Walker St",
+    "city": "Cypress",
+    "state": "CA",
+    "zipcode": "90630",
+    "website": null,
+    "latitude": "33.82955",
+    "longitude": "-118.037147",
+    "source": null,
+    "avg_rating": "0.0000",
+    "total_reviews": "0",
+    "distance": "17.26372916640252",
+    "categories": [
+      "Veterinarians"
+    ],
+    "autocomplete": [
+      "Abc Animal Hospital",
+      "Veterinarians"
+    ],
+    "spell": [
+      "",
+      "Veterinarians"
+    ],
+    "label": "Abc Animal Hospital"
+  },
+  {
+    "entity_id": "537",
+    "title": "Abc Vet Clinic Solan Beach",
+    "path_alias": "abc-vet-clinic-solan-beach",
+    "description": "",
+    "dvm": "Barry Neichin Dvm",
+    "phone": "+1-(858)-3506353",
+    "fax": " ",
+    "address_1": "140 South Solana Hills Dr",
+    "city": "Solana Beach",
+    "state": "CA",
+    "zipcode": "92075",
+    "website": null,
+    "latitude": "32.995377",
+    "longitude": "-117.258672",
+    "source": null,
+    "avg_rating": "0.0000",
+    "total_reviews": "0",
+    "distance": "55.86255730781299",
+    "categories": [
+      "Veterinarians"
+    ],
+    "autocomplete": [
+      "Abc Vet Clinic Solan Beach",
+      "Veterinarians"
+    ],
+    "spell": [
+      "",
+      "Veterinarians"
+    ],
+    "label": "Abc Vet Clinic Solan Beach"
+  },
+  {
+    "entity_id": "538",
+    "title": "Abc Vet Hospital",
+    "path_alias": "abc-vet-hospital",
+    "description": "",
+    "dvm": " ",
+    "phone": "+1-(760)-4714950",
+    "fax": " ",
+    "address_1": "330 Rancheros Dr #102",
+    "city": "San Marcos",
+    "state": "CA",
+    "zipcode": "92069",
+    "website": null,
+    "latitude": "33.13837",
+    "longitude": "-117.15927",
+    "source": null,
+    "avg_rating": "0.0000",
+    "total_reviews": "0",
+    "distance": "52.37949439111165",
+    "categories": [
+      "Veterinarians"
+    ],
+    "autocomplete": [
+      "Abc Vet Hospital",
+      "Veterinarians"
+    ],
+    "spell": [
+      "",
+      "Veterinarians"
+    ],
+    "label": "Abc Vet Hospital"
+  },
+  {
+    "entity_id": "539",
+    "title": "Abc Vet Hospital Kearny Mesa",
+    "path_alias": "abc-vet-hospital-kearny-mesa",
+    "description": "",
+    "dvm": "Michael Webber Dvm",
+    "phone": "+1-(858)-2781825",
+    "fax": " ",
+    "address_1": "8020 Ronson Rd",
+    "city": "San Diego",
+    "state": "CA",
+    "zipcode": "92111",
+    "website": null,
+    "latitude": "32.829205",
+    "longitude": "-117.150207",
+    "source": null,
+    "avg_rating": "0.0000",
+    "total_reviews": "0",
+    "distance": "68.86141125839607",
+    "categories": [
+      "Veterinarians"
+    ],
+    "autocomplete": [
+      "Abc Vet Hospital Kearny Mesa",
+      "Veterinarians"
+    ],
+    "spell": [
+      "",
+      "Veterinarians"
+    ],
+    "label": "Abc Vet Hospital Kearny Mesa"
+  },
+  {
+    "entity_id": "541",
+    "title": "Abc Veterinary Hospital",
+    "path_alias": "abc-veterinary-hospital",
+    "description": "",
+    "dvm": " ",
+    "phone": "+1-(858)-2704120",
+    "fax": " ",
+    "address_1": "2032 Hornblend St",
+    "city": "San Diego",
+    "state": "CA",
+    "zipcode": "92109",
+    "website": null,
+    "latitude": "32.800732",
+    "longitude": "-117.232586",
+    "source": null,
+    "avg_rating": "0.0000",
+    "total_reviews": "0",
+    "distance": "67.92573141877702",
+    "categories": [
+      "Veterinarians"
+    ],
+    "autocomplete": [
+      "Abc Veterinary Hospital",
+      "Veterinarians"
+    ],
+    "spell": [
+      "",
+      "Veterinarians"
+    ],
+    "label": "Abc Veterinary Hospital"
+  },
+  {
+    "entity_id": "612",
+    "title": "Acacia Animal Health Center",
+    "path_alias": "acacia-animal-health-center",
+    "description": "",
+    "dvm": "Gary A Gallerstein Dvm",
+    "phone": "+1-(745)-7458115",
+    "fax": null,
+    "address_1": "1040 N Broadway",
+    "city": "Escondido",
+    "state": "CA",
+    "zipcode": "92026",
+    "website": null,
+    "latitude": "33.134691",
+    "longitude": "-117.08706",
+    "source": null,
+    "avg_rating": "0.0000",
+    "total_reviews": "0",
+    "distance": "55.70979726265774",
+    "categories": [
+      "Veterinarians"
+    ],
+    "autocomplete": [
+      "Acacia Animal Health Center",
+      "Veterinarians"
+    ],
+    "spell": [
+      "",
+      "Veterinarians"
+    ],
+    "label": "Acacia Animal Health Center"
+  },
+  {
+    "entity_id": "613",
+    "title": "Acacia Animal Hospital",
+    "path_alias": "acacia-animal-hospital",
+    "description": "",
+    "dvm": "Dewey C Ballinger Dvm",
+    "phone": "+1-(909)-6583219",
+    "fax": null,
+    "address_1": "1110 North Buena Vista",
+    "city": "Hemet",
+    "state": "CA",
+    "zipcode": "92543",
+    "website": null,
+    "latitude": "33.763644",
+    "longitude": "-116.967303",
+    "source": null,
+    "avg_rating": "0.0000",
+    "total_reviews": "0",
+    "distance": "50.533789502828284",
+    "categories": [
+      "Veterinarians"
+    ],
+    "autocomplete": [
+      "Acacia Animal Hospital",
+      "Veterinarians"
+    ],
+    "spell": [
+      "",
+      "Veterinarians"
+    ],
+    "label": "Acacia Animal Hospital"
+  },
+  {
+    "entity_id": "692",
+    "title": "Acs Veterinary Clinic",
+    "path_alias": "acs-veterinary-clinic",
+    "description": "",
+    "dvm": "J Philip Dvm",
+    "phone": "+1-(805)-5294650",
+    "fax": " ",
+    "address_1": "173 High Street",
+    "city": "Moorpark",
+    "state": "CA",
+    "zipcode": "93021",
+    "website": null,
+    "latitude": "34.285551",
+    "longitude": "-118.879803",
+    "source": null,
+    "avg_rating": "0.0000",
+    "total_reviews": "0",
+    "distance": "74.47318375297847",
+    "categories": [
+      "Veterinarians"
+    ],
+    "autocomplete": [
+      "Acs Veterinary Clinic",
+      "Veterinarians"
+    ],
+    "spell": [
+      "",
+      "Veterinarians"
+    ],
+    "label": "Acs Veterinary Clinic"
+  },
+  {
+    "entity_id": "718",
+    "title": "Adam's Animal Hospital",
+    "path_alias": "adams-animal-hospital",
+    "description": "",
+    "dvm": null,
+    "phone": "+1-(626)-9654424",
+    "fax": null,
+    "address_1": "1559 East Amar Road",
+    "city": "West Covina",
+    "state": "CA",
+    "zipcode": "91792",
+    "website": null,
+    "latitude": "34.030919",
+    "longitude": "-117.913461",
+    "source": null,
+    "avg_rating": "0.0000",
+    "total_reviews": "0",
+    "distance": "27.052439701645984",
+    "categories": [
+      "Veterinarians"
+    ],
+    "autocomplete": [
+      "Adam's Animal Hospital",
+      "Veterinarians"
+    ],
+    "spell": [
+      "",
+      "Veterinarians"
+    ],
+    "label": "Adam's Animal Hospital"
+  },
+  {
+    "entity_id": "771",
+    "title": "Adler Vet Group",
+    "path_alias": "adler-vet-group",
+    "description": "",
+    "dvm": " ",
+    "phone": "+1-(818)-8936366",
+    "fax": " ",
+    "address_1": "16911 Roscoe Blvd",
+    "city": "North Hills",
+    "state": "CA",
+    "zipcode": "91343",
+    "website": null,
+    "latitude": "34.221343",
+    "longitude": "-118.501384",
+    "source": null,
+    "avg_rating": "0.0000",
+    "total_reviews": "0",
+    "distance": "55.1999841972609",
+    "categories": [
+      "Veterinarians"
+    ],
+    "autocomplete": [
+      "Adler Vet Group",
+      "Veterinarians"
+    ],
+    "spell": [
+      "",
+      "Veterinarians"
+    ],
+    "label": "Adler Vet Group"
+  },
+  {
+    "entity_id": "772",
+    "title": "Adler Veterinary Group Inc",
+    "path_alias": "adler-veterinary-group-inc",
+    "description": "",
+    "dvm": null,
+    "phone": "+1-(818)-8936366",
+    "fax": null,
+    "address_1": "16911 Roscoe Blvd",
+    "city": "North Hills",
+    "state": "CA",
+    "zipcode": "91343",
+    "website": null,
+    "latitude": "34.221343",
+    "longitude": "-118.501384",
+    "source": null,
+    "avg_rating": "5.0000",
+    "total_reviews": "1",
+    "distance": "55.1999841972609",
+    "categories": [
+      "Veterinarians"
+    ],
+    "autocomplete": [
+      "Adler Veterinary Group Inc",
+      "Veterinarians"
+    ],
+    "spell": [
+      "",
+      "Veterinarians"
+    ],
+    "label": "Adler Veterinary Group Inc"
+  },
+  {
+    "entity_id": "776",
+    "title": "Adobe Animal Clinic",
+    "path_alias": "adobe-animal-clinic",
+    "description": "",
+    "dvm": "Donald Martinucci Dvm",
+    "phone": "+1-(805)-9251131",
+    "fax": " ",
+    "address_1": "2255 S Broadway Rd",
+    "city": "Santa Maria",
+    "state": "CA",
+    "zipcode": "93455",
+    "website": null,
+    "latitude": "34.919502",
+    "longitude": "-120.436258",
+    "source": null,
+    "avg_rating": "0.0000",
+    "total_reviews": "0",
+    "distance": "172.66776383500246",
+    "categories": [
+      "Veterinarians"
+    ],
+    "autocomplete": [
+      "Adobe Animal Clinic",
+      "Veterinarians"
+    ],
+    "spell": [
+      "",
+      "Veterinarians"
+    ],
+    "label": "Adobe Animal Clinic"
+  },
+  {
+    "entity_id": "785",
+    "title": "Adobe Veterinary Service",
+    "path_alias": "adobe-veterinary-service",
+    "description": "",
+    "dvm": "Robert Mushkot Dvm",
+    "phone": "+1-(661)-2513710",
+    "fax": null,
+    "address_1": "17787 Sierra Hwy",
+    "city": "Canyon Country",
+    "state": "CA",
+    "zipcode": "91351",
+    "website": null,
+    "latitude": "34.427262",
+    "longitude": "-118.44704",
+    "source": null,
+    "avg_rating": "0.0000",
+    "total_reviews": "0",
+    "distance": "64.43225618056356",
+    "categories": [
+      "Veterinarians"
+    ],
+    "autocomplete": [
+      "Adobe Veterinary Service",
+      "Veterinarians"
+    ],
+    "spell": [
+      "",
+      "Veterinarians"
+    ],
+    "label": "Adobe Veterinary Service"
+  },
+  {
+    "entity_id": "816",
+    "title": "Advanced Care Veterinary Hospital",
+    "path_alias": "advanced-care-veterinary-hospital",
+    "description": "",
+    "dvm": null,
+    "phone": "+1-(858)-4868860",
+    "fax": null,
+    "address_1": "12443 Poway Road",
+    "city": "Poway",
+    "state": "CA",
+    "zipcode": "92064",
+    "website": null,
+    "latitude": "32.951616",
+    "longitude": "-117.061269",
+    "source": null,
+    "avg_rating": "5.0000",
+    "total_reviews": "1",
+    "distance": "65.50034662249274",
+    "categories": [
+      "Veterinarians"
+    ],
+    "autocomplete": [
+      "Advanced Care Veterinary Hospital",
+      "Veterinarians"
+    ],
+    "spell": [
+      "",
+      "Veterinarians"
+    ],
+    "label": "Advanced Care Veterinary Hospital"
+  },
+  {
+    "entity_id": "817",
+    "title": "Advanced Critical Care & Internal Medicine",
+    "path_alias": "advanced-critical-care--internal-medicine",
+    "description": "",
+    "dvm": null,
+    "phone": "+1-(949)-6548950",
+    "fax": "949-936-0079",
+    "address_1": "2965 Edinger Avenue",
+    "city": "Tustin",
+    "state": "CA",
+    "zipcode": "92780",
+    "website": "www.accim.net",
+    "latitude": "33.712347",
+    "longitude": "-117.812348",
+    "source": null,
+    "avg_rating": "0.0000",
+    "total_reviews": "0",
+    "distance": "4.834734464161324",
+    "categories": [
+      "Emergency Clinics"
+    ],
+    "autocomplete": [
+      "Advanced Critical Care & Internal Medicine",
+      "Emergency Clinics"
+    ],
+    "spell": [
+      "",
+      "Emergency Clinics"
+    ],
+    "label": "Advanced Critical Care & Internal Medicine"
+  },
+  {
+    "entity_id": "818",
+    "title": "Advanced Critical Care and Internal Medicine Los Angeles",
+    "path_alias": "advanced-critical-care-and-internal-medicine-los-angeles",
+    "description": "",
+    "dvm": null,
+    "phone": "+1-(310)-5586100",
+    "fax": "310 558 6199",
+    "address_1": "9599 Jefferson Blvd",
+    "city": "Culver City",
+    "state": "CA",
+    "zipcode": "0",
+    "website": "",
+    "latitude": "34.017493",
+    "longitude": "-118.387756",
+    "source": null,
+    "avg_rating": "0.0000",
+    "total_reviews": "0",
+    "distance": "40.86950179672554",
+    "categories": [
+      "Emergency Clinics"
+    ],
+    "autocomplete": [
+      "Advanced Critical Care and Internal Medicine Los Angeles",
+      "Emergency Clinics"
+    ],
+    "spell": [
+      "",
+      "Emergency Clinics"
+    ],
+    "label": "Advanced Critical Care and Internal Medicine Los Angeles"
+  },
+  {
+    "entity_id": "824",
+    "title": "Advanced Veterinary Care Center",
+    "path_alias": "advanced-veterinary-care-center",
+    "description": "",
+    "dvm": "Michael Lesser Dvm",
+    "phone": "+1-(310)-6794988",
+    "fax": null,
+    "address_1": "15308 Inglewood Ave",
+    "city": "Lawndale",
+    "state": "CA",
+    "zipcode": "90260",
+    "website": null,
+    "latitude": "33.892523",
+    "longitude": "-118.36124",
+    "source": null,
+    "avg_rating": "0.0000",
+    "total_reviews": "0",
+    "distance": "34.74619734252225",
+    "categories": [
+      "Veterinarians"
+    ],
+    "autocomplete": [
+      "Advanced Veterinary Care Center",
+      "Veterinarians"
+    ],
+    "spell": [
+      "",
+      "Veterinarians"
+    ],
+    "label": "Advanced Veterinary Care Center"
+  },
+  {
+    "entity_id": "859",
+    "title": "Affordable Affection",
+    "path_alias": "affordable-affection",
+    "description": "",
+    "dvm": null,
+    "phone": "+1-(909)-4769118",
+    "fax": null,
+    "address_1": "8649 Hamilton Street",
+    "city": "Rancho Cucamonga",
+    "state": "CA",
+    "zipcode": "91701",
+    "website": null,
+    "latitude": "34.153555",
+    "longitude": "-117.614284",
+    "source": null,
+    "avg_rating": "0.0000",
+    "total_reviews": "0",
+    "distance": "37.35160218847759",
+    "categories": [
+      "Pet Day Care"
+    ],
+    "autocomplete": [
+      "Affordable Affection",
+      "Pet Day Care"
+    ],
+    "spell": [
+      "",
+      "Pet Day Care"
+    ],
+    "label": "Affordable Affection"
+  },
+  {
+    "entity_id": "860",
+    "title": "Affordable Animal Emergency",
+    "path_alias": "affordable-animal-emergency",
+    "description": "",
+    "dvm": "Rahim Zabihi Dvm",
+    "phone": "+1-(818)-7981801",
+    "fax": null,
+    "address_1": "16907 San Fernando Mission Blvd",
+    "city": "Granada Hills",
+    "state": "CA",
+    "zipcode": "91344",
+    "website": null,
+    "latitude": "34.272045",
+    "longitude": "-118.500312",
+    "source": "felix",
+    "avg_rating": "0.0000",
+    "total_reviews": "0",
+    "distance": "57.73065520721231",
+    "categories": [
+      "Veterinarians"
+    ],
+    "autocomplete": [
+      "Affordable Animal Emergency",
+      "Veterinarians"
+    ],
+    "spell": [
+      "",
+      "Veterinarians"
+    ],
+    "label": "Affordable Animal Emergency"
+  },
+  {
+    "entity_id": "866",
+    "title": "Affordable Loving & Reliable",
+    "path_alias": "affordable-loving--reliable",
+    "description": "",
+    "dvm": null,
+    "phone": "+1-(949)-6530780",
+    "fax": null,
+    "address_1": "24 Fuchsia",
+    "city": "Irvine",
+    "state": "CA",
+    "zipcode": "92604",
+    "website": null,
+    "latitude": "33.688291",
+    "longitude": "-117.78896",
+    "source": null,
+    "avg_rating": "0.0000",
+    "total_reviews": "0",
+    "distance": "3.990050231041415",
+    "categories": [
+      "Pet Day Care"
+    ],
+    "autocomplete": [
+      "Affordable Loving & Reliable",
+      "Pet Day Care"
+    ],
+    "spell": [
+      "",
+      "Pet Day Care"
+    ],
+    "label": "Affordable Loving & Reliable"
+  },
+  {
+    "entity_id": "867",
+    "title": "Affordable Pet & House Sitting",
+    "path_alias": "affordable-pet--house-sitting",
+    "description": "",
+    "dvm": null,
+    "phone": "+1-(760)-3937375",
+    "fax": null,
+    "address_1": "53-635 Avenida Bermudas",
+    "city": "La Quinta",
+    "state": "CA",
+    "zipcode": "92253",
+    "website": null,
+    "latitude": "33.67814",
+    "longitude": "-116.297229",
+    "source": null,
+    "avg_rating": "0.0000",
+    "total_reviews": "0",
+    "distance": "88.45440997792228",
+    "categories": [
+      "Pet Day Care"
+    ],
+    "autocomplete": [
+      "Affordable Pet & House Sitting",
+      "Pet Day Care"
+    ],
+    "spell": [
+      "",
+      "Pet Day Care"
+    ],
+    "label": "Affordable Pet & House Sitting"
+  },
+  {
+    "entity_id": "875",
+    "title": "Affordable Quality Veterinary Care",
+    "path_alias": "affordable-quality-veterinary-care",
+    "description": "",
+    "dvm": "Wendy Ringle Moore",
+    "phone": "+1-(909)-8452675",
+    "fax": null,
+    "address_1": "764 East 3Rd Street",
+    "city": "Beaumont",
+    "state": "CA",
+    "zipcode": "92223",
+    "website": null,
+    "latitude": "33.924929",
+    "longitude": "-116.971564",
+    "source": null,
+    "avg_rating": "0.0000",
+    "total_reviews": "0",
+    "distance": "53.21399302007558",
+    "categories": [
+      "Veterinarians"
+    ],
+    "autocomplete": [
+      "Affordable Quality Veterinary Care",
+      "Veterinarians"
+    ],
+    "spell": [
+      "",
+      "Veterinarians"
+    ],
+    "label": "Affordable Quality Veterinary Care"
+  },
+  {
+    "entity_id": "912",
+    "title": "Agoura Animal Clinic",
+    "path_alias": "agoura-animal-clinic",
+    "description": "",
+    "dvm": "Bradford Capper Dvm",
+    "phone": "+1-(818)-9911036",
+    "fax": null,
+    "address_1": "28282 Dorothy Drive",
+    "city": "Agoura Hills",
+    "state": "CA",
+    "zipcode": "91301",
+    "website": null,
+    "latitude": "34.141879",
+    "longitude": "-118.742181",
+    "source": null,
+    "avg_rating": "0.0000",
+    "total_reviews": "0",
+    "distance": "62.35416541968881",
+    "categories": [
+      "Veterinarians"
+    ],
+    "autocomplete": [
+      "Agoura Animal Clinic",
+      "Veterinarians"
+    ],
+    "spell": [
+      "",
+      "Veterinarians"
+    ],
+    "label": "Agoura Animal Clinic"
+  },
+  {
+    "entity_id": "913",
+    "title": "Agoura Hills Animal Hospital",
+    "path_alias": "agoura-hills-animal-hospital",
+    "description": "",
+    "dvm": "Keith Berry Dvm",
+    "phone": "+1-(818)-9912424",
+    "fax": null,
+    "address_1": "5605 Kanan Rd",
+    "city": "Agoura Hills",
+    "state": "CA",
+    "zipcode": "91301",
+    "website": null,
+    "latitude": "34.152227",
+    "longitude": "-118.758146",
+    "source": null,
+    "avg_rating": "0.0000",
+    "total_reviews": "0",
+    "distance": "63.509623019460626",
+    "categories": [
+      "Veterinarians"
+    ],
+    "autocomplete": [
+      "Agoura Hills Animal Hospital",
+      "Veterinarians"
+    ],
+    "spell": [
+      "",
+      "Veterinarians"
+    ],
+    "label": "Agoura Hills Animal Hospital"
+  },
+  {
+    "entity_id": "914",
+    "title": "Agoura Westlake Animal Hosp",
+    "path_alias": "agoura-westlake-animal-hosp",
+    "description": "",
+    "dvm": "Steve Rosenstein Dvm",
+    "phone": "+1-(818)-7073030",
+    "fax": " ",
+    "address_1": "30849 Thousand Oaks Blvd",
+    "city": "Westlake Village",
+    "state": "CA",
+    "zipcode": "91362",
+    "website": null,
+    "latitude": "34.15535",
+    "longitude": "-118.792626",
+    "source": null,
+    "avg_rating": "0.0000",
+    "total_reviews": "0",
+    "distance": "65.28321645336062",
+    "categories": [
+      "Veterinarians"
+    ],
+    "autocomplete": [
+      "Agoura Westlake Animal Hosp",
+      "Veterinarians"
+    ],
+    "spell": [
+      "",
+      "Veterinarians"
+    ],
+    "label": "Agoura Westlake Animal Hosp"
+  },
+  {
+    "entity_id": "970",
+    "title": "Airport Animal Hospital",
+    "path_alias": "airport-animal-hospital",
+    "description": "",
+    "dvm": "K H Kamel Dvm",
+    "phone": "+1-(714)-8794531",
+    "fax": null,
+    "address_1": "2433 West Commonwealth",
+    "city": "Fullerton",
+    "state": "CA",
+    "zipcode": "92833",
+    "website": null,
+    "latitude": "33.870175",
+    "longitude": "-117.971254",
+    "source": null,
+    "avg_rating": "0.0000",
+    "total_reviews": "0",
+    "distance": "17.42933681216317",
+    "categories": [
+      "Veterinarians"
+    ],
+    "autocomplete": [
+      "Airport Animal Hospital",
+      "Veterinarians"
+    ],
+    "spell": [
+      "",
+      "Veterinarians"
+    ],
+    "label": "Airport Animal Hospital"
+  },
+  {
+    "entity_id": "972",
+    "title": "Airport Cities Animal Hospital",
+    "path_alias": "airport-cities-animal-hospital",
+    "description": "",
+    "dvm": "Toya Jackson Dvm",
+    "phone": "+1-(310)-6418800",
+    "fax": null,
+    "address_1": "1120 West Manchester Blvd",
+    "city": "Inglewood",
+    "state": "CA",
+    "zipcode": "90301",
+    "website": null,
+    "latitude": "33.959738",
+    "longitude": "-118.375864",
+    "source": null,
+    "avg_rating": "0.0000",
+    "total_reviews": "0",
+    "distance": "37.92820312132441",
+    "categories": [
+      "Veterinarians"
+    ],
+    "autocomplete": [
+      "Airport Cities Animal Hospital",
+      "Veterinarians"
+    ],
+    "spell": [
+      "",
+      "Veterinarians"
+    ],
+    "label": "Airport Cities Animal Hospital"
+  },
+  {
+    "entity_id": "978",
+    "title": "Airport Pet Cottages And Spa",
+    "path_alias": "airport-pet-cottages-and-spa",
+    "description": "",
+    "dvm": "",
+    "phone": "+1-(310)-3226506",
+    "fax": null,
+    "address_1": "235 E. Franklin Ave.",
+    "city": "El Segundo",
+    "state": "CA",
+    "zipcode": "90245",
+    "website": null,
+    "latitude": "33.918022",
+    "longitude": "-118.414294",
+    "source": null,
+    "avg_rating": "0.0000",
+    "total_reviews": "0",
+    "distance": "38.26182753413031",
+    "categories": [
+      "Pet Day Care",
+      "Pet Sitters"
+    ],
+    "autocomplete": [
+      "Airport Pet Cottages And Spa",
+      "Pet Day Care",
+      "Pet Sitters"
+    ],
+    "spell": [
+      "",
+      "Pet Day Care",
+      "Pet Sitters"
+    ],
+    "label": "Airport Pet Cottages And Spa"
+  },
+  {
+    "entity_id": "986",
+    "title": "Airport Veterinary Hospital",
+    "path_alias": "airport-veterinary-hospital",
+    "description": "",
+    "dvm": "Norman Zachary Dvm",
+    "phone": "+1-(661)-3920544",
+    "fax": null,
+    "address_1": "1450 Olive Dr",
+    "city": "Bakersfield",
+    "state": "CA",
+    "zipcode": "93308",
+    "website": null,
+    "latitude": "35.412579",
+    "longitude": "-119.049083",
+    "source": null,
+    "avg_rating": "0.0000",
+    "total_reviews": "0",
+    "distance": "140.34303091122501",
+    "categories": [
+      "Veterinarians"
+    ],
+    "autocomplete": [
+      "Airport Veterinary Hospital",
+      "Veterinarians"
+    ],
+    "spell": [
+      "",
+      "Veterinarians"
+    ],
+    "label": "Airport Veterinary Hospital"
+  },
+  {
+    "entity_id": "990",
+    "title": "Airport-Irvine Animal Hospital",
+    "path_alias": "airport-irvine-animal-hospital",
+    "description": "",
+    "dvm": "William Radovich Dvm",
+    "phone": "+1-(714)-7541033",
+    "fax": " ",
+    "address_1": "1206 Se Bistol Street",
+    "city": "Santa Ana Heights",
+    "state": "CA",
+    "zipcode": "92707",
+    "website": null,
+    "latitude": "33.652875",
+    "longitude": "-117.873834",
+    "source": null,
+    "avg_rating": "0.0000",
+    "total_reviews": "0",
+    "distance": "2.3146837475858018",
+    "categories": [
+      "Veterinarians"
+    ],
+    "autocomplete": [
+      "Airport-Irvine Animal Hospital",
+      "Veterinarians"
+    ],
+    "spell": [
+      "",
+      "Veterinarians"
+    ],
+    "label": "Airport-Irvine Animal Hospital"
+  },
+  {
+    "entity_id": "1016",
+    "title": "Ala-Plam Animal Hospital",
+    "path_alias": "ala-plam-animal-hospital",
+    "description": "",
+    "dvm": "F K Hart Dvm",
+    "phone": "+1-(909)-8625111",
+    "fax": null,
+    "address_1": "8068 Plam Avenue",
+    "city": "Highland",
+    "state": "CA",
+    "zipcode": "92346",
+    "website": null,
+    "latitude": "34.125739",
+    "longitude": "-117.195797",
+    "source": null,
+    "avg_rating": "0.0000",
+    "total_reviews": "0",
+    "distance": "49.46875236261445",
+    "categories": [
+      "Veterinarians"
+    ],
+    "autocomplete": [
+      "Ala-Plam Animal Hospital",
+      "Veterinarians"
+    ],
+    "spell": [
+      "",
+      "Veterinarians"
+    ],
+    "label": "Ala-Plam Animal Hospital"
+  },
+  {
+    "entity_id": "1019",
+    "title": "Alabama Hills",
+    "path_alias": "alabama-hills",
+    "description": "",
+    "dvm": "",
+    "phone": "",
+    "fax": null,
+    "address_1": "Movie Flat Road",
+    "city": "Lone Pine",
+    "state": "CA",
+    "zipcode": "92545",
+    "website": null,
+    "latitude": "33.730734",
+    "longitude": "-117.013237",
+    "source": null,
+    "avg_rating": "4.0000",
+    "total_reviews": "1",
+    "distance": "47.60282306952601",
+    "categories": [
+      "Dog Parks"
+    ],
+    "autocomplete": [
+      "Alabama Hills",
+      "Dog Parks"
+    ],
+    "spell": [
+      "",
+      "Dog Parks"
+    ],
+    "label": "Alabama Hills"
+  },
+  {
+    "entity_id": "1036",
+    "title": "Alamitos Animal Hospital",
+    "path_alias": "alamitos-animal-hospital",
+    "description": "",
+    "dvm": "Wayne Smith Dvm",
+    "phone": "+1-(714)-8933591",
+    "fax": " ",
+    "address_1": "7122 Garden Grove Blvd",
+    "city": "Westminster",
+    "state": "CA",
+    "zipcode": "92683",
+    "website": null,
+    "latitude": "33.773593",
+    "longitude": "-118.009539",
+    "source": null,
+    "avg_rating": "0.0000",
+    "total_reviews": "0",
+    "distance": "13.416713208801943",
+    "categories": [
+      "Veterinarians"
+    ],
+    "autocomplete": [
+      "Alamitos Animal Hospital",
+      "Veterinarians"
+    ],
+    "spell": [
+      "",
+      "Veterinarians"
+    ],
+    "label": "Alamitos Animal Hospital"
+  },
+  {
+    "entity_id": "1043",
+    "title": "Alamo Veterinary Hospital",
+    "path_alias": "alamo-veterinary-hospital",
+    "description": "",
+    "dvm": null,
+    "phone": "+1-(805)-5838855",
+    "fax": null,
+    "address_1": "2767 Tapo Street",
+    "city": "Simi Valley",
+    "state": "CA",
+    "zipcode": "93063",
+    "website": null,
+    "latitude": "34.285651",
+    "longitude": "-118.709119",
+    "source": null,
+    "avg_rating": "0.0000",
+    "total_reviews": "0",
+    "distance": "66.86518008942959",
+    "categories": [
+      "Veterinarians"
+    ],
+    "autocomplete": [
+      "Alamo Veterinary Hospital",
+      "Veterinarians"
+    ],
+    "spell": [
+      "",
+      "Veterinarians"
+    ],
+    "label": "Alamo Veterinary Hospital"
+  },
+  {
+    "entity_id": "1110",
+    "title": "Alessandro Animal Hospital",
+    "path_alias": "alessandro-animal-hospital",
+    "description": "",
+    "dvm": "H S Randhawa Dvm",
+    "phone": "+1-(909)-6564455",
+    "fax": " ",
+    "address_1": "23932 B Alessandro Blvd",
+    "city": "Moreno Valley",
+    "state": "CA",
+    "zipcode": "92553",
+    "website": null,
+    "latitude": "33.917471",
+    "longitude": "-117.245099",
+    "source": null,
+    "avg_rating": "4.0000",
+    "total_reviews": "1",
+    "distance": "38.749200386325214",
+    "categories": [
+      "Veterinarians"
+    ],
+    "autocomplete": [
+      "Alessandro Animal Hospital",
+      "Veterinarians"
+    ],
+    "spell": [
+      "",
+      "Veterinarians"
+    ],
+    "label": "Alessandro Animal Hospital"
+  },
+  {
+    "entity_id": "1127",
+    "title": "Alfon Dog Training",
+    "path_alias": "alfon-dog-training",
+    "description": "",
+    "dvm": null,
+    "phone": "+1-(626)-9184239",
+    "fax": null,
+    "address_1": "1031 S Silverbirch Place",
+    "city": "West Covina",
+    "state": "CA",
+    "zipcode": "91790",
+    "website": null,
+    "latitude": "34.07215",
+    "longitude": "-117.939187",
+    "source": null,
+    "avg_rating": "0.0000",
+    "total_reviews": "0",
+    "distance": "30.123620062650264",
+    "categories": [
+      "Pet Day Care"
+    ],
+    "autocomplete": [
+      "Alfon Dog Training",
+      "Pet Day Care"
+    ],
+    "spell": [
+      "",
+      "Pet Day Care"
+    ],
+    "label": "Alfon Dog Training"
+  },
+  {
+    "entity_id": "1136",
+    "title": "Alga Pet Hospital",
+    "path_alias": "alga-pet-hospital",
+    "description": "",
+    "dvm": "Johnathan Lax Dvm",
+    "phone": "+1-(760)-6325336",
+    "fax": null,
+    "address_1": "6955 El Camino Real #101",
+    "city": "Carlsbad",
+    "state": "CA",
+    "zipcode": "92009",
+    "website": null,
+    "latitude": "33.10371",
+    "longitude": "-117.266986",
+    "source": null,
+    "avg_rating": "0.0000",
+    "total_reviews": "0",
+    "distance": "49.71631014074829",
+    "categories": [
+      "Veterinarians"
+    ],
+    "autocomplete": [
+      "Alga Pet Hospital",
+      "Veterinarians"
+    ],
+    "spell": [
+      "",
+      "Veterinarians"
+    ],
+    "label": "Alga Pet Hospital"
+  },
+  {
+    "entity_id": "1143",
+    "title": "Alhambra Veterinary Hospital",
+    "path_alias": "alhambra-veterinary-hospital",
+    "description": "",
+    "dvm": "Heidi Henstra Dvm",
+    "phone": "+1-(626)-2899227",
+    "fax": null,
+    "address_1": "1501 W Mission Rd",
+    "city": "Alhambra",
+    "state": "CA",
+    "zipcode": "91803",
+    "website": null,
+    "latitude": "34.082657",
+    "longitude": "-118.139754",
+    "source": null,
+    "avg_rating": "0.0000",
+    "total_reviews": "0",
+    "distance": "34.94513833107917",
+    "categories": [
+      "Veterinarians"
+    ],
+    "autocomplete": [
+      "Alhambra Veterinary Hospital",
+      "Veterinarians"
+    ],
+    "spell": [
+      "",
+      "Veterinarians"
+    ],
+    "label": "Alhambra Veterinary Hospital"
+  },
+  {
+    "entity_id": "1147",
+    "title": "Alicia Pet Clinic",
+    "path_alias": "alicia-pet-clinic",
+    "description": "",
+    "dvm": "",
+    "phone": "+1-(949)-7681313",
+    "fax": null,
+    "address_1": "24861 Alicia Parkway",
+    "city": "Laguna Hills",
+    "state": "CA",
+    "zipcode": "92653",
+    "website": null,
+    "latitude": "33.601276",
+    "longitude": "-117.691605",
+    "source": null,
+    "avg_rating": "0.0000",
+    "total_reviews": "0",
+    "distance": "8.770495223808313",
+    "categories": [
+      "Pet Day Care"
+    ],
+    "autocomplete": [
+      "Alicia Pet Clinic",
+      "Pet Day Care"
+    ],
+    "spell": [
+      "",
+      "Pet Day Care"
+    ],
+    "label": "Alicia Pet Clinic"
+  },
+  {
+    "entity_id": "1155",
+    "title": "Aliso Viejo Pet Clinic",
+    "path_alias": "aliso-viejo-pet-clinic",
+    "description": "",
+    "dvm": "Soheil Shahhosseini Dvm",
+    "phone": "+1-(949)-3600357",
+    "fax": null,
+    "address_1": "22912 Pacific Park Drive Ste E",
+    "city": "Aliso Viejo",
+    "state": "CA",
+    "zipcode": "92656",
+    "website": null,
+    "latitude": "33.570477",
+    "longitude": "-117.729668",
+    "source": null,
+    "avg_rating": "0.0000",
+    "total_reviews": "0",
+    "distance": "7.938300832909316",
+    "categories": [
+      "Veterinarians"
+    ],
+    "autocomplete": [
+      "Aliso Viejo Pet Clinic",
+      "Veterinarians"
+    ],
+    "spell": [
+      "",
+      "Veterinarians"
+    ],
+    "label": "Aliso Viejo Pet Clinic"
+  },
+  {
+    "entity_id": "1157",
+    "title": "Alisos Animal Hospital",
+    "path_alias": "alisos-animal-hospital",
+    "description": "",
+    "dvm": "M Sindhu Dvm",
+    "phone": "+1-(714)-7688308",
+    "fax": " ",
+    "address_1": "22902 Los Alisos Blvd",
+    "city": "Mission Viejo",
+    "state": "CA",
+    "zipcode": "92691",
+    "website": null,
+    "latitude": "33.629686",
+    "longitude": "-117.664419",
+    "source": null,
+    "avg_rating": "0.0000",
+    "total_reviews": "0",
+    "distance": "9.854950511254582",
+    "categories": [
+      "Veterinarians"
+    ],
+    "autocomplete": [
+      "Alisos Animal Hospital",
+      "Veterinarians"
+    ],
+    "spell": [
+      "",
+      "Veterinarians"
+    ],
+    "label": "Alisos Animal Hospital"
+  },
+  {
+    "entity_id": "1228",
+    "title": "All Care Cat Hospital",
+    "path_alias": "all-care-cat-hospital",
+    "description": "",
+    "dvm": null,
+    "phone": "+1-(858)-2742287",
+    "fax": null,
+    "address_1": "4680 Clairemont Mesa Boulevard",
+    "city": "San Diego",
+    "state": "CA",
+    "zipcode": "92117",
+    "website": null,
+    "latitude": "32.83471",
+    "longitude": "-117.189641",
+    "source": null,
+    "avg_rating": "5.0000",
+    "total_reviews": "1",
+    "distance": "67.26028815561898",
+    "categories": [
+      "Veterinarians"
+    ],
+    "autocomplete": [
+      "All Care Cat Hospital",
+      "Veterinarians"
+    ],
+    "spell": [
+      "",
+      "Veterinarians"
+    ],
+    "label": "All Care Cat Hospital"
+  },
+  {
+    "entity_id": "1235",
+    "title": "All Cat Veterinary Clinic",
+    "path_alias": "all-cat-veterinary-clinic",
+    "description": "",
+    "dvm": "Victoria Valdez Dvm",
+    "phone": "+1-(714)-5382287",
+    "fax": " ",
+    "address_1": "600 East Chapman Avenue",
+    "city": "Orange",
+    "state": "CA",
+    "zipcode": "92866",
+    "website": null,
+    "latitude": "33.787764",
+    "longitude": "-117.847559",
+    "source": null,
+    "avg_rating": "0.0000",
+    "total_reviews": "0",
+    "distance": "9.898566416398479",
+    "categories": [
+      "Veterinarians"
+    ],
+    "autocomplete": [
+      "All Cat Veterinary Clinic",
+      "Veterinarians"
+    ],
+    "spell": [
+      "",
+      "Veterinarians"
+    ],
+    "label": "All Cat Veterinary Clinic"
+  },
+  {
+    "entity_id": "1237",
+    "title": "All Cats Clinic",
+    "path_alias": "all-cats-clinic",
+    "description": "",
+    "dvm": "Andrew Ozdy Dvm",
+    "phone": "+1-(805)-6562190",
+    "fax": " ",
+    "address_1": "4587 Telephone Road Suite 105",
+    "city": "Ventura",
+    "state": "CA",
+    "zipcode": "93003",
+    "website": null,
+    "latitude": "34.256576",
+    "longitude": "-119.235129",
+    "source": null,
+    "avg_rating": "0.0000",
+    "total_reviews": "0",
+    "distance": "90.71277314574377",
+    "categories": [
+      "Veterinarians"
+    ],
+    "autocomplete": [
+      "All Cats Clinic",
+      "Veterinarians"
+    ],
+    "spell": [
+      "",
+      "Veterinarians"
+    ],
+    "label": "All Cats Clinic"
+  },
+  {
+    "entity_id": "1238",
+    "title": "All Cats Hospital",
+    "path_alias": "all-cats-hospital",
+    "description": "",
+    "dvm": "Lynn A Yut Dvm",
+    "phone": "+1-(760)-4313585",
+    "fax": null,
+    "address_1": "7040 Avenida Encinas",
+    "city": "Carlsbad",
+    "state": "CA",
+    "zipcode": "92009",
+    "website": null,
+    "latitude": "33.102195",
+    "longitude": "-117.313022",
+    "source": null,
+    "avg_rating": "0.0000",
+    "total_reviews": "0",
+    "distance": "48.08919644448889",
+    "categories": [
+      "Veterinarians"
+    ],
+    "autocomplete": [
+      "All Cats Hospital",
+      "Veterinarians"
+    ],
+    "spell": [
+      "",
+      "Veterinarians"
+    ],
+    "label": "All Cats Hospital"
+  },
+  {
+    "entity_id": "1255",
+    "title": "All Creatures Care Cottage",
+    "path_alias": "all-creatures-care-cottage",
+    "description": "",
+    "dvm": "Joel Pasco Dvm",
+    "phone": "+1-(949)-6427151",
+    "fax": null,
+    "address_1": "1912 Harbor Blvd",
+    "city": "Costa Mesa",
+    "state": "CA",
+    "zipcode": "92627",
+    "website": null,
+    "latitude": "33.643959",
+    "longitude": "-117.918814",
+    "source": null,
+    "avg_rating": "0.0000",
+    "total_reviews": "0",
+    "distance": "4.836185857436669",
+    "categories": [
+      "Veterinarians"
+    ],
+    "autocomplete": [
+      "All Creatures Care Cottage",
+      "Veterinarians"
+    ],
+    "spell": [
+      "",
+      "Veterinarians"
+    ],
+    "label": "All Creatures Care Cottage"
+  },
+  {
+    "entity_id": "1257",
+    "title": "All Creatures Emergency Center",
+    "path_alias": "all-creatures-emergency-center",
+    "description": "",
+    "dvm": null,
+    "phone": "+1-(661)-2911121",
+    "fax": "",
+    "address_1": "22722 Lyons Ave. #5",
+    "city": "Newhall",
+    "state": "CA",
+    "zipcode": "91384",
+    "website": "www.all-creatures-emergency.com",
+    "latitude": "34.380595",
+    "longitude": "-118.531056",
+    "source": null,
+    "avg_rating": "0.0000",
+    "total_reviews": "0",
+    "distance": "64.6112890600394",
+    "categories": [
+      "Emergency Clinics"
+    ],
+    "autocomplete": [
+      "All Creatures Emergency Center",
+      "Emergency Clinics"
+    ],
+    "spell": [
+      "",
+      "Emergency Clinics"
+    ],
+    "label": "All Creatures Emergency Center"
+  },
+  {
+    "entity_id": "1270",
+    "title": "All Creatures Hospital",
+    "path_alias": "all-creatures-hospital",
+    "description": "",
+    "dvm": "Michael M Mulvany Dvm",
+    "phone": "+1-(858)-4817992",
+    "fax": null,
+    "address_1": "3665 Via De La Valle",
+    "city": "Del Mar",
+    "state": "CA",
+    "zipcode": "92014",
+    "website": null,
+    "latitude": "32.982382",
+    "longitude": "-117.231802",
+    "source": null,
+    "avg_rating": "0.0000",
+    "total_reviews": "0",
+    "distance": "57.513671675694845",
+    "categories": [
+      "Veterinarians"
+    ],
+    "autocomplete": [
+      "All Creatures Hospital",
+      "Veterinarians"
+    ],
+    "spell": [
+      "",
+      "Veterinarians"
+    ],
+    "label": "All Creatures Hospital"
+  },
+  {
+    "entity_id": "1275",
+    "title": "All Creatures Pet Care Center",
+    "path_alias": "all-creatures-pet-care-center",
+    "description": "",
+    "dvm": " ",
+    "phone": "+1-(559)-7841955",
+    "fax": " ",
+    "address_1": "842 North Westwood",
+    "city": "Porterville",
+    "state": "CA",
+    "zipcode": "93257",
+    "website": null,
+    "latitude": "36.080854",
+    "longitude": "-119.070674",
+    "source": null,
+    "avg_rating": "0.0000",
+    "total_reviews": "0",
+    "distance": "182.31627913544006",
+    "categories": [
+      "Veterinarians"
+    ],
+    "autocomplete": [
+      "All Creatures Pet Care Center",
+      "Veterinarians"
+    ],
+    "spell": [
+      "",
+      "Veterinarians"
+    ],
+    "label": "All Creatures Pet Care Center"
+  },
+  {
+    "entity_id": "1280",
+    "title": "All Creatures Pet Sitting and Walking Services",
+    "path_alias": "all-creatures-pet-sitting-and-walking-services",
+    "description": "",
+    "dvm": null,
+    "phone": "+1-(714)-7680671",
+    "fax": null,
+    "address_1": "4445 Old River St",
+    "city": "Oceanside",
+    "state": "CA",
+    "zipcode": "92057",
+    "website": null,
+    "latitude": "33.241379",
+    "longitude": "-117.300835",
+    "source": null,
+    "avg_rating": "0.0000",
+    "total_reviews": "0",
+    "distance": "41.534204446958086",
+    "categories": [
+      "Pet Day Care"
+    ],
+    "autocomplete": [
+      "All Creatures Pet Sitting and Walking Services",
+      "Pet Day Care"
+    ],
+    "spell": [
+      "",
+      "Pet Day Care"
+    ],
+    "label": "All Creatures Pet Sitting and Walking Services"
+  },
+  {
+    "entity_id": "1292",
+    "title": "All Creatures Veterinary Care",
+    "path_alias": "all-creatures-veterinary-care",
+    "description": "",
+    "dvm": "",
+    "phone": "+1-(760)-8484053",
+    "fax": null,
+    "address_1": "78-359 Highway 111",
+    "city": "La Quinta",
+    "state": "CA",
+    "zipcode": "92253",
+    "website": null,
+    "latitude": "33.71039",
+    "longitude": "-116.289559",
+    "source": "felix",
+    "avg_rating": "1.0000",
+    "total_reviews": "1",
+    "distance": "88.96417296151073",
+    "categories": [
+      "Veterinarians"
+    ],
+    "autocomplete": [
+      "All Creatures Veterinary Care",
+      "Veterinarians"
+    ],
+    "spell": [
+      "",
+      "Veterinarians"
+    ],
+    "label": "All Creatures Veterinary Care"
+  },
+  {
+    "entity_id": "1412",
+    "title": "All Pets Veterinary Hospital",
+    "path_alias": "all-pets-veterinary-hospital",
+    "description": "",
+    "dvm": "Robert W Moore Dvm",
+    "phone": "+1-(310)-5472784",
+    "fax": " ",
+    "address_1": "28326 S Western Avenue",
+    "city": "Rancho Palos Verdes",
+    "state": "CA",
+    "zipcode": "90275",
+    "website": null,
+    "latitude": "33.76248",
+    "longitude": "-118.311554",
+    "source": null,
+    "avg_rating": "0.0000",
+    "total_reviews": "0",
+    "distance": "28.58714153338346",
+    "categories": [
+      "Veterinarians"
+    ],
+    "autocomplete": [
+      "All Pets Veterinary Hospital",
+      "Veterinarians"
+    ],
+    "spell": [
+      "",
+      "Veterinarians"
+    ],
+    "label": "All Pets Veterinary Hospital"
+  },
+  {
+    "entity_id": "1423",
+    "title": "All Species Pet Care",
+    "path_alias": "all-species-pet-care",
+    "description": "",
+    "dvm": null,
+    "phone": "+1-(805)-7738779",
+    "fax": null,
+    "address_1": "872 Morro Street",
+    "city": "San Luis Obispo",
+    "state": "CA",
+    "zipcode": "93401",
+    "website": null,
+    "latitude": "35.28552",
+    "longitude": "-120.662554",
+    "source": null,
+    "avg_rating": "0.0000",
+    "total_reviews": "0",
+    "distance": "196.97031952235724",
+    "categories": [
+      "Pet Day Care"
+    ],
+    "autocomplete": [
+      "All Species Pet Care",
+      "Pet Day Care"
+    ],
+    "spell": [
+      "",
+      "Pet Day Care"
+    ],
+    "label": "All Species Pet Care"
+  },
+  {
+    "entity_id": "1426",
+    "title": "All Star Pet Resort",
+    "path_alias": "all-star-pet-resort",
+    "description": "",
+    "dvm": "",
+    "phone": "+1-(310)-3208799",
+    "fax": null,
+    "address_1": "951 W. 223rd St.",
+    "city": "Torrance",
+    "state": "CA",
+    "zipcode": "90502",
+    "website": null,
+    "latitude": "33.82835",
+    "longitude": "-118.292674",
+    "source": null,
+    "avg_rating": "0.0000",
+    "total_reviews": "0",
+    "distance": "29.206963946088244",
+    "categories": [
+      "Pet Sitters",
+      "Groomers",
+      "Pet Day Care"
+    ],
+    "autocomplete": [
+      "All Star Pet Resort",
+      "Pet Sitters",
+      "Groomers",
+      "Pet Day Care"
+    ],
+    "spell": [
+      "",
+      "Pet Sitters",
+      "Groomers",
+      "Pet Day Care"
+    ],
+    "label": "All Star Pet Resort"
+  },
+  {
+    "entity_id": "1437",
+    "title": "All Valley Pet Hospital",
+    "path_alias": "all-valley-pet-hospital",
+    "description": "",
+    "dvm": "Martin M Vale Dvm",
+    "phone": "+1-(805)-9220305",
+    "fax": " ",
+    "address_1": "230 A East Betteravia Rd",
+    "city": "Santa Maria",
+    "state": "CA",
+    "zipcode": "93454",
+    "website": null,
+    "latitude": "34.921498",
+    "longitude": "-120.432822",
+    "source": null,
+    "avg_rating": "0.0000",
+    "total_reviews": "0",
+    "distance": "172.5680020848964",
+    "categories": [
+      "Veterinarians"
+    ],
+    "autocomplete": [
+      "All Valley Pet Hospital",
+      "Veterinarians"
+    ],
+    "spell": [
+      "",
+      "Veterinarians"
+    ],
+    "label": "All Valley Pet Hospital"
+  },
+  {
+    "entity_id": "1444",
+    "title": "All-Care Animal Referral Ctr",
+    "path_alias": "all-care-animal-referral-ctr",
+    "description": "",
+    "dvm": "",
+    "phone": "+1-(714)-9630909",
+    "fax": null,
+    "address_1": "18440 Amistead St Ste E",
+    "city": "Fountain Valley",
+    "state": "CA",
+    "zipcode": "92708",
+    "website": null,
+    "latitude": "33.694958",
+    "longitude": "-117.943634",
+    "source": null,
+    "avg_rating": "0.0000",
+    "total_reviews": "0",
+    "distance": "7.153238096522679",
+    "categories": [
+      "Veterinarians"
+    ],
+    "autocomplete": [
+      "All-Care Animal Referral Ctr",
+      "Veterinarians"
+    ],
+    "spell": [
+      "",
+      "Veterinarians"
+    ],
+    "label": "All-Care Animal Referral Ctr"
+  },
+  {
+    "entity_id": "1532",
+    "title": "Ally McPets Pet Sitting",
+    "path_alias": "ally-mcpets-pet-sitting",
+    "description": "",
+    "dvm": null,
+    "phone": "+1-(310)-3183494",
+    "fax": null,
+    "address_1": "810 North Juanita Ave",
+    "city": "Redondo Beach",
+    "state": "CA",
+    "zipcode": "90277",
+    "website": "",
+    "latitude": "33.8530520",
+    "longitude": "-118.38815",
+    "source": null,
+    "avg_rating": "0.0000",
+    "total_reviews": "0",
+    "distance": "34.89631611415479",
+    "categories": [
+      "Pet Day Care"
+    ],
+    "autocomplete": [
+      "Ally McPets Pet Sitting",
+      "Pet Day Care"
+    ],
+    "spell": [
+      "",
+      "Pet Day Care"
+    ],
+    "label": "Ally McPets Pet Sitting"
+  },
+  {
+    "entity_id": "1556",
+    "title": "Aloha Animal Hospital",
+    "path_alias": "aloha-animal-hospital",
+    "description": "",
+    "dvm": " ",
+    "phone": "+1-(760)-7248313",
+    "fax": " ",
+    "address_1": "2020 E Vista Way",
+    "city": "Vista",
+    "state": "CA",
+    "zipcode": "92084",
+    "website": null,
+    "latitude": "33.230749",
+    "longitude": "-117.226304",
+    "source": null,
+    "avg_rating": "0.0000",
+    "total_reviews": "0",
+    "distance": "45.27444864821782",
+    "categories": [
+      "Veterinarians"
+    ],
+    "autocomplete": [
+      "Aloha Animal Hospital",
+      "Veterinarians"
+    ],
+    "spell": [
+      "",
+      "Veterinarians"
+    ],
+    "label": "Aloha Animal Hospital"
+  },
+  {
+    "entity_id": "1569",
+    "title": "Alondra Animal Hospital",
+    "path_alias": "alondra-animal-hospital",
+    "description": "",
+    "dvm": "Mark Lowell Pio Dvm",
+    "phone": "+1-(310)-6762255",
+    "fax": null,
+    "address_1": "14425 Crenshaw Blvd",
+    "city": "Gardena",
+    "state": "CA",
+    "zipcode": "90249",
+    "website": null,
+    "latitude": "33.900428",
+    "longitude": "-118.326674",
+    "source": null,
+    "avg_rating": "0.0000",
+    "total_reviews": "0",
+    "distance": "33.317696827348826",
+    "categories": [
+      "Veterinarians"
+    ],
+    "autocomplete": [
+      "Alondra Animal Hospital",
+      "Veterinarians"
+    ],
+    "spell": [
+      "",
+      "Veterinarians"
+    ],
+    "label": "Alondra Animal Hospital"
+  },
+  {
+    "entity_id": "1571",
+    "title": "Aloro Pet Clinic",
+    "path_alias": "aloro-pet-clinic",
+    "description": "",
+    "dvm": "S V Dogra Dvm",
+    "phone": "+1-(818)-7668197",
+    "fax": " ",
+    "address_1": "4846 Laurel Canyon",
+    "city": "North Hollywood",
+    "state": "CA",
+    "zipcode": "91607",
+    "website": null,
+    "latitude": "34.158793",
+    "longitude": "-118.396329",
+    "source": null,
+    "avg_rating": "0.0000",
+    "total_reviews": "0",
+    "distance": "47.93866233685205",
+    "categories": [
+      "Veterinarians"
+    ],
+    "autocomplete": [
+      "Aloro Pet Clinic",
+      "Veterinarians"
+    ],
+    "spell": [
+      "",
+      "Veterinarians"
+    ],
+    "label": "Aloro Pet Clinic"
+  },
+  {
+    "entity_id": "1572",
+    "title": "Alosta Animal Hospital",
+    "path_alias": "alosta-animal-hospital",
+    "description": "",
+    "dvm": "Russell H Corbett Dvm",
+    "phone": "+1-(626)-9631674",
+    "fax": null,
+    "address_1": "1821 E Alosta Ave",
+    "city": "Glendora",
+    "state": "CA",
+    "zipcode": "91741",
+    "website": null,
+    "latitude": "34.129013",
+    "longitude": "-117.830534",
+    "source": null,
+    "avg_rating": "0.0000",
+    "total_reviews": "0",
+    "distance": "33.45149793826006",
+    "categories": [
+      "Veterinarians"
+    ],
+    "autocomplete": [
+      "Alosta Animal Hospital",
+      "Veterinarians"
+    ],
+    "spell": [
+      "",
+      "Veterinarians"
+    ],
+    "label": "Alosta Animal Hospital"
+  },
+  {
+    "entity_id": "1609",
+    "title": "Alpine Vet Clinic",
+    "path_alias": "alpine-vet-clinic",
+    "description": "",
+    "dvm": "John Hackett Dvm",
+    "phone": "+1-(619)-4456262",
+    "fax": null,
+    "address_1": "2113 Arnold Way",
+    "city": "Alpine",
+    "state": "CA",
+    "zipcode": "91901",
+    "website": null,
+    "latitude": "32.835372",
+    "longitude": "-116.769382",
+    "source": null,
+    "avg_rating": "0.0000",
+    "total_reviews": "0",
+    "distance": "83.1838708880579",
+    "categories": [
+      "Veterinarians"
+    ],
+    "autocomplete": [
+      "Alpine Vet Clinic",
+      "Veterinarians"
+    ],
+    "spell": [
+      "",
+      "Veterinarians"
+    ],
+    "label": "Alpine Vet Clinic"
+  },
+  {
+    "entity_id": "1627",
+    "title": "Alta Mira Animal Hospital",
+    "path_alias": "alta-mira-animal-hospital",
+    "description": "",
+    "dvm": "Valerie L Graben Dvm",
+    "phone": "+1-(760)-7268918",
+    "fax": " ",
+    "address_1": "998 S Santa Fe Ave",
+    "city": "Vista",
+    "state": "CA",
+    "zipcode": "92084",
+    "website": null,
+    "latitude": "33.192583",
+    "longitude": "-117.230537",
+    "source": null,
+    "avg_rating": "0.0000",
+    "total_reviews": "0",
+    "distance": "46.8095407840301",
+    "categories": [
+      "Veterinarians"
+    ],
+    "autocomplete": [
+      "Alta Mira Animal Hospital",
+      "Veterinarians"
+    ],
+    "spell": [
+      "",
+      "Veterinarians"
+    ],
+    "label": "Alta Mira Animal Hospital"
+  },
+  {
+    "entity_id": "1629",
+    "title": "Alta Rancho Pet Hospital",
+    "path_alias": "alta-rancho-pet-hospital",
+    "description": "",
+    "dvm": "Reed Shufer Dvm",
+    "phone": "+1-(909)-9803575",
+    "fax": null,
+    "address_1": "8677 19Th Street",
+    "city": "Alta Loma",
+    "state": "CA",
+    "zipcode": "91701",
+    "website": null,
+    "latitude": "34.132478",
+    "longitude": "-117.616834",
+    "source": null,
+    "avg_rating": "0.0000",
+    "total_reviews": "0",
+    "distance": "35.93400502935339",
+    "categories": [
+      "Veterinarians"
+    ],
+    "autocomplete": [
+      "Alta Rancho Pet Hospital",
+      "Veterinarians"
+    ],
+    "spell": [
+      "",
+      "Veterinarians"
+    ],
+    "label": "Alta Rancho Pet Hospital"
+  },
+  {
+    "entity_id": "1642",
+    "title": "Altadena Animal Hospital",
+    "path_alias": "altadena-animal-hospital",
+    "description": "",
+    "dvm": "Baljeet Sahi Dvm",
+    "phone": "+1-(626)-7980738",
+    "fax": null,
+    "address_1": "2071 North Lake",
+    "city": "Altadena",
+    "state": "CA",
+    "zipcode": "91001",
+    "website": null,
+    "latitude": "34.182032",
+    "longitude": "-118.100506",
+    "source": null,
+    "avg_rating": "0.0000",
+    "total_reviews": "0",
+    "distance": "40.12093411407384",
+    "categories": [
+      "Veterinarians"
+    ],
+    "autocomplete": [
+      "Altadena Animal Hospital",
+      "Veterinarians"
+    ],
+    "spell": [
+      "",
+      "Veterinarians"
+    ],
+    "label": "Altadena Animal Hospital"
+  },
+  {
+    "entity_id": "1665",
+    "title": "Alton Centre Animal Hospital",
+    "path_alias": "alton-centre-animal-hospital",
+    "description": "",
+    "dvm": "Hong Sik Moon Dvm",
+    "phone": "+1-(714)-5403105",
+    "fax": " ",
+    "address_1": "3105 S Main",
+    "city": "Santa Ana",
+    "state": "CA",
+    "zipcode": "92707",
+    "website": null,
+    "latitude": "33.705832",
+    "longitude": "-117.867897",
+    "source": null,
+    "avg_rating": "0.0000",
+    "total_reviews": "0",
+    "distance": "4.621272160613203",
+    "categories": [
+      "Veterinarians"
+    ],
+    "autocomplete": [
+      "Alton Centre Animal Hospital",
+      "Veterinarians"
+    ],
+    "spell": [
+      "",
+      "Veterinarians"
+    ],
+    "label": "Alton Centre Animal Hospital"
+  },
+  {
+    "entity_id": "1676",
+    "title": "Alvarado Vet Hospital",
+    "path_alias": "alvarado-vet-hospital",
+    "description": "",
+    "dvm": "Malcolm Jones Dvm",
+    "phone": "+1-(760)-7286606",
+    "fax": null,
+    "address_1": "347 E Alvarado St",
+    "city": "Fallbrook",
+    "state": "CA",
+    "zipcode": "92028",
+    "website": null,
+    "latitude": "33.381882",
+    "longitude": "-117.24843",
+    "source": null,
+    "avg_rating": "0.0000",
+    "total_reviews": "0",
+    "distance": "38.35700361988749",
+    "categories": [
+      "Veterinarians"
+    ],
+    "autocomplete": [
+      "Alvarado Vet Hospital",
+      "Veterinarians"
+    ],
+    "spell": [
+      "",
+      "Veterinarians"
+    ],
+    "label": "Alvarado Vet Hospital"
+  },
+  {
+    "entity_id": "1694",
+    "title": "Amar Glen Animal Hospital",
+    "path_alias": "amar-glen-animal-hospital",
+    "description": "",
+    "dvm": "Gerry Gorospe Dvm",
+    "phone": "+1-(626)-3332282",
+    "fax": null,
+    "address_1": "725 N Glendora",
+    "city": "La Puente",
+    "state": "CA",
+    "zipcode": "91744",
+    "website": null,
+    "latitude": "34.031531",
+    "longitude": "-117.950624",
+    "source": null,
+    "avg_rating": "0.0000",
+    "total_reviews": "0",
+    "distance": "27.530207966180605",
+    "categories": [
+      "Veterinarians"
+    ],
+    "autocomplete": [
+      "Amar Glen Animal Hospital",
+      "Veterinarians"
+    ],
+    "spell": [
+      "",
+      "Veterinarians"
+    ],
+    "label": "Amar Glen Animal Hospital"
+  },
+  {
+    "entity_id": "1701",
+    "title": "Amazon Animal Hospital",
+    "path_alias": "amazon-animal-hospital",
+    "description": "",
+    "dvm": "Maxwell Hibi Dvm",
+    "phone": "+1-(619)-4760053",
+    "fax": null,
+    "address_1": "1172 3Rd Avenue Ste D8",
+    "city": "Chula Vista",
+    "state": "CA",
+    "zipcode": "91911",
+    "website": null,
+    "latitude": "32.611232",
+    "longitude": "-117.068292",
+    "source": null,
+    "avg_rating": "0.0000",
+    "total_reviews": "0",
+    "distance": "84.07364686728283",
+    "categories": [
+      "Veterinarians"
+    ],
+    "autocomplete": [
+      "Amazon Animal Hospital",
+      "Veterinarians"
+    ],
+    "spell": [
+      "",
+      "Veterinarians"
+    ],
+    "label": "Amazon Animal Hospital"
+  },
+  {
+    "entity_id": "1704",
+    "title": "Amazonas Dogs Spa Inc",
+    "path_alias": "amazonas-dogs-spa-inc",
+    "description": "",
+    "dvm": "",
+    "phone": "+1-(305)-8669292",
+    "fax": null,
+    "address_1": "1040 71st Street",
+    "city": "Miami",
+    "state": "FL",
+    "zipcode": "33141",
+    "website": null,
+    "latitude": "33.747231",
+    "longitude": "-117.001258",
+    "source": null,
+    "avg_rating": "0.0000",
+    "total_reviews": "0",
+    "distance": "48.43491064758595",
+    "categories": [
+      "Groomers"
+    ],
+    "autocomplete": [
+      "Amazonas Dogs Spa Inc",
+      "Groomers"
+    ],
+    "spell": [
+      "",
+      "Groomers"
+    ],
+    "label": "Amazonas Dogs Spa Inc"
+  },
+  {
+    "entity_id": "1711",
+    "title": "Ambassador Dog & Cat",
+    "path_alias": "ambassador-dog--cat",
+    "description": "",
+    "dvm": "Kumar Sanjeev Dvm",
+    "phone": "+1-(213)-3841255",
+    "fax": " ",
+    "address_1": "3684 Beverly Blvd",
+    "city": "Los Angeles",
+    "state": "CA",
+    "zipcode": "90004",
+    "website": null,
+    "latitude": "34.076184",
+    "longitude": "-118.288948",
+    "source": null,
+    "avg_rating": "0.0000",
+    "total_reviews": "0",
+    "distance": "39.5883364496263",
+    "categories": [
+      "Veterinarians"
+    ],
+    "autocomplete": [
+      "Ambassador Dog & Cat",
+      "Veterinarians"
+    ],
+    "spell": [
+      "",
+      "Veterinarians"
+    ],
+    "label": "Ambassador Dog & Cat"
+  },
+  {
+    "entity_id": "1712",
+    "title": "Ambassador Dog & Cat Hospital",
+    "path_alias": "ambassador-dog--cat-hospital",
+    "description": "",
+    "dvm": "Sam Shenouda Dvm",
+    "phone": "+1-(562)-4272889",
+    "fax": " ",
+    "address_1": "2251 East Carson",
+    "city": "Long Beach",
+    "state": "CA",
+    "zipcode": "90807",
+    "website": null,
+    "latitude": "33.832602",
+    "longitude": "-118.164827",
+    "source": null,
+    "avg_rating": "0.0000",
+    "total_reviews": "0",
+    "distance": "22.97663399974297",
+    "categories": [
+      "Veterinarians"
+    ],
+    "autocomplete": [
+      "Ambassador Dog & Cat Hospital",
+      "Veterinarians"
+    ],
+    "spell": [
+      "",
+      "Veterinarians"
+    ],
+    "label": "Ambassador Dog & Cat Hospital"
+  },
+  {
+    "entity_id": "1714",
+    "title": "Amber Animal Clinic",
+    "path_alias": "amber-animal-clinic",
+    "description": "",
+    "dvm": "Sitadevi Gunawardena Dvm",
+    "phone": "+1-(626)-9606495",
+    "fax": null,
+    "address_1": "1840 North Puente Ave",
+    "city": "Baldwin Park",
+    "state": "CA",
+    "zipcode": "91706",
+    "website": null,
+    "latitude": "34.067698",
+    "longitude": "-117.964452",
+    "source": null,
+    "avg_rating": "0.0000",
+    "total_reviews": "0",
+    "distance": "30.14703338574374",
+    "categories": [
+      "Veterinarians"
+    ],
+    "autocomplete": [
+      "Amber Animal Clinic",
+      "Veterinarians"
+    ],
+    "spell": [
+      "",
+      "Veterinarians"
+    ],
+    "label": "Amber Animal Clinic"
+  },
+  {
+    "entity_id": "1763",
+    "title": "American Veterinary Hospital",
+    "path_alias": "american-veterinary-hospital",
+    "description": "",
+    "dvm": "John Anderson Dvm Phd",
+    "phone": "+1-(805)-5819111",
+    "fax": " ",
+    "address_1": "2109 Tapo St Ste 3",
+    "city": "Simi Valley",
+    "state": "CA",
+    "zipcode": "93063",
+    "website": null,
+    "latitude": "34.273602",
+    "longitude": "-118.709106",
+    "source": null,
+    "avg_rating": "0.0000",
+    "total_reviews": "0",
+    "distance": "66.31898406445272",
+    "categories": [
+      "Veterinarians"
+    ],
+    "autocomplete": [
+      "American Veterinary Hospital",
+      "Veterinarians"
+    ],
+    "spell": [
+      "",
+      "Veterinarians"
+    ],
+    "label": "American Veterinary Hospital"
+  },
+  {
+    "entity_id": "1790",
+    "title": "Amigo Animal Hospital",
+    "path_alias": "amigo-animal-hospital",
+    "description": "",
+    "dvm": "Frank Moore Dvm",
+    "phone": "+1-(714)-8945558",
+    "fax": " ",
+    "address_1": "13951 Milan St",
+    "city": "Westminster",
+    "state": "CA",
+    "zipcode": "92683",
+    "website": null,
+    "latitude": "33.760012",
+    "longitude": "-118.033447",
+    "source": null,
+    "avg_rating": "0.0000",
+    "total_reviews": "0",
+    "distance": "13.918435723657131",
+    "categories": [
+      "Veterinarians"
+    ],
+    "autocomplete": [
+      "Amigo Animal Hospital",
+      "Veterinarians"
+    ],
+    "spell": [
+      "",
+      "Veterinarians"
+    ],
+    "label": "Amigo Animal Hospital"
+  }
+]
