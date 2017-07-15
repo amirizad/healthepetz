@@ -550,7 +550,6 @@
               <table class="render table table-striped table-hover">
                 <thead>
                   <tr>
-                    <td>id</td>
                     <td>Pet Name</td>
                     <td>Type</td>
                     <td>Breed</td>
@@ -558,14 +557,12 @@
                   </tr>
                 </thead>
                 <tr>
-                  <td id='td-petId'>1</td>
-                  <td id='td-petName'>Ginger</td>
+                  <td>Ginger</td>
                   <td>Dog</td>
                   <td>Cavapoo</td>
                   <td>18 Dec 2015</td>
                 </tr>
                 <tr>
-                  <td></td>
                   <td></td>
                   <td></td>
                   <td></td>
@@ -1030,33 +1027,6 @@
   <script src="https://cdn.datatables.net/v/bs/dt-1.10.15/af-2.2.0/r-2.1.1/se-1.2.2/datatables.min.js"></script>
   <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDeky0w8gJWCxaJEY7sFZFE6I0toU8akok&amp;callback=hPetz.initMap" async defer></script>
   <script src="assets/script/app.js"></script>
-  <script>
-
-var getPetData=function() {
-     var queryURL="/api/pet/1"
-     //+ this.closest('tr').children('td-petId').text();
-     console.log(queryURL);
-    //  $.getJSON(apiURL, function() {
-		// 	console.log('success');
-		// })
-     $.ajax({
-          url: queryURL,
-          type: "GET",
-          //dataType:"json"
-        })
-
-        .done(function(response) {
-          var results = response.data;
-            console.log(response);
-            console.log(results.length);
-        });
-
-    
-}
-
-
-    $('#td-petName').click(getPetData);
-    </script>
 
 </body>
 
