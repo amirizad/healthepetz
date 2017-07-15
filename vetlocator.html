@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html>
+<head>
+        <script src="https://code.jquery.com/jquery-1.6.4.min.js"></script>
+</head>
+<body>
+
+<p>Click the button to get your coordinates.</p>
+
+<button onclick="getLocation()">Try It</button>
+
+
+<script>
+var x = document.getElementById("demo");
+
+
+function getLocation() {
+    if (navigator.geolocation) {
+        navigator.geolocation.getCurrentPosition(showPosition);
+
+    } else { 
+        x.innerHTML = "Geolocation is not supported by this browser.";
+    }
+   
+}
+
+function showPosition(position) {
+    var lat = position.coords.latitude;
+    var long = position.coords.longitude;
+    console.log(lat);
+    console.log(long);
+    
+    //var queryURL;
+    //queryURL='http://www.petmd.com/servicefinderapi/select?lat=' + lat + '&lng=' + long + '&radius=3.041500458928814';
+
+var query = { 
+                lat: lat,
+                lng: long,
+                radius: 3.041500458928814,
+                callback: "logResults",
+                _: 1499996355000 
+            };
+
+        query = JSON.stringify(query);
+
+        var settings = {
+        "async": true,
+        "crossDomain": true,
+        "url": "http://localhost:3000/api/petmd",
+        "method": "POST",
+        "headers": {
+            "content-type": "application/json",
+            "cache-control": "no-cache",
+            "postman-token": "4425d692-cbdc-c453-48e4-fbd7532176e8"
+        },
+        "processData": false,
+        "data": query
+           };
+
+        $.ajax(settings).done(function (response) {
+        console.log(response);
+        });
+
+    console.log(settings);
+
+    $.ajax(settings).done(function (response) {
+    console.log(response);
+    });
+    //var contentType ="application/x-www-form-urlencoded; charset=utf-8";
+     //var contentType ="text/javascript"
+    
+    // if(window.XDomainRequest)
+	// contentType = "text/plain";
+    //contentType = "text/javascript"
+      function logResults(json) {
+          console.log(json);
+      }  
+
+    //  $.ajax({
+    //       url: queryURL,
+    //       type: "GET",
+    //       dataType:"jsonp",
+    //       jsonpCallback: "logResults"
+    //     })
+
+        // .done(function(response) {
+        //   //var results = response.data;
+        //     //console.log(response);
+        //     //console.log(results.length);
+        // });
+}
+
+</script>
+
+</body>
+</html>

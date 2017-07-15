@@ -480,6 +480,24 @@ module.exports = (express,passport,db,bcrypt)=>{
             res.json({"success":""});
         });
         
+         router.route("/petmd")
+        .post((req, res) => {
+            var request = require("request");
+            var queryParams = req.body;
+
+            var options = { method: 'GET',
+            url: 'http://www.petmd.com/servicefinderapi/select',
+            qs: queryParams,
+            headers: 
+            { 'cache-control': 'no-cache' } };
+
+            request(options, function (error, response, body) {
+            if (error) throw new Error(error);
+
+            console.log(body);
+            }).pipe(res);
+
+        });
     //returns router back to request
     return router;
 };
