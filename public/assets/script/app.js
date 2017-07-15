@@ -366,7 +366,7 @@ $(document).ready(function() {
 		var settings = {
 			"async": true,
 			"crossDomain": true,
-			"url": "http://localhost:3000/api/password-reset",
+			"url": "http://healthepetz.herokuapp.com/api/password-reset",
 			"method": "POST",
 			"headers": {
 				"content-type": "application/json",
