@@ -346,3 +346,4 @@ $(document).ready(function() {
     $('.nav a').filter('[href="#'+target[1]+'"]').tab('show');
 	});
 });
+
