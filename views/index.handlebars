@@ -14,21 +14,21 @@
 					<div id="signup" class="tab-pane fade">
 						<form class="form-horizontal form-field register" action="/api/register" role="form" name="registerfrm" id="registerfrm" method="POST" autocomplete="off">
 							<div class="form-group">
-								<label class="control-label col-xs-3" for="o-fname">First Name:</label>
+								<label class="control-label col-xs-3" for="fname">First Name:</label>
 								<div class="col-xs-11 col-sm-7">
-									<input class="form-control reqfield" type="text" name="fname" id="o-fname" tabindex="1" value="{{fname}}" placeholder="Enter your first name." pattern=".{2,}">
+									<input class="form-control reqfield" type="text" name="fname" id="fname" tabindex="1" value="{{fname}}" placeholder="Enter your first name." pattern=".{2,}">
 								</div>
 							</div>
 							<div class="form-group">
-								<label class="control-label col-xs-3" for="o-lname">Last Name:</label>
+								<label class="control-label col-xs-3" for="lname">Last Name:</label>
 								<div class="col-xs-11 col-sm-7">
-									<input class="form-control reqfield" type="text" name="lname" id="o-lname" tabindex="2" value="{{lname}}" placeholder="Enter your last name." pattern=".{2,}">
+									<input class="form-control reqfield" type="text" name="lname" id="lname" tabindex="2" value="{{lname}}" placeholder="Enter your last name." pattern=".{2,}">
 								</div>
 							</div>
 							<div class="form-group">
-								<label class="control-label col-xs-3" for="o-bd">Date of Birth:</label>
+								<label class="control-label col-xs-3" for="dob">Date of Birth:</label>
 								<div class="col-xs-11 col-sm-7">
-									<input class="form-control" type="text" name="dob" id="o-bd" tabindex="3" value="{{dob}}" placeholder="Enter your date of birth." pattern="(0[1-9]|1[012])[- /.](0[1-9]|[12][0-9]|3[01])[- /.](19|20)\d\d">
+									<input class="form-control" type="text" name="dob" id="dob" tabindex="3" value="{{dob}}" placeholder="Enter your date of birth." pattern="(0[1-9]|1[012])[- /.](0[1-9]|[12][0-9]|3[01])[- /.](19|20)\d\d">
 								</div>
 								<span><a href="#loginsec" class="petstooltip page-scroll" title="Date Format: MM/DD/YYYY"><img id="route-input-help" src="/assets/css/icons/info-blue.png" class="info-icon" ></a></span>
 							</div>
@@ -44,28 +44,28 @@
 								</div>
 							</div>
 							<div class="form-group">
-								<label class="control-label col-xs-3" for="o-email">Email:</label>
+								<label class="control-label col-xs-3" for="email">Email:</label>
 								<div class="col-xs-11 col-sm-7">
-									<input class="form-control reqfield" type="email" name="email" id="o-email" tabindex="5" value="{{email}}" placeholder="Enter your contact email address." pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,3}$">
+									<input class="form-control reqfield" type="email" name="email" id="email" tabindex="5" value="{{email}}" placeholder="Enter your contact email address." pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,3}$">
 								</div>
 								<span><a href="#loginsec" class="petstooltip page-scroll" title="This will be used for communications."><img id="route-input-help" src="/assets/css/icons/info-blue.png" class="info-icon" ></a></span>
 							</div>
 							<div class="form-group">
-								<label class="control-label col-xs-3" for="o-phone">Phone:</label>
+								<label class="control-label col-xs-3" for="phone">Phone:</label>
 								<div class="col-xs-11 col-sm-7">
-									<input class="form-control" type="text" name="phone" id="o-phone" tabindex="6" value="{{phone}}" placeholder="Enter your contact phone number." pattern="(?:\(\d{3}\)|\d{3})[- ]?\d{3}[- ]?\d{4}">
+									<input class="form-control" type="text" name="phone" id="phone" tabindex="6" value="{{phone}}" placeholder="Enter your contact phone number." pattern="(?:\(\d{3}\)|\d{3})[- ]?\d{3}[- ]?\d{4}">
 								</div>
 							</div>
 							<div class="form-group">
-								<label class="control-label col-xs-3" for="o-fax">Fax:</label>
+								<label class="control-label col-xs-3" for="fax">Fax:</label>
 								<div class="col-xs-11 col-sm-7">
-									<input class="form-control" type="text" name="fax" id="o-fax" tabindex="7" value="{{fax}}" placeholder="Enter your contact fax number." pattern="(?:\(\d{3}\)|\d{3})[- ]?\d{3}[- ]?\d{4}">
+									<input class="form-control" type="text" name="fax" id="fax" tabindex="7" value="{{fax}}" placeholder="Enter your contact fax number." pattern="(?:\(\d{3}\)|\d{3})[- ]?\d{3}[- ]?\d{4}">
 								</div>
 							</div>
 							<div class="form-group">
-								<label class="control-label col-xs-3" for="o-address">Address:</label>
+								<label class="control-label col-xs-3" for="address">Address:</label>
 								<div class="col-xs-11 col-sm-7">
-									<input class="form-control" type="text" name="address" id="o-address" tabindex="8" value="{{address}}" placeholder="Enter your contact address." pattern="[0-9()-]{13}">
+									<input class="form-control" type="text" name="address" id="address" tabindex="8" value="{{address}}" placeholder="Enter your contact address." pattern="[0-9()-]{13}">
 								</div>
 							</div>
 							<div class="form-group">
@@ -73,10 +73,10 @@
 								<div class="col-xs-11 col-sm-7">
 									<div class="row">
 										<div class="col-xs-4">
-											<input type="text" tabindex="9" class="form-control" value='{{city}}' name="city" id="o-city" placeholder="City">
+											<input type="text" tabindex="9" class="form-control" value='{{city}}' name="city" id="city" placeholder="City">
 										</div>
 										<div class="col-xs-4">
-											<select class="form-control" tabindex="10" name="state" id="o-state">
+											<select class="form-control" tabindex="10" name="state" id="state">
 												<option value="" disabled selected>Select one ...</option>
 												<option value="AL">Alabama</option>
 												<option value="AL">Alabama</option>
@@ -133,7 +133,7 @@
 											</select>
 										</div>
 										<div class="col-xs-4">
-											<input type="text" tabindex="11" class="form-control" name="zip" id="o-zip" placeholder="Zip" value="{{zip}}" PATTERN="(\d{5}([\-]\d{4})?)">
+											<input type="text" tabindex="11" class="form-control" name="zip" id="zip" placeholder="Zip" value="{{zip}}" PATTERN="(\d{5}([\-]\d{4})?)">
 										</div>
 									</div>
 								</div>
@@ -163,7 +163,7 @@
 							{{#if regError}}
 								{{#each regError}}
 								<div class="message">
-									<div class="alert alert-warning" role="alert"><button class="close" type="button" data-dismiss="alert" aria-hidden="true">&times;</button><strong>Error! </strong> {{this.message}}</div>
+									{{this.message}}
 								</div>
 								{{/each}}
 							{{/if}} 
@@ -182,7 +182,7 @@
 							<div class="form-group">
 								<label class="control-label col-xs-3" for="login-id">User ID:</label>
 								<div class="col-xs-11 col-sm-7">
-									 <input autocomplete="off" class="form-control reqfield" type="email" name="username" id="login-id" placeholder="Enter your user id" value="{{username}}"> <!--pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,3}$"-->
+									 <input autocomplete="off" class="form-control reqfield" name="username" id="login-id" placeholder="Enter your user id" value="{{username}}"> <!--pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,3}$"-->
 								</div>
 							</div>
 							<div class="form-group">
@@ -195,7 +195,7 @@
 							{{#if loginError}}
 								{{#each loginError}}
 								<div class="message">
-									<div class="alert alert-warning" role="alert"><button class="close" type="button" data-dismiss="alert" aria-hidden="true">&times;</button><strong>Error! </strong> {{this}}</div>
+									 {{this}}
 								</div>
 								{{/each}}
 							{{/if}}	
@@ -244,10 +244,18 @@
 	</div>
 </section>
 
-<!-- Owner Profile Section -->
+<!-- Profile Section -->
+{{#if loggedIn}}
 <section id="profilesec">
-					
+	         {{> petsTable}}       
+	   {{> medTable}} 
+	    {{> vacTable}}
+		{{> ownerTable}}       
 </section>
+{{/if}}
 
 <!--If loged in value="1" Else value="0"-->
 <input type="hidden" name="loggedin" id="loggedin" value="{{loggedIn}}">
+
+{{!-- Should pass the ID of the appropriate page that client side should load --}}
+<input type="hidden" name="currentdiv" id="currentdivid" value="{{currentdivid}}">

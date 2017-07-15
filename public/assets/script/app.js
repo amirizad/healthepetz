@@ -51,6 +51,7 @@ var hPetz = {
 			case "findersecnav":
 				$('#findersec').addClass('show');
 				$('#activesec').val('findersec');
+				hPetz.loadVFjs();
 				break;
 			case "pricesecnav":
 			case "virvsecnav":
@@ -80,8 +81,8 @@ var hPetz = {
 		}
 	},
 
-	loadJS: function(){
-		//Map
+	loadVFjs: function(){
+		hPetz.initMap();
 		$('#vetfinderbtn').click(function(event){
 			event.preventDefault();
 			hPetz.findVets();
@@ -107,8 +108,8 @@ var hPetz = {
 	},
 
 	loadProfJS: function(){
-		$('table.display').DataTable( {
-			"order": [[ 3, "desc" ]],
+		$('table.render').DataTable( {
+			"order": [[ 0, "desc" ]],
 			"paging":   true,
 			"ordering": true,
 			"info":     true,
@@ -183,13 +184,15 @@ var hPetz = {
 		var lat = baseInfo.lat;
 		var long = baseInfo.lng;
 		var rad = baseInfo.rad;
-		var apiURL = `http://www.petmd.com/servicefinderapi/select?lat=${lat}&lng=${long}&radius=${rad}`;
+		var apiURL = `/assets/data/vets.json`;
 		$.getJSON(apiURL, function() {
 			console.log('success');
 		})
 		.done(function(data) {
-			vets = data.response.docs;
+			console.log(data);
+			vets = data;
 			vets.sort(function(a, b){ return a.distance - b.distance; });
+			console.log(vets);
 			if(vets.length){
 				hPetz.pinVets(vets);
 			} else {
@@ -203,7 +206,7 @@ var hPetz = {
 
 	pinVets: function(vets){
 		for ( i = 0 ; i < baseInfo.lim ; i++){
-			console.log(vets.title);
+			console.log(vets[i].title);
 		}
 	},
 
@@ -258,7 +261,7 @@ var hPetz = {
 		    $('#address').text('');
 		    address = address.replace(/ /g, '+');
 		    var url = 'https://maps.googleapis.com/maps/api/geocode/json?address=' +
-			address + '&key=AIzaSyDlqM5HOhxP8DcUtTclMRu0RSvWy9t59qk';
+				address + '&key=AIzaSyDlqM5HOhxP8DcUtTclMRu0RSvWy9t59qk';
 		    $.getJSON(url, function() {
 			    console.log('success');
 			})
@@ -308,16 +311,15 @@ var hPetz = {
 		return latLong;
 	},
 	
-	// retrieveAddress: function() {
-	// 	var $address = $(this).attr('data-address');
-	// 	$('#addresstext').val($address);
-	// },
+	retrieveAddress: function() {
+		var $address = $(this).attr('data-address');
+		$('#addresstext').val($address);
+	},
 };
 
 $(document).ready(function() {
 
 	hPetz.updateNavbar($('#loggedin').val());
-	hPetz.loadJS();
 
 	$('.navto').click(function(){
 		hPetz.changePage($(this).attr('id'));

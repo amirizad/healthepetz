@@ -28,12 +28,24 @@ const index = require('./routes/html-routes.js')(express,passport,db,path);
 const API = require('./routes/api-routes.js')(express,passport,db,bcrypt);
 
 //Used to create the sessions table for authentication
+//-------------------------------------------
+// *** IMPORTANT***Use this for development
+// const sessionStore = new MySQLStore({
+//     host:'localhost',
+//     port:'3306',
+//     user:'root',
+//     password:'root',
+//     //password:'password',
+//     database:'healthepetz_db'
+// });
+
+// *** IMPORTANT***Use this for production
 const sessionStore = new MySQLStore({
-    host:'localhost',
+    host:'ko86t9azcob3a2f9.cbetxkdyhwsb.us-east-1.rds.amazonaws.com',
     port:'3306',
-    user:'root',
-    password:'root',
-    database:'healthepetz_db'
+    user:'cdj7xzlcrm7b1zyt',
+    password:'jlo8p3kzo6s9wvbu',
+    database:'fy1oiq0nn0ib9b0m'
 });
 
 //Custom Section Helper for Views
@@ -47,7 +59,7 @@ var hbs = exphbs.create({
             } 
         }    
     });
-
+    
 // START Configuring Express App
 // ========================================================================================
 
@@ -62,6 +74,10 @@ app.use(methodOverride("_method"));
 app.set('views', path.join(__dirname, 'views'));
 app.engine('handlebars', hbs.engine);
 app.set('view engine', 'handlebars');
+app.set('partials',__dirname + 'views/partials')
+
+//Servers public content such as CSS Javascript required in the HTML files
+app.use(express.static(path.join(__dirname,'public')));
 
 //Creates the sessions table that will authenticate user sessions
 app.use(session({
@@ -82,9 +98,6 @@ app.use(session({
 app.use(passport.initialize());
 app.use(passport.session());
 const localStrategy = require('./config/passport/passport-strategy.js')(passport,LocalStrategy,db,bcrypt);
-
-//Servers public content such as CSS Javascript required in the HTML files
-app.use(express.static(path.join(__dirname,'public')));
 
 //Sets up express routes
 app.use('/',index);

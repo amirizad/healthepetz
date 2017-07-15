@@ -216,7 +216,7 @@ module.exports = (express,passport,db,bcrypt)=>{
                 }}).then(function(results) {
                     console.log(results.length);
                     if (results.length===0) {
-                        res.json(results[0].pets);
+                        res.json({});
                     }
                     else {
                         res.json(results[0].pets);
@@ -230,8 +230,9 @@ module.exports = (express,passport,db,bcrypt)=>{
                    include: {model: db.pets, required: true,
                    order: [[{model: db.pets}, 'pet_type'],[{model: db.pets},'pet_name']]
                  }}).then(function(results) {
+                     console.log(results.length);
                      if (results.length===0) {
-                        res.json(results[0].pets);
+                        res.json({});
                     }
                     else {
                         res.json(results[0].pets);
@@ -411,7 +412,6 @@ module.exports = (express,passport,db,bcrypt)=>{
     router.route("/vaccinations/:petId?")
         .get(auth(),(req, res, next) => {
              if (req.params.petId) {
-        
                 db.owners.findAll({
                    attributes: ['userId'],
                    where: {userId: parseInt(req.user)},
@@ -461,24 +461,24 @@ module.exports = (express,passport,db,bcrypt)=>{
         })
         .put(auth(),(req, res, next) => {
             // Update med bill
-            db.vaccinations.update(req.body, 
-                { 
-                    fields: Object.keys(req.body), 
-                    where: {id: req.body.id} 
-                })
-            .then((results) => {
-                res.json(results)
-            }).catch(function(error) {
-                console.log(error);
+            console.log(req.body);
+            req.body.data.forEach(function(dataObject){
+                db.vaccinations.update(dataObject, 
+                    { 
+                        fields: Object.keys(dataObject), 
+                        where: {id: dataObject.id} 
+                    });
+                res.json({"success":""});
             });
         })
         .delete(auth(),(req, res, next) => {
-            db.vaccinations.destroy({
-                where: {id: parseInt(req.params.petId)}
-            }).then((results) => {
-                res.json(results);
+            var idsArray = req.query.ids;
+            idsArray.forEach((id)=>{
+                db.vaccinations.destroy({
+                    where: {id: parseInt(id)}
+                });
             });
-            // Delete vaccination
+            res.json({"success":""});
         });
         
          router.route("/petmd")

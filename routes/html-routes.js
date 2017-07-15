@@ -11,7 +11,8 @@ module.exports = (express,passport,db,path)=>{
     .get('/',(req,res,next)=>{
         if(req.isAuthenticated()){
             res.render('index',{
-                loggedIn:1
+                loggedIn:1,
+                petId:2
             });
         } else {
             var errors = req.flash('error');
@@ -22,35 +23,11 @@ module.exports = (express,passport,db,path)=>{
         }
     })
 
-    //Get dashboard if user is authenticated
-    .get('/dashboard',auth(),(req,res,next)=>{
-        res.render('dashboard');
-        // Query db for owner data
-        // Query db for all owner's pets
-        // Render owner page
-    })
-
-    .get('/petprofile',auth(),(req,res,next)=>{
-        res.render('petprofile');
-        // Query db for pet data
-        // Render pet page
-    })
-
     .get('/filestack',(req,res,next)=>{
         //res.send("hello, world");
         // Render home page
         res.sendFile(path.join(__dirname + "/filestack-example.html"));
     })
-    
-    .get('/petst',(req,res,next)=>{
-        res.render('petsTable',{
-            petId:2
-        });
-    })
-
-    .get('/medt',(req,res,next)=>{
-        res.render('medTable');
-    });
     //returns the router requsted
     return router;
 };

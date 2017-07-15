@@ -271,21 +271,21 @@
             <div id="signup" class="tab-pane fade">
               <form class="form-horizontal form-field register" action="/api/register" role="form" name="registerfrm" id="registerfrm" method="POST" autocomplete="off">
                 <div class="form-group">
-                  <label class="control-label col-xs-3" for="o-fname">First Name:</label>
+                  <label class="control-label col-xs-3" for="fname">First Name:</label>
                   <div class="col-xs-11 col-sm-7">
-                    <input class="form-control reqfield" type="text" name="o-fname" id="o-fname" tabindex="1" value="" placeholder="Enter your first name." pattern=".{2,}">
+                    <input class="form-control reqfield" type="text" name="fname" id="fname" tabindex="1" value="" placeholder="Enter your first name." pattern=".{2,}">
                   </div>
                 </div>
                 <div class="form-group">
-                  <label class="control-label col-xs-3" for="o-lname">Last Name:</label>
+                  <label class="control-label col-xs-3" for="lname">Last Name:</label>
                   <div class="col-xs-11 col-sm-7">
-                    <input class="form-control reqfield" type="text" name="o-lname" id="o-lname" tabindex="2" value="" placeholder="Enter your last name." pattern=".{2,}">
+                    <input class="form-control reqfield" type="text" name="lname" id="lname" tabindex="2" value="" placeholder="Enter your last name." pattern=".{2,}">
                   </div>
                 </div>
                 <div class="form-group">
-                  <label class="control-label col-xs-3" for="o-bd">Date of Birth:</label>
+                  <label class="control-label col-xs-3" for="dob">Date of Birth:</label>
                   <div class="col-xs-11 col-sm-7">
-                    <input class="form-control" type="text" name="o-bd" id="o-bd" tabindex="3" value="" placeholder="Enter your date of birth." pattern="(0[1-9]|1[012])[- /.](0[1-9]|[12][0-9]|3[01])[- /.](19|20)\d\d">
+                    <input class="form-control" type="text" name="dob" id="dob" tabindex="3" value="" placeholder="Enter your date of birth." pattern="(0[1-9]|1[012])[- /.](0[1-9]|[12][0-9]|3[01])[- /.](19|20)\d\d">
                   </div>
                   <span><a href="#loginsec" class="petstooltip page-scroll" title="Date Format: MM/DD/YYYY"><img id="route-input-help" src="assets/css/icons/info-blue.png" class="info-icon" ></a></span>
                 </div>
@@ -301,28 +301,28 @@
                   </div>
                 </div>
                 <div class="form-group">
-                  <label class="control-label col-xs-3" for="o-email">Email:</label>
+                  <label class="control-label col-xs-3" for="email">Email:</label>
                   <div class="col-xs-11 col-sm-7">
-                    <input class="form-control reqfield" type="email" name="o-email" id="o-email" tabindex="5" value="" placeholder="Enter your contact email address." pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,3}$">
+                    <input class="form-control reqfield" type="email" name="email" id="email" tabindex="5" value="" placeholder="Enter your contact email address." pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,3}$">
                   </div>
                   <span><a href="#loginsec" class="petstooltip page-scroll" title="This will be used for communications."><img id="route-input-help" src="assets/css/icons/info-blue.png" class="info-icon" ></a></span>
                 </div>
                 <div class="form-group">
-                  <label class="control-label col-xs-3" for="o-phone">Phone:</label>
+                  <label class="control-label col-xs-3" for="phone">Phone:</label>
                   <div class="col-xs-11 col-sm-7">
-                    <input class="form-control" type="text" name="o-phone" id="o-phone" tabindex="6" value="" placeholder="Enter your contact phone number." pattern="(?:\(\d{3}\)|\d{3})[- ]?\d{3}[- ]?\d{4}">
+                    <input class="form-control" type="text" name="phone" id="phone" tabindex="6" value="" placeholder="Enter your contact phone number." pattern="(?:\(\d{3}\)|\d{3})[- ]?\d{3}[- ]?\d{4}">
                   </div>
                 </div>
                 <div class="form-group">
-                  <label class="control-label col-xs-3" for="o-fax">Fax:</label>
+                  <label class="control-label col-xs-3" for="fax">Fax:</label>
                   <div class="col-xs-11 col-sm-7">
-                    <input class="form-control" type="text" name="o-fax" id="o-fax" tabindex="7" value="" placeholder="Enter your contact fax number." pattern="(?:\(\d{3}\)|\d{3})[- ]?\d{3}[- ]?\d{4}">
+                    <input class="form-control" type="text" name="fax" id="fax" tabindex="7" value="" placeholder="Enter your contact fax number." pattern="(?:\(\d{3}\)|\d{3})[- ]?\d{3}[- ]?\d{4}">
                   </div>
                 </div>
                 <div class="form-group">
-                  <label class="control-label col-xs-3" for="o-address">Address:</label>
+                  <label class="control-label col-xs-3" for="address">Address:</label>
                   <div class="col-xs-11 col-sm-7">
-                    <input class="form-control" type="text" name="o-address" id="o-address" tabindex="8" value="" placeholder="Enter your contact address." pattern="[0-9()-]{13}">
+                    <input class="form-control" type="text" name="address" id="address" tabindex="8" value="" placeholder="Enter your contact address." pattern="[0-9()-]{13}">
                   </div>
                 </div>
                 <div class="form-group">
@@ -330,10 +330,10 @@
                   <div class="col-xs-11 col-sm-7">
                     <div class="row">
                       <div class="col-xs-4">
-                        <input type="text" tabindex="9" class="form-control" name="o-city" id="o-city" placeholder="City">
+                        <input type="text" tabindex="9" class="form-control" name="city" id="city" placeholder="City">
                       </div>
                       <div class="col-xs-4">
-                        <select class="form-control" tabindex="10" name="o-state" id="o-state">
+                        <select class="form-control" tabindex="10" name="state" id="state">
                           <option value="" disabled selected>Select one ...</option>
                           <option value="AL">Alabama</option>
                           <option value="AL">Alabama</option>
@@ -390,7 +390,7 @@
                         </select>
                       </div>
                       <div class="col-xs-4">
-                        <input type="text" tabindex="11" class="form-control" name="o-zip" id="o-zip" placeholder="Zip" PATTERN="(\d{5}([\-]\d{4})?)">
+                        <input type="text" tabindex="11" class="form-control" name="zip" id="zip" placeholder="Zip" PATTERN="(\d{5}([\-]\d{4})?)">
                       </div>
                     </div>
                   </div>
@@ -482,10 +482,282 @@
 
   <!-- Profile Section -->
   <section id="profilesec">
+    <div id="ownerdash" class="container">
+      <div class="row">
+        <div class="col-sm-4">
+          <div class="panel panel-default">
+            <div class="panel-heading">
+              <span class="panel-title"><i class="fa fa-user"></i>Owner Profile</span>
+              <button name="ownereditbtn" id="ownereditbtn" class="btn btn-primary btn-sm pull-right" title "Edit" data-toggle="modal" data-target="#editowner">
+                <i class="fa fa-edit"></i>
+              </button>
+            </div>
+            <div class="panel-body table-responsive">
+              <table class="borderless table table-striped">
+                <tr>
+                  <td>Last Name:</td>
+                  <td>Izadpanah</td>
+                </tr>
+                <tr>
+                  <td>First Name:</td>
+                  <td>Amir</td>
+                </tr>
+                <tr>
+                  <td>DOB:</td>
+                  <td>04 Mar 1980</td>
+                </tr>
+                <tr>
+                  <td>Sex:</td>
+                  <td>Male</td>
+                </tr>
+                <tr>
+                  <td>Address:</td>
+                  <td>2151 Michelson Dr. #168</td>
+                </tr>
+                <tr>
+                  <td>City:</td>
+                  <td>Irvine</td>
+                </tr>
+                <tr>
+                  <td>State:</td>
+                  <td>California</td>
+                </tr>
+                <tr>
+                  <td>Zip:</td>
+                  <td>92612</td>
+                </tr>
+                <tr>
+                  <td>Phone:</td>
+                  <td>(949)419-7049</td>
+                </tr>
+                <tr>
+                  <td>Fax:</td>
+                  <td>N/A</td>
+                </tr>
+              </table>
+            </div>
+          </div>
+        </div>
+        <div class="col-sm-8">
+          <div class="panel panel-default">
+            <div class="panel-heading">
+              <span class="panel-title"><img src="assets/img/pets.png" alt="pets">Pets</span>
+              <button name="addpetbtn" id="ownereditbtn" class="btn btn-primary btn-sm pull-right" title "Add Pet" data-toggle="modal" data-target="#addpet">
+                <i class="fa fa-plus"></i>
+              </button>
+            </div>
+            <div class="panel-body table-responsive">
+              <table class="render table table-striped table-hover">
+                <thead>
+                  <tr>
+                    <td>Pet Name</td>
+                    <td>Type</td>
+                    <td>Breed</td>
+                    <td>DOB</td>
+                  </tr>
+                </thead>
+                <tr>
+                  <td>Ginger</td>
+                  <td>Dog</td>
+                  <td>Cavapoo</td>
+                  <td>18 Dec 2015</td>
+                </tr>
+                <tr>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                </tr>
+              </table>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div id="petdash" class="container">
+
+    </div>
+    <!-- editowner Modal -->
+    <div class="modal fade" id="editowner" tabindex="-1" role="dialog" aria-labelledby="editownerlbl">
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+            <h4 class="modal-title" id="editownerlbl"><i class="fa fa-user"></i> Edir your profile</h4>
+          </div>
+          <div class="modal-body">
+            <form class="form-horizontal form-field register" action="/api/register" role="form" name="registerfrm" id="registerfrm" method="POST" autocomplete="off">
+              <div class="form-group">
+                <label class="control-label col-xs-3" for="fname">First Name:</label>
+                <div class="col-xs-11 col-sm-7">
+                  <input class="form-control reqfield" type="text" name="fname" id="fname" tabindex="1" value="" placeholder="Enter your first name." pattern=".{2,}">
+                </div>
+              </div>
+              <div class="form-group">
+                <label class="control-label col-xs-3" for="lname">Last Name:</label>
+                <div class="col-xs-11 col-sm-7">
+                  <input class="form-control reqfield" type="text" name="lname" id="lname" tabindex="2" value="" placeholder="Enter your last name." pattern=".{2,}">
+                </div>
+              </div>
+              <div class="form-group">
+                <label class="control-label col-xs-3" for="dob">Date of Birth:</label>
+                <div class="col-xs-11 col-sm-7">
+                  <input class="form-control" type="text" name="dob" id="dob" tabindex="3" value="" placeholder="Enter your date of birth." pattern="(0[1-9]|1[012])[- /.](0[1-9]|[12][0-9]|3[01])[- /.](19|20)\d\d">
+                </div>
+                <span><a href="#loginsec" class="petstooltip page-scroll" title="Date Format: MM/DD/YYYY"><img id="route-input-help" src="assets/css/icons/info-blue.png" class="info-icon" ></a></span>
+              </div>
+              <div class="form-group">
+                <label class="control-label col-xs-3">Sex:</label>
+                <div class="col-xs-11 col-sm-7">
+                  <label class="radio-inline">
+                    <input type="radio" name="sex" id="male" tabindex="4" value="M"> Male
+                  </label>
+                  <label class="radio-inline">
+                    <input type="radio" name="sex" id="female" value="F"> Female
+                  </label>
+                </div>
+              </div>
+              <div class="form-group">
+                <label class="control-label col-xs-3" for="email">Email:</label>
+                <div class="col-xs-11 col-sm-7">
+                  <input class="form-control reqfield" type="email" name="email" id="email" tabindex="5" value="" placeholder="Enter your contact email address." pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,3}$">
+                </div>
+                <span><a href="#loginsec" class="petstooltip page-scroll" title="This will be used for communications."><img id="route-input-help" src="assets/css/icons/info-blue.png" class="info-icon" ></a></span>
+              </div>
+              <div class="form-group">
+                <label class="control-label col-xs-3" for="phone">Phone:</label>
+                <div class="col-xs-11 col-sm-7">
+                  <input class="form-control" type="text" name="phone" id="phone" tabindex="6" value="" placeholder="Enter your contact phone number." pattern="(?:\(\d{3}\)|\d{3})[- ]?\d{3}[- ]?\d{4}">
+                </div>
+              </div>
+              <div class="form-group">
+                <label class="control-label col-xs-3" for="fax">Fax:</label>
+                <div class="col-xs-11 col-sm-7">
+                  <input class="form-control" type="text" name="fax" id="fax" tabindex="7" value="" placeholder="Enter your contact fax number." pattern="(?:\(\d{3}\)|\d{3})[- ]?\d{3}[- ]?\d{4}">
+                </div>
+              </div>
+              <div class="form-group">
+                <label class="control-label col-xs-3" for="address">Address:</label>
+                <div class="col-xs-11 col-sm-7">
+                  <input class="form-control" type="text" name="address" id="address" tabindex="8" value="" placeholder="Enter your contact address." pattern="[0-9()-]{13}">
+                </div>
+              </div>
+              <div class="form-group">
+                <label class="control-label col-xs-3">City-State-Zip:</label>
+                <div class="col-xs-11 col-sm-7">
+                  <div class="row">
+                    <div class="col-xs-5">
+                      <input type="text" tabindex="9" class="form-control" name="city" id="city" placeholder="City">
+                    </div>
+                    <div class="col-xs-3">
+                      <select class="form-control" tabindex="10" name="state" id="state">
+                        <option value="" disabled selected>... Select one</option>
+                        <option value="AL">Alabama</option>
+                        <option value="AL">Alabama</option>
+                        <option value="AK">Alaska</option>
+                        <option value="AZ">Arizona</option>
+                        <option value="AR">Arkansas</option>
+                        <option value="CA">California</option>
+                        <option value="CO">Colorado</option>
+                        <option value="CT">Connecticut</option>
+                        <option value="DE">Delaware</option>
+                        <option value="DC">District Of Columbia</option>
+                        <option value="FL">Florida</option>
+                        <option value="GA">Georgia</option>
+                        <option value="HI">Hawaii</option>
+                        <option value="ID">Idaho</option>
+                        <option value="IL">Illinois</option>
+                        <option value="IN">Indiana</option>
+                        <option value="IA">Iowa</option>
+                        <option value="KS">Kansas</option>
+                        <option value="KY">Kentucky</option>
+                        <option value="LA">Louisiana</option>
+                        <option value="ME">Maine</option>
+                        <option value="MD">Maryland</option>
+                        <option value="MA">Massachusetts</option>
+                        <option value="MI">Michigan</option>
+                        <option value="MN">Minnesota</option>
+                        <option value="MS">Mississippi</option>
+                        <option value="MO">Missouri</option>
+                        <option value="MT">Montana</option>
+                        <option value="NE">Nebraska</option>
+                        <option value="NV">Nevada</option>
+                        <option value="NH">New Hampshire</option>
+                        <option value="NJ">New Jersey</option>
+                        <option value="NM">New Mexico</option>
+                        <option value="NY">New York</option>
+                        <option value="NC">North Carolina</option>
+                        <option value="ND">North Dakota</option>
+                        <option value="OH">Ohio</option>
+                        <option value="OK">Oklahoma</option>
+                        <option value="OR">Oregon</option>
+                        <option value="PA">Pennsylvania</option>
+                        <option value="RI">Rhode Island</option>
+                        <option value="SC">South Carolina</option>
+                        <option value="SD">South Dakota</option>
+                        <option value="TN">Tennessee</option>
+                        <option value="TX">Texas</option>
+                        <option value="UT">Utah</option>
+                        <option value="VT">Vermont</option>
+                        <option value="VA">Virginia</option>
+                        <option value="WA">Washington</option>
+                        <option value="WV">West Virginia</option>
+                        <option value="WI">Wisconsin</option>
+                        <option value="WY">Wyoming</option>
+                      </select>
+                    </div>
+                    <div class="col-xs-4">
+                      <input type="text" tabindex="11" class="form-control" name="zip" id="zip" placeholder="Zip" PATTERN="(\d{5}([\-]\d{4})?)">
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <hr>
+              <div class="form-group">
+                <label class="control-label col-xs-3" for="password">Password:</label>
+                <div class="col-xs-11 col-sm-7">
+                  <input class="form-control reqfield" type="password" name="password" id="password" tabindex="13" value="" placeholder="Choose a password for your account." pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{6,}" onchange="form.confirmpass.pattern = this.value;">
+                </div>
+                <span><a href="#loginsec" class="petstooltip page-scroll" title="Must be at least 6 upto 16 characters including one number, one lowercase and one uppercase letter."><img id="route-input-help" src="assets/css/icons/info-blue.png" class="info-icon" ></a></span>
+              </div>
+              <div class="form-group">
+                <label class="control-label col-xs-3" for="confirmpass">Confirm:</label>
+                <div class="col-xs-11 col-sm-7">
+                  <input class="form-control reqfield" type="password" name="confirmpass" id="confirmpass" tabindex="14" value="" placeholder="Retype the password to confirm." pattern="">
+                </div>
+              </div>
+              <div class="message frontmsg hide" id="signup-err-msg"></div>
+            </form>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+            <button type="button" class="btn btn-primary">Save changes</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- addpet Modal -->
+    <div class="modal fade" id="addpet" tabindex="-1" role="dialog" aria-labelledby="addpetlbl">
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+            <h4 class="modal-title" id="addpetlbl"><img src="assets/img/pets.png" alt="pets"> Add your pet</h4>
+          </div>
+          <div class="modal-body">
+            ...
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+            <button type="button" class="btn btn-primary">Save changes</button>
+          </div>
+        </div>
+      </div>
+    </div>
   </section>
 
   <!--If loged in value="1" Else value="0"-->
-  <input type="hidden" name="loggedin" id="logedin" value="0">
+  <input type="hidden" name="loggedin" id="loggedin" value="1">
 
   <!-- Under Construction Section -->
   <section id="ucsec">
