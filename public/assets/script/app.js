@@ -66,9 +66,13 @@ var hPetz = {
 			case "virvsecnav":
 			case "telesecnav":
 			case "hhubsecnav":
-			case "vetnsecnav":
 				$('#ucsec').addClass('show');
 				$('#activesec').val('ucsec');
+				break;
+			case "petnewssecnav":
+				$('#petnewssec').addClass('show');
+				$('#activesec').val('petnewssec');
+				hPetz.loadPetNewsjs();
 				break;
 			case "loginsecnav":
 				$('#loginsec').addClass('show');
@@ -116,6 +120,21 @@ var hPetz = {
 		});
 	},
 
+	loadPetNewsjs: function(){
+    var test =`<div class="panel panel-default fixpanel"><div class="panel-body">
+      <h3>{title}<br><small>({date})</small></h3><p>{shortBody}... 
+      <a href="{url}" target="_blank">Read More.</a></p>
+      <img class="img-responsive" src="{teaserImageUrl}">
+			</div></div>`;
+			
+		$("#rss-feeds").rss("http://www.vetstreet.com/rss/news-feed.jsp?Categories=siteContentTags:symptom-center:health-issues:seasonal-dangers:symptoms:adult-dog-health-conditions,dogBreedTags=health-issues",
+		{
+			limit: 12,
+			dateFormat: 'MMMM Do, YYYY',
+			entryTemplate: test
+		})
+	},
+
 	loadProfJS: function(){
 		// hPetz.renderTable();
 
@@ -129,28 +148,6 @@ var hPetz = {
 			$('#ownerdash').removeClass('hide');
 		})
 	},
-
-	// renderTable: function(){
-	// 	$('table.render').DataTable( {
-	// 		"order": [[ 0, "desc" ]],
-	// 		"paging":   true,
-	// 		"ordering": true,
-	// 		"info":     true,
-	// 		"lengthMenu": [[5, 10, 25, -1], [5, 10, 25, "All"]],
-	// 		stateSave: true
-	// 		// ,"columnDefs": [
-	// 		// 				{
-	// 		// 						"targets": [ 2 ],
-	// 		// 						"visible": false,
-	// 		// 						"searchable": false
-	// 		// 				},
-	// 		// 				{
-	// 		// 						"targets": [ 3 ],
-	// 		// 						"visible": false
-	// 		// 				}
-	// 		// 		]
-	// 	});
-	// },
 
 	loadLoginJS: function(){
 		$("input.reqfield").prop("required",true);
