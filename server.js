@@ -5,6 +5,7 @@ const bodyParser = require("body-parser");
 const path = require("path");
 const exphbs = require('express-handlebars');
 const db = require('./models');
+const emailer = require('./modules/emailer.js');
 
 // use it before all route definitions
 
@@ -115,6 +116,10 @@ app.use(function(error, req, res) {
 
 //END CONFIGURE
 //=================================================================================
+var millisecondDay = 1000*60*60*24;
+setInterval(emailer, millisecondDay);
+//run email scheduler on startup
+emailer();
 
 // Sync Database and Start the Server
 // =============================================================

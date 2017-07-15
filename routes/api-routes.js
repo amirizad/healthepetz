@@ -1,5 +1,5 @@
 module.exports = (express,passport,db,bcrypt)=>{
-
+const nodemailer = require('nodemailer');
     //Declare router variable 
     const router = express.Router();
     const auth = require('./../config/passport/passport.js')(passport,db);
@@ -502,6 +502,53 @@ module.exports = (express,passport,db,bcrypt)=>{
             }).pipe(res);
 
         });
+
+        router.route('/password-reset')
+        .post((req, res) => {
+            // Password reset route
+                // Send users an email with a link to a page where they can reset their passwords
+                var tempPassword = 'alsdf23450fv848';
+
+                var transporter = nodemailer.createTransport({
+                    host: 'smtp.gmail.com',
+                    port: 465,
+                    secure: true, // secure:true for port 465, secure:false for port 587
+                    auth: {
+                        user: 'healthepetz@gmail.com',
+                        pass: 'C0deb00tcamp'
+                    }
+                });
+            
+                db.Users.update({
+                    password: tempPassword
+                },
+            {
+                where: {
+                    email: 'test.healthepetz@gmail.com'
+                }
+            }).then((results) => {
+                var ownerEmail = req.body.email;
+            
+                let mailOptions = {
+                    from: '"HealthePetz" <healthepetz@gmail.com>', // sender address
+                    to: ownerEmail, // list of receivers
+                    subject: `Password Recovery`, // Subject line
+                    text: `Hi,\n
+                    Your temporary recovery password is: ${tempPassword}.\n
+                    Please be sure to enter a new password after logging in.`, // plain text body
+                    //html: `<b>Happy birthday, ${pet.pet_name}!!!!!</b>` // html body
+                };
+            
+                // send mail with defined transport object
+                transporter.sendMail(mailOptions, (error, info) => {
+                    if (error) {
+                        return console.log(error);
+                    }
+                    console.log(`Message ${info.messageId} sent: ${info.response}`);
+                });
+            });
+        });
+        
     //returns router back to request
     return router;
 };
