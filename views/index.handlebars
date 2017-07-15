@@ -4,9 +4,9 @@
 		<div class="row">
 			<div id="tabs">
 				<ul id="ultabs" class="nav nav-tabs" role="tablist">
-					<li id="logintab" class="active"><a href="#login" aria-controls="login" role="tab" data-toggle="tab">Login</a></li>
-					<li id="signuptab"><a href="#signup" aria-controls="signup" role="tab" data-toggle="tab">Sign up</a></li>
-					<li id="forgottab"><a href="#forgot" aria-controls="forgot" role="tab" data-toggle="tab">Forgot</a></li>
+					<li class="active"><a class='indexTab' id="logintab" href="#login" aria-controls="login" role="tab" data-toggle="tab">Login</a></li>
+					<li ><a class='indexTab' id="signuptab" href="#signup" aria-controls="signup" role="tab" data-toggle="tab">Sign up</a></li>
+					<li ><a class='indexTab' id="forgottab" href="#forgot" aria-controls="forgot" role="tab" data-toggle="tab">Forgot</a></li>
 				</ul>
 				<span class="required_notification">* Denotes Required Field</span>
 				<div class="tab-content">
@@ -686,6 +686,3 @@
 {{/if}}
 <!--If loged in value="1" Else value="0"-->
 <input type="hidden" name="loggedin" id="loggedin" value="{{loggedIn}}">
-
-{{!-- Should pass the ID of the appropriate page that client side should load --}}
-<input type="hidden" name="currentdiv" id="currentdivid" value="#ucsec">
