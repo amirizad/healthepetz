@@ -2,11 +2,17 @@
 <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/v/bs-3.3.7/jq-2.2.4/jszip-3.1.3/pdfmake-0.1.27/dt-1.10.15/af-2.2.0/b-1.3.1/b-colvis-1.3.1/b-flash-1.3.1/b-html5-1.3.1/b-print-1.3.1/cr-1.3.3/fc-3.2.2/fh-3.1.2/kt-2.2.1/r-2.1.1/rg-1.0.0/rr-1.2.0/sc-1.4.2/se-1.2.2/datatables.min.css"/>
 <link rel="stylesheet" type="text/css" href="/assets/editor/css/editor.dataTables.css">
 {{/section}}
-<div class="row">
-    <div class="col-md-12">
-<table id="petsTable" class="display responsive" cellspacing="0" width="100%">
-		<thead>
-				<tr>
+<div class="panel panel-default">
+    <div class="panel-heading">
+        <span class="panel-title"><img src="assets/img/pets.png" alt="pets">Pets</span>
+        <button name="addpetbtn" id="ownereditbtn" class=" addPet btn btn-primary btn-sm pull-right" title "Add Pet" data-toggle="modal" data-target="#addpet">
+        <i class="fa fa-plus"></i>
+        </button>
+    </div>
+    <div class="panel-body table-responsive">
+        <table id="petsTable" class="render table table-striped table-hover responsive" cellspacing="0" width="100%">
+            <thead>
+                <tr>
                     <th>Selected</th>
                     <th>Pet Id</th>
                     <th>ownerId</th> 
@@ -52,9 +58,10 @@
                     <th>createdAt</th> 
                     <th>updatedAt</th>
                     <th>Edit / Delete</th>
-				</tr>
-		</thead>
-	</table>
+                    <th>Pet Profile</th>
+                </tr>
+            </thead>
+        </table>
     </div>
 </div>
 {{#section 'petsTableScript'}}
@@ -152,19 +159,29 @@ $(document).ready(function() {
     } );
 
 
-$('#petsTable').on( 'click', 'tbody td:not(:first-child)', function (e) {
+/*$('#petsTable').on( 'click', 'tbody td:not(:first-child)', function (e) {
         petsTable.bubble( this );
-    } );
+    } );*/
 
     var pTable = $('#petsTable').DataTable( {
         ajax: {
             url:'/api/pet',
             dataSrc:''
         },
-        dom: 'Bfrtip',
+        dom: 'Bfrltip',
+        stateSave: true,
+        "paging":   true,
+        "ordering": true,
+        "info":     true,
+        "lengthMenu": [5, 10, 25],
+        "createdRow": function ( row, data, index ) {
+                $('td', row).eq(6).children().attr("pet-data",String(data.id));
+        },
         columns: [
             {
                 data: null,
+                "visible": false,
+                "searchable": false,
                 defaultContent: '',
                 className: 'select-checkbox',
                 orderable: false,
@@ -172,8 +189,8 @@ $('#petsTable').on( 'click', 'tbody td:not(:first-child)', function (e) {
             },
             { 
                 data: 'id',
-                "visible": true,
-                "searchable": true 
+                "visible": false,
+                "searchable": false 
                 },
             {
                 data: "ownerId",
@@ -228,7 +245,8 @@ $('#petsTable').on( 'click', 'tbody td:not(:first-child)', function (e) {
             {
                 data: "pet_dob",
                 "visible": true,
-                "searchable": true
+                "searchable": true,
+                "width":"20%"
                 },
             {
                 data: "pet_dod",
@@ -242,8 +260,8 @@ $('#petsTable').on( 'click', 'tbody td:not(:first-child)', function (e) {
                 },
             {
                 data: "pet_sex",
-                "visible": true,
-                "searchable": true
+                "visible": false,
+                "searchable": false
                 },
             {
                 data: "spayed_neutered_ind",
@@ -387,30 +405,37 @@ $('#petsTable').on( 'click', 'tbody td:not(:first-child)', function (e) {
                 },
             {
                 data: null,
+                "width":"18%",
                 className: "center",
                 defaultContent: '<a href="" class="editor_edit">Edit</a> / <a href="" class="editor_remove">Delete</a>'
+            },
+            {
+                data: null,
+                className: "center",
+                defaultContent: '<a class="viewPet">View</a>'
             }
             // etc
         ],
-        select: true,
+        select: false,
         select: {
             style:    'multi',
             selector: 'td:first-child'
         },
         "scrollX": true,
         buttons: [
-            { extend: 'create', editor: petsTable },
-            { extend: 'edit',   editor: petsTable },
-            { extend: 'remove', editor: petsTable },
+            { extend: 'create', editor: petsTable, className: 'btn btn-primary',text:'<i class="fa fa-plus"></i>' },
+            /*{ extend: 'edit',   editor: petsTable },
+             { extend: 'remove', editor: petsTable }, 
             {
                 text: 'Select All',
                 action: function () {
-                pTable.rows( {search:'applied'} ).select();
+                    pTable.rows( {search:'applied'} ).select();
                 }
             },
-            'selectNone'
+             'selectNone'*/
         ]
     } );
+    
     // Edit record
     $('#petsTable').on('click', 'a.editor_edit', function (e) {
         e.preventDefault();
@@ -441,6 +466,69 @@ $('#petsTable').on( 'click', 'tbody td:not(:first-child)', function (e) {
     petsTable.on( 'onInitCreate', function () {
           petsTable.disable('id');
     } );
+   
+	//Populate pet profile info on pet dash
+      $('#petsTable').on('click', 'a.viewPet', function(e) {
+             e.preventDefault();
+             var rowPetId=$(this).attr("pet-data");
+             //console.log(rowPetId);
+          
+            var queryURL="/api/pet/" + rowPetId;
+                        //+ this.closest('tr').children('td-petId').text();
+            //console.log(queryURL);
+                        //  $.getJSON(apiURL, function() {
+                        // 	console.log('success');
+                        // })
+             $.ajax({
+             url: queryURL,
+            type: "GET",
+            //dataType:"json"
+            })
+            .done(function(response) {
+                var results = response[0];
+                //console.log(results.pet_name);
+                if (results===[]) {
+                       alert("Pet could not be found! Please refresh your browser.");
+                }
+                else {
+                    //console.log(results.pet_type);
+                      $("#pettable-td-id").text(results.id);
+                      $("#pettable-td-name").text(results.pet_name);
+                      $("#pettable-td-type").text(results.pet_type);
+                      $("#pettable-td-breed").text(results.pet_breed);
+                      $("#pettable-td-color").text(results.pet_color);
+                      $("#pettable-td-dob").text(results.pet_dob);
+                      $("#pettable-td-sex").text(results.pet_sex);
+                      $("#pettable-td-microchip").text(results.microchip_no);
+                      $("#pettable-td-spayedneutered").text(results.spayed_neutered_ind);
+                      $("#pettable-td-cond1").text(results.cond1);
+                      $("#pettable-td-cond2").text(results.cond2);
+                      $("#pettable-td-cond3").text(results.cond3);
+                      $("#pettable-td-med1").text(results.med1);
+                      $("#pettable-td-med2").text(results.med2);
+                      $("#pettable-td-med3").text(results.med3);
+                      $("#pettable-td-v1name").text(results.vet1_name);
+                      $("#pettable-td-v1spec").text(results.vet1_spec);
+                      $("#pettable-td-v1addr").text(results.vet1_addr);
+                      $("#pettable-td-v1city").text(results.vet1_city);
+                      $("#pettable-td-v1state").text(results.vet1_state);
+                      $("#pettable-td-v1zip").text(results.vet1_zip);
+                      $("#pettable-td-v1phone").text(results.vet1_phone);
+                      $("#pettable-td-v1email").text(results.vet1_email);
+                      $("#pettable-td-v1fax").text(results.vet1_fax);
+                      $("#pettable-td-v2name").text(results.vet2_name);
+                      $("#pettable-td-v2spec").text(results.vet2_spec);
+                      $("#pettable-td-v2addr").text(results.vet2_addr);
+                      $("#pettable-td-v2city").text(results.vet2_city);
+                      $("#pettable-td-v2state").text(results.vet2_state);
+                      $("#pettable-td-v2zip").text(results.vet_zip);
+                      $("#pettable-td-v2phone").text(results.vet2_phone);
+                      $("#pettable-td-v2email").text(results.vet2_email);
+                      $("#pettable-td-v2fax").text(results.vet2_fax);
+                }
+            });
+        });
+    //
 } );
 
 </script>

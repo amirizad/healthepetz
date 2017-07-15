@@ -139,7 +139,7 @@ module.exports = (express,passport,db,bcrypt)=>{
                 where: {userId: req.user},
             }).then(function(results) {
                 console.log(results);
-                res.json(results.dataValues);
+                res.json([results.dataValues]);
             }); 
         })
        .post(auth(),(req, res, next) => {
@@ -162,16 +162,15 @@ module.exports = (express,passport,db,bcrypt)=>{
             });
         })
         .put(auth(),(req, res, next) => {
-        // Update owner
-            db.owners.update(req.body, 
-            { 
-                fields: Object.keys(req.body), 
-                where: {id: req.body.id} 
-            })
-            .then((results) => {
-                res.json(results)
-            }).catch(function(error) {
-                console.log(error);
+            // Update owner
+            console.log(req.body.data);
+            req.body.data.forEach(function(dataObject){
+                db.owners.update(dataObject, 
+                { 
+                    fields: Object.keys(dataObject), 
+                    where: {id: dataObject.id} 
+                });
+                res.json({"success":""});
             });
         })
         .delete(auth(),(req, res, next) => {
@@ -481,6 +480,24 @@ module.exports = (express,passport,db,bcrypt)=>{
             res.json({"success":""});
         });
         
+         router.route("/petmd")
+        .post((req, res) => {
+            var request = require("request");
+            var queryParams = req.body;
+
+            var options = { method: 'GET',
+            url: 'http://www.petmd.com/servicefinderapi/select',
+            qs: queryParams,
+            headers: 
+            { 'cache-control': 'no-cache' } };
+
+            request(options, function (error, response, body) {
+            if (error) throw new Error(error);
+
+            console.log(body);
+            }).pipe(res);
+
+        });
     //returns router back to request
     return router;
 };

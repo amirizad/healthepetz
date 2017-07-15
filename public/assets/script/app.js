@@ -108,7 +108,7 @@ var hPetz = {
 	},
 
 	loadProfJS: function(){
-		hPetz.renderTable();
+		// hPetz.renderTable();
 
 		$('#petslist').on('click', 'tbody tr', function(event) {
 			
@@ -121,27 +121,27 @@ var hPetz = {
 		})
 	},
 
-	renderTable: function(){
-		$('table.render').DataTable( {
-			"order": [[ 0, "desc" ]],
-			"paging":   true,
-			"ordering": true,
-			"info":     true,
-			"lengthMenu": [[5, 10, 25, -1], [5, 10, 25, "All"]],
-			stateSave: true
-			// ,"columnDefs": [
-			// 				{
-			// 						"targets": [ 2 ],
-			// 						"visible": false,
-			// 						"searchable": false
-			// 				},
-			// 				{
-			// 						"targets": [ 3 ],
-			// 						"visible": false
-			// 				}
-			// 		]
-		});
-	},
+	// renderTable: function(){
+	// 	$('table.render').DataTable( {
+	// 		"order": [[ 0, "desc" ]],
+	// 		"paging":   true,
+	// 		"ordering": true,
+	// 		"info":     true,
+	// 		"lengthMenu": [[5, 10, 25, -1], [5, 10, 25, "All"]],
+	// 		stateSave: true
+	// 		// ,"columnDefs": [
+	// 		// 				{
+	// 		// 						"targets": [ 2 ],
+	// 		// 						"visible": false,
+	// 		// 						"searchable": false
+	// 		// 				},
+	// 		// 				{
+	// 		// 						"targets": [ 3 ],
+	// 		// 						"visible": false
+	// 		// 				}
+	// 		// 		]
+	// 	});
+	// },
 
 	loadLoginJS: function(){
 		$("input.reqfield").prop("required",true);
@@ -345,5 +345,5 @@ $(document).ready(function() {
     var target = this.href.split('#');
     $('.nav a').filter('[href="#'+target[1]+'"]').tab('show');
 	});
-
 });
+

@@ -173,11 +173,11 @@ pets.associate = function(models) {
     });
 
     pets.hasMany(models.medical_history,  {
-            onDelete: "cascade"
-    });
+            onDelete: "cascade"     
+    });  
 
       pets.hasMany(models.vaccinations,  {
-            onDelete: "cascade"
+            onDelete: "cascade"       
     });
   }
 

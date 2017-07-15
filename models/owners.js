@@ -71,7 +71,8 @@ owners.associate = function(models) {
     });
 
     owners.hasMany(models.pets,  {
-            onDelete: "cascade"});
+            onDelete: "cascade"
+          });
   }
 
 
