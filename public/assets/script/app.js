@@ -41,8 +41,6 @@ var hPetz = {
 		$('li.navto.active').removeClass('active');
 		$('#' + navId).addClass('active');
 		var currentSec = $('#activesec').val();
-		var mainSec = String(currentSec);
-		localStorage.setItem("mainSec", mainSec);
 		$('#' + currentSec).removeClass('show');
 
 		switch (navId) {
@@ -347,11 +345,4 @@ $(document).ready(function() {
     var target = this.href.split('#');
     $('.nav a').filter('[href="#'+target[1]+'"]').tab('show');
 	});
-
-	$('a[href]').click(function(){
-		var windowLocation = this.href;
-		var domain = windowLocation.substring( 0, windowLocation.lastIndexOf( "/" )+1);
-		var subSec = String(windowLocation.replace(domain,""));
-		localStorage.setItem("subSec", subSec);
-    });
 });
