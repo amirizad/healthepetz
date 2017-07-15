@@ -1,54 +1,25 @@
-{{#section 'petsTableStyle'}}
+{{#section 'ownTableStyle'}}
 <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/v/bs-3.3.7/jq-2.2.4/jszip-3.1.3/pdfmake-0.1.27/dt-1.10.15/af-2.2.0/b-1.3.1/b-colvis-1.3.1/b-flash-1.3.1/b-html5-1.3.1/b-print-1.3.1/cr-1.3.3/fc-3.2.2/fh-3.1.2/kt-2.2.1/r-2.1.1/rg-1.0.0/rr-1.2.0/sc-1.4.2/se-1.2.2/datatables.min.css"/>
 <link rel="stylesheet" type="text/css" href="/assets/editor/css/editor.dataTables.css">
 {{/section}}
 <div class="row">
     <div class="col-md-12">
-<table id="ownTable" class="display responsive" cellspacing="0" width="100%">
+<table id="ownTable" class="display" cellspacing="0" width="100%">
 		<thead>
 				<tr>
                     <th>Selected</th>
-                    <th>Pet Id</th>
-                    <th>ownerId</th> 
-                    <th>Pet Name</th> 
-                    <th>Pet Type</th> 
-                    <th>Pet Breed</th> 
-                    <th>pet_color</th> 
-                    <th>license_no</th> 
-                    <th>microchip_no</th> 
-                    <th>insur_name</th> 
-                    <th>insur_id</th> 
-                    <th>insur_phone</th> 
-                    <th>Pet DOB</th> 
-                    <th>pet_dod</th> 
-                    <th>pet_age</th> 
-                    <th>Pet Sex</th> 
-                    <th>spayed_neutered_ind</th> 
-                    <th>pet_image_url</th> 
-                    <th>Condition 1</th> 
-                    <th>cond2</th> 
-                    <th>cond3</th> 
-                    <th>med1</th> 
-                    <th>med2</th> 
-                    <th>med3</th> 
-                    <th>Vet Name</th> 
-                    <th>vet1_specialty</th> 
-                    <th>vet1_address</th> 
-                    <th>vet1_city</th> 
-                    <th>vet1_state</th> 
-                    <th>vet1_zip</th> 
-                    <th>vet1_phone</th> 
-                    <th>vet1_email</th> 
-                    <th>vet1_fax</th> 
-                    <th>vet2_name</th> 
-                    <th>vet2_specialty</th> 
-                    <th>vet2_address</th> 
-                    <th>vet2_city</th> 
-                    <th>vet2_state</th> 
-                    <th>vet2_zip</th> 
-                    <th>vet2_phone</th> 
-                    <th>vet2_email</th> 
-                    <th>vet2_fax</th> 
+                    <th>Owner Id</th>
+                    <th>First Name</th> 
+                    <th>Last Name</th> 
+                    <th>Date of Birth</th> 
+                    <th>Sex</th> 
+                    <th>Address</th> 
+                    <th>City</th> 
+                    <th>State</th> 
+                    <th>Zip Code</th> 
+                    <th>Phone Number</th> 
+                    <th>Fax Number</th>
+                    <th>User Id</th>
                     <th>createdAt</th> 
                     <th>updatedAt</th>
                     <th>Edit / Delete</th>
@@ -103,57 +74,32 @@ $(document).ready(function() {
             },
             idSrc:'id',
         table: '#ownTable',
-        
         fields: [
-            {label: 'Id', name: 'id'},
-            {label: "Owner Id", name: "ownerId", type:"hidden"},
-            {label: "Pet Name", name: "pet_name"},
-            {label: "Pet Type", name: "pet_type"},
-            {label: "Pet Breed", name: "pet_breed"},
-            {label: "Pet Color", name: "pet_color"},
-            {label: "Pet License", name: "license_no"},
-            {label: "Microchip #", name:"microchip_no"},
-            {label: "Insurance Name", name:"insur_name"},
-            {label: "Insurance Id", name:"insur_id"},
-            {label: "Insurance Phone #", name:"insur_phone"},
-            {label: "Pet DOB", name:"pet_dob"},
-            {label: "Pet DOD", name:"pet_dod", type:"hidden"},
-            {label: "Pet Age", name:"pet_age"},
-            {label: "Pet Sex", name:"pet_sex"},
-            {label: "Spayed/Neutered", name:"spayed_neutered_ind"},
-            {label: "Pet Image", name:"pet_image_url"},
-            {label: "Condition 1", name:"cond1"},
-            {label: "Condition 2", name:"cond2"},
-            {label: "Condition 3", name:"cond3"},
-            {label: "Medication 1", name:"med1"},
-            {label: "Medication 2", name:"med2"},
-            {label: "Medication 3", name:"med3"},
-            {label: "Vet1 Name", name:"vet1_name"},
-            {label: "Vet1 Specialty", name:"vet1_specialty"},
-            {label: "Vet1 Address", name:"vet1_address"},
-            {label: "Vet1 City", name:"vet1_city"},
-            {label: "Vet1 State", name:"vet1_state"},
-            {label: "Vet1 Zip", name:"vet1_zip"},
-            {label: "Vet1 Phone", name:"vet1_phone"},
-            {label: "Vet1 Email", name:"vet1_email"},
-            {label: "Vet1 Fax", name:"vet1_fax"},
-            {label: "Vet2 Name", name:"vet2_name"},
-            {label: "Vet2 Specialty", name:"vet2_specialty"},
-            {label: "Vet2 Address", name: "vet2_address"} ,
-            {label: "Vet2 City", name:"vet2_city"},
-            {label: "Vet2 State", name:"vet2_state"},
-            {label: "Vet2 Zip", name:"vet2_zip"},
-            {label: "Vet2 Phone", name:"vet2_phone"},
-            {label: "Vet2 Email", name:"vet2_email"},
-            {label: "Vet2 Fax", name:"vet2_fax"},
+            {label: 'Owner Id', name: 'id'},
+            {label: "First Name", name: "owner_fname"},
+            {label: "Last Name", name: "owner_lname"},
+            {label: "Date of Birth", name: "owner_dob"},
+            {label: "Sex", name: "owner_sex"},
+            {label: "Address", name: "address"},
+            {label: "City", name: "city"},
+            {label: "State", name:"state"},
+            {label: "Zip Code", name:"zip"},
+            {label: "Phone Number", name:"phone"},
+            {label: "Fax Number", name:"fax"},
+            {label: "User Id", name:"userId"},
             {label: "createdAt", name:"createdAt", type:"hidden"},
             {label: "updatedAt", name:"updatedAt", type:"hidden"}
         ]
     } );
 
-
-$('#ownTable').on( 'click', 'tbody td:not(:first-child)', function (e) {
+    //Bubble Edit
+    /*$('#ownTable').on( 'click', 'tbody td:not(:first-child)', function (e) {
         ownTable.bubble( this );
+    });*/
+
+    //Inline Edit
+    $('#ownTable').on( 'click', 'tbody td:not(:first-child)', function (e) {
+        ownTable.inline( this );
     } );
 
     var oTable = $('#ownTable').DataTable( {
@@ -176,214 +122,69 @@ $('#ownTable').on( 'click', 'tbody td:not(:first-child)', function (e) {
                 "searchable": true 
                 },
             {
+                data: "owner_fname",
+                "visible": true,
+                "searchable": true
+                },
+            {
+                data: "owner_lname",
+                "visible": true,
+                "searchable": true
+                },
+            {
+                data: "owner_dob",
+                "visible": true,
+                "searchable": true
+                },
+            {
+                data: "owner_sex",
+                "visible": true,
+                "searchable": true
+                },
+            {
+                data: "address",
+                "visible": true,
+                "searchable": true
+                },
+            {
+                data: "city",
+                "visible": true,
+                "searchable": true
+                },
+            {
+                data: "state",
+                "visible": true,
+                "searchable": true
+                },
+            {
+                data: "zip",
+                "visible": true,
+                "searchable": true
+                },
+            {
+                data: "phone",
+                "visible": true,
+                "searchable": true
+                },
+            {
+                data: "fax",
+                "visible": true,
+                "searchable": true
+                },
+            {
                 data: "UserId",
-                "visible": false,
-                "searchable": false
-                },
-            {
-                data: "pet_name",
                 "visible": true,
                 "searchable": true
-                },
-            {
-                data: "pet_type",
-                "visible": true,
-                "searchable": true
-                },
-            {
-                data: "pet_breed",
-                "visible": true,
-                "searchable": true
-                },
-            {
-                data: "pet_color",
-                "visible": false,
-                "searchable": false
-                },
-            {
-                data: "license_no",
-                "visible": false,
-                "searchable": false
-                },
-            {
-                data: "microchip_no",
-                "visible": false,
-                "searchable": false
-                },
-            {
-                data: "insur_name",
-                "visible": false,
-                "searchable": false
-                },
-            {
-                data: "insur_id",
-                "visible": false,
-                "searchable": false
-                },
-            {
-                data: "insur_phone",
-                "visible": false,
-                "searchable": false
-                },
-            {
-                data: "pet_dob",
-                "visible": true,
-                "searchable": true
-                },
-            {
-                data: "pet_dod",
-                "visible": false,
-                "searchable": false
-                },
-            {
-                data: "pet_age",
-                "visible": false,
-                "searchable": false
-                },
-            {
-                data: "pet_sex",
-                "visible": true,
-                "searchable": true
-                },
-            {
-                data: "spayed_neutered_ind",
-                "visible": false,
-                "searchable": false
-                },
-            {
-                data: "pet_image_url",
-                "visible": false,
-                "searchable": false
-                },
-            {
-                data: "cond1",
-                "visible": false,
-                "searchable": false
-                },
-            {
-                data: "cond2",
-                "visible": false,
-                "searchable": false
-                },
-            {
-                data: "cond3",
-                "visible": false,
-                "searchable": false
-                },
-            {
-                data: "med1",
-                "visible": false,
-                "searchable": false
-                },
-            {
-                data: "med2",
-                "visible": false,
-                "searchable": false
-                },
-            {
-                data: "med3",
-                "visible": false,
-                "searchable": false
-                },
-            {
-                data: "vet1_name",
-                "visible": true,
-                "searchable": true
-                },
-            {
-                data: "vet1_specialty",
-                "visible": false,
-                "searchable": false
-                },
-            {
-                data: "vet1_address",
-                "visible": false,
-                "searchable": false
-                },
-            {
-                data: "vet1_city",
-                "visible": false,
-                "searchable": false
-                },
-            {
-                data: "vet1_state",
-                "visible": false,
-                "searchable": false
-                },
-            {
-                data: "vet1_zip",
-                "visible": false,
-                "searchable": false
-                },
-            {
-                data: "vet1_phone",
-                "visible": false,
-                "searchable": false
-                },
-            {
-                data: "vet1_email",
-                "visible": false,
-                "searchable": false
-                },
-            {
-                data: "vet1_fax",
-                "visible": false,
-                "searchable": false
-                },
-            {
-                data: "vet2_name",
-                "visible": false,
-                "searchable": false
-                },
-            {
-                data: "vet2_specialty",
-                "visible": false,
-                "searchable": false
-                },
-            {
-                data: "vet2_address",
-                "visible": false,
-                "searchable": false
-                },
-            {
-                data: "vet2_city",
-                "visible": false,
-                "searchable": false
-                },
-            {
-                data: "vet2_state",
-                "visible": false,
-                "searchable": false
-                },
-            {
-                data: "vet2_zip",
-                "visible": false,
-                "searchable": false
-                },
-            {
-                data: "vet2_phone",
-                "visible": false,
-                "searchable": false
-                },
-            {
-                data: "vet2_email",
-                "visible": false,
-                "searchable": false
-                },
-            {
-                data: "vet2_fax",
-                "visible": false,
-                "searchable": false
                 },
             {
                 data: "createdAt",
-                "visible": false,
-                "searchable": false
+                "visible": true,
+                "searchable": true
                 },
             {
                 data: "updatedAt",
-                "visible": false,
-                "searchable": false
+                "visible": true,
+                "searchable": true
                 },
             {
                 data: null,
@@ -399,18 +200,22 @@ $('#ownTable').on( 'click', 'tbody td:not(:first-child)', function (e) {
         },
         "scrollX": true,
         buttons: [
-            { extend: 'create', editor: ownTable },
+            { extend: 'create', editor: ownTable},
             { extend: 'edit',   editor: ownTable },
             { extend: 'remove', editor: ownTable },
             {
                 text: 'Select All',
                 action: function () {
+                /* selects all rows*/
                 oTable.rows( {search:'applied'} ).select();
                 }
             },
             'selectNone'
         ]
     } );
+    //Table Header
+     /*$("div.toolbar").html('<b>Pet Medical History</b>');*/ 
+
     // Edit record
     $('#ownTable').on('click', 'a.editor_edit', function (e) {
         e.preventDefault();
@@ -434,13 +239,21 @@ $('#ownTable').on( 'click', 'tbody td:not(:first-child)', function (e) {
      
     //disable field on edit
     ownTable.on( 'onInitEdit', function () {
-          ownTable
-          .disable('id');
+           ownTable
+          .disable('id')
     } );
     //disable field on edit
     ownTable.on( 'onInitCreate', function () {
-          ownTable.disable('id');
+          ownTable
+          .disable('id')
     } );
+
+    // Use a record as a template
+    ownTable.on( 'onInitCreate', function () {
+    // Loop over the fields in the editor instance and use the `set` method or just statically assign them
+        ownTable.set( 'petId', {{petId}} );
+    } );
+    
 } );
 
 </script>
