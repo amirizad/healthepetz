@@ -111,6 +111,11 @@ var hPetz = {
 
 	loadProfJS: function(){
 		hPetz.renderTable();
+
+		$('#petslist').on('click', 'tbody tr', function(event) {
+			
+		});
+
 		$('#back-owner').click(function(e){
 			e.preventDefault();
 			$('#petdash').addClass('hide');
