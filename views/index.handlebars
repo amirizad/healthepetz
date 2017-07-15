@@ -9,7 +9,7 @@
 					<li id="forgottab"><a href="#forgot" aria-controls="forgot" role="tab" data-toggle="tab">Forgot</a></li>
 				</ul>
 				<span class="required_notification">* Denotes Required Field</span>
-				<div class="tab-content portal">
+				<div class="tab-content">
 					<!--************************ Register **************************-->
 					<div id="signup" class="tab-pane fade">
 						<form class="form-horizontal form-field register" action="/api/register" role="form" name="registerfrm" id="registerfrm" method="POST" autocomplete="off">
@@ -313,6 +313,7 @@
         </div>
         {{> ownerTable}}
         <div class="col-sm-8">
+          <div class="panel panel-default">
            {{> petsTable}}
         </div>
       </div>
@@ -495,77 +496,12 @@
           </div>
         </div>
         <div class="col-md-7">
-          <div class="panel panel-warning panel-size">
-            <div class="panel-heading">
-              <span class="panel-title"><i class="fa fa-eyedropper"></i>Vaccinations</span>
-            </div>
-            <div class="panel-body table-responsive">
-              <table class="render table table-striped table-hover">
-                <thead>
-                  <tr>
-                    <td>Vaccine</td>
-                    <td>Last Vacc Dt.</td>
-                    <td>Next Vacc Dt.</td>
-                    <td>Vacc Img</td>
-                  </tr>
-                </thead>
-                <tr>
-                  <td>Rabbies</td>
-                  <td>05/11/2017</td>
-                  <td>05/11/2018</td>
-                  <td></td>
-                </tr>
-                <tr>
-                  <td>Rabbies</td>
-                  <td>05/11/2016</td>
-                  <td>05/11/2017</td>
-                  <td></td>
-                </tr>
-              </table>
-            </div>
-          </div>
+          {{> vacTable}}
         </div>
       </div>
       <div class="row">
         <div class="col-sm-12">
-          <div class="panel panel-default">
-            <div class="panel-heading">
-              <span class="panel-title"><i class="fa fa-history"></i>Medical History</span>
-            </div>
-            <div class="panel-body table-responsive">
-              <table class="render table table-striped table-hover">
-                <thead>
-                  <tr>
-                    <td>Prov. Name</td>
-                    <td>Condition</td>
-                    <td>Bill Amt.</td>
-                    <td>Paid Amt.</td>
-                    <td>Notes</td>
-                    <td>Doc Type</td>
-                    <td>Doc Image</td>
-                  </tr>
-                </thead>
-                <tr>
-                  <td>Test Data</td>
-                  <td>Test Data</td>
-                  <td>Test Data</td>
-                  <td>Test Data</td>
-                  <td>Test Data</td>
-                  <td>Test Data</td>
-                  <td>Test Data</td>
-                </tr>
-                <tr>
-                  <td>Test Data</td>
-                  <td>Test Data</td>
-                  <td>Test Data</td>
-                  <td>Test Data</td>
-                  <td>Test Data</td>
-                  <td>Test Data</td>
-                  <td>Test Data</td>
-                </tr>
-              </table>
-            </div>
-          </div>
+          {{> medTable}}
         </div>
       </div>
     </div>
