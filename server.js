@@ -91,7 +91,7 @@ app.use(session({
     //if the user is not logged in don't save a session or add a cookie
     saveUninitialized: false,
     //To be enabled if using HTTPS
-       cookie: { secure: true }
+       //cookie: { secure: true }
 }));
 
 //Sets up passport with express
