@@ -16,6 +16,9 @@ var hPetz = {
 	},
 
 	updateNavbar: function(loggedIn){
+		var lastTab = localStorage.getItem('lastTab');
+		var lastPage = localStorage.getItem('lastPage');
+
 		$('li.navto.active').removeClass('active');
 		$('section').removeClass('show');
 		if ( loggedIn == 1){
@@ -33,6 +36,12 @@ var hPetz = {
 			$('#homesecnav').addClass('active');
 			$('#homesec').addClass('show')
 			$('#activesec').val('homesec');
+			if(lastTab){
+				$("#" + lastTab).click();
+			}
+			if(lastPage){
+				hPetz.changePage(lastPage);
+			}
 			hPetz.loadLoginJS();
 		}
 	},
@@ -331,9 +340,15 @@ var hPetz = {
 $(document).ready(function() {
 
 	hPetz.updateNavbar($('#loggedin').val());
-
+	
 	$('.navto').click(function(){
-		hPetz.changePage($(this).attr('id'));
+		var currPage = $(this).attr('id');
+		hPetz.changePage(currPage);
+		localStorage.setItem("lastPage",currPage);
+	})
+
+	$('.indexTab').on('click',function(e){
+		localStorage.setItem('lastTab',$(this).attr("id"));
 	})
 
   $('.carousel').carousel({ interval: 7000 })

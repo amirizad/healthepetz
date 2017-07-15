@@ -30,23 +30,23 @@ const API = require('./routes/api-routes.js')(express,passport,db,bcrypt);
 //Used to create the sessions table for authentication
 //-------------------------------------------
 // *** IMPORTANT***Use this for development
-// const sessionStore = new MySQLStore({
-//     host:'localhost',
-//     port:'3306',
-//     user:'root',
-//     password:'root',
-//     //password:'password',
-//     database:'healthepetz_db'
-// });
+const sessionStore = new MySQLStore({
+    host:'localhost',
+    port:'3306',
+    user:'root',
+    password:'root',
+    //password:'password',
+    database:'healthepetz_db'
+});
 
 // *** IMPORTANT***Use this for production
-const sessionStore = new MySQLStore({
-    host:'ko86t9azcob3a2f9.cbetxkdyhwsb.us-east-1.rds.amazonaws.com',
-    port:'3306',
-    user:'cdj7xzlcrm7b1zyt',
-    password:'jlo8p3kzo6s9wvbu',
-    database:'fy1oiq0nn0ib9b0m'
-});
+// const sessionStore = new MySQLStore({
+//     host:'ko86t9azcob3a2f9.cbetxkdyhwsb.us-east-1.rds.amazonaws.com',
+//     port:'3306',
+//     user:'cdj7xzlcrm7b1zyt',
+//     password:'jlo8p3kzo6s9wvbu',
+//     database:'fy1oiq0nn0ib9b0m'
+// });
 
 //Custom Section Helper for Views
 var hbs = exphbs.create({

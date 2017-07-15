@@ -8,7 +8,7 @@ module.exports = (express,passport,db,bcrypt)=>{
     router.route('/login')
         .post(passport.authenticate('local',{
             //if valid redirect to home
-            successRedirect:'/',
+            successRedirect:'/#',
             //if not redirect back to login and pass in flash errors
             failureRedirect:'/',
             failureFlash:true
@@ -26,110 +26,114 @@ module.exports = (express,passport,db,bcrypt)=>{
         .post((req,res,next)=>{
             var user = req.body;
             console.log(user);
-            //if the userpassword matches continue
-            if(user.password === user.repassword){
-                //Declare number of salt rounds default:10
-                const saltRounds = 10;
-                //Hash the normal password for protected and pass it as hash
-                bcrypt.hash(user.password, saltRounds, (err, hash) =>{
-                    var userID;
-                    //Query the Users table and pass in the required fields including the hash pw
-                    db.Users.create({
-                        "username": user.username,
-                        "email": user.email,
-                        "password": hash
-                    }).then((data)=>{
-                        //When done grab the new user id and store it in a variable
-                        userID = data.dataValues.id;
-                        //create the user in owners table
-                        db.owners.create({
-                            "owner_fname": user.fname,
-                            "owner_lname": user.lname,
-                            "owner_dob": user.dob,
-                            "owner_sex": user.sex,
-                            "phone": user.phone,
-                            "fax": user.fax,
-                            "address": user.address,
-                            "city": user.city,
-                            "state": user.state,
-                            "zip": user.zip,
-                            "UserId": userID
-                        }).then((result)=>{
-                            //login the user with the id and redirect to dashboard
-                            req.login(userID,(err)=>{
-                                res.redirect('/dashboard');
-                            });
-                        }).catch((err)=>{
-                            console.log(err);
-                            db.Users.destroy({
-                                where:{
-                                    id:userID
-                                }
-                            }).then((data)=>{
-                                //if there is any errors render register and pass in the error flash msgs
-                                res.render('index',{
-                                    username: req.body.username,
-                                    fname: req.body.fname,
-                                    lname: req.body.lname,
-                                    email: req.body.email,
-                                    dob: req.body.dob,
-                                    phone: req.body.phone,
-                                    fax: req.body.fax,
-                                    address: req.body.address,
-                                    city: req.body.city,
-                                    zip: req.body.zip,
-                                    regError:err.errors
+            if(req.isAuthenticated() == false){
+                //if the userpassword matches continue
+                if(user.password === user.repassword){
+                    //Declare number of salt rounds default:10
+                    const saltRounds = 10;
+                    //Hash the normal password for protected and pass it as hash
+                    bcrypt.hash(user.password, saltRounds, (err, hash) =>{
+                        var userID;
+                        //Query the Users table and pass in the required fields including the hash pw
+                        db.Users.create({
+                            "username": user.username,
+                            "email": user.email,
+                            "password": hash
+                        }).then((data)=>{
+                            //When done grab the new user id and store it in a variable
+                            userID = data.dataValues.id;
+                            //create the user in owners table
+                            db.owners.create({
+                                "owner_fname": user.fname,
+                                "owner_lname": user.lname,
+                                "owner_dob": user.dob,
+                                "owner_sex": user.sex,
+                                "phone": user.phone,
+                                "fax": user.fax,
+                                "address": user.address,
+                                "city": user.city,
+                                "state": user.state,
+                                "zip": user.zip,
+                                "UserId": userID
+                            }).then((result)=>{
+                                //login the user with the id and redirect to dashboard
+                                req.login(userID,(err)=>{
+                                    res.redirect('/#');
                                 });
                             }).catch((err)=>{
                                 console.log(err);
-                                res.render('index',{
-                                    username: req.body.username,
-                                    fname: req.body.fname,
-                                    lname: req.body.lname,
-                                    email: req.body.email,
-                                    dob: req.body.dob,
-                                    phone: req.body.phone,
-                                    fax: req.body.fax,
-                                    address: req.body.address,
-                                    city: req.body.city,
-                                    zip: req.body.zip,
-                                    regError:err.errors
-                                });
+                                db.Users.destroy({
+                                    where:{
+                                        id:userID
+                                    }
+                                }).then((data)=>{
+                                    //if there is any errors render register and pass in the error flash msgs
+                                    res.render('index',{
+                                        username: req.body.username,
+                                        fname: req.body.fname,
+                                        lname: req.body.lname,
+                                        email: req.body.email,
+                                        dob: req.body.dob,
+                                        phone: req.body.phone,
+                                        fax: req.body.fax,
+                                        address: req.body.address,
+                                        city: req.body.city,
+                                        zip: req.body.zip,
+                                        regError:err.errors
+                                    });
+                                }).catch((err)=>{
+                                    console.log(err);
+                                    res.render('index',{
+                                        username: req.body.username,
+                                        fname: req.body.fname,
+                                        lname: req.body.lname,
+                                        email: req.body.email,
+                                        dob: req.body.dob,
+                                        phone: req.body.phone,
+                                        fax: req.body.fax,
+                                        address: req.body.address,
+                                        city: req.body.city,
+                                        zip: req.body.zip,
+                                        regError:err.errors
+                                    });
+                                })
                             })
-                        })
-                    }).catch((err)=>{
-                        console.log(err.errors);
-                        //if there is any errors render register and pass in the error flash msgs
-                        res.render('index',{
-                            username: req.body.username,
-                            fname: req.body.fname,
-                            lname: req.body.lname,
-                            email: req.body.email,
-                            dob: req.body.dob,
-                            phone: req.body.phone,
-                            fax: req.body.fax,
-                            address: req.body.address,
-                            city: req.body.city,
-                            zip: req.body.zip,
-                            regError:err.errors
+                        }).catch((err)=>{
+                            console.log(err.errors);
+                            //if there is any errors render register and pass in the error flash msgs
+                            res.render('index',{
+                                username: req.body.username,
+                                fname: req.body.fname,
+                                lname: req.body.lname,
+                                email: req.body.email,
+                                dob: req.body.dob,
+                                phone: req.body.phone,
+                                fax: req.body.fax,
+                                address: req.body.address,
+                                city: req.body.city,
+                                zip: req.body.zip,
+                                regError:err.errors
+                            });
                         });
                     });
-                });
+                } else {
+                    //else render register page again with filled values and flash msg
+                    res.render('index',{
+                        username: req.body.username,
+                        fname: req.body.fname,
+                        lname: req.body.lname,
+                        email: req.body.email,
+                        dob: req.body.dob,
+                        phone: req.body.phone,
+                        fax: req.body.fax,
+                        address: req.body.address,
+                        city: req.body.city,
+                        zip: req.body.zip,
+                        regError:[{"message": "Your passwords do not match. Try again."}]
+                    });
+                }
             } else {
-                //else render register page again with filled values and flash msg
-                res.render('index',{
-                    username: req.body.username,
-                    fname: req.body.fname,
-                    lname: req.body.lname,
-                    email: req.body.email,
-                    dob: req.body.dob,
-                    phone: req.body.phone,
-                    fax: req.body.fax,
-                    address: req.body.address,
-                    city: req.body.city,
-                    zip: req.body.zip,
-                    regError:[{"message": "Your passwords do not match. Try again."}]
-                });
+                res.redirect('/');
             }
         });
 

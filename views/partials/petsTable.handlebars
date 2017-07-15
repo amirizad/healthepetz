@@ -69,10 +69,10 @@
 <script type="text/javascript" src="/assets/editor/js/dataTables.editor.js"></script>
 <script type="text/javascript" src="//cdn.datatables.net/plug-ins/1.10.15/api/fnReloadAjax.js"></script>
 <script>
-   
+
+
 
 $(document).ready(function() {
-    
 
     var petsTable = new $.fn.dataTable.Editor( {} );
 
@@ -423,10 +423,10 @@ $(document).ready(function() {
         },
         "scrollX": true,
         buttons: [
-            { extend: 'create', editor: petsTable, className: 'btn btn-primary',text:'<i class="fa fa-plus"></i>' },
-            /*{ extend: 'edit',   editor: petsTable },
-             { extend: 'remove', editor: petsTable }, 
-            {
+            { extend: 'create', editor: petsTable },
+            { extend: 'edit',   editor: petsTable, className:"hide"},
+             { extend: 'remove', editor: petsTable, className:"hide" }, 
+            /*{
                 text: 'Select All',
                 action: function () {
                     pTable.rows( {search:'applied'} ).select();
@@ -466,11 +466,11 @@ $(document).ready(function() {
     petsTable.on( 'onInitCreate', function () {
           petsTable.disable('id');
     } );
-   
+
 	//Populate pet profile info on pet dash
       $('#petsTable').on('click', 'a.viewPet', function(e) {
              e.preventDefault();
-             var rowPetId=$(this).attr("pet-data");
+            rowPetId=$(this).attr("pet-data");
              //console.log(rowPetId);
           
             var queryURL="/api/pet/" + rowPetId;

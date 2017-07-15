@@ -9,10 +9,10 @@ module.exports = (express,passport,db,path)=>{
     
     //get homepage render index
     .get('/',(req,res,next)=>{
+        console.log(req.isAuthenticated());
         if(req.isAuthenticated()){
             res.render('index',{
-                loggedIn:1,
-                petId:2
+                loggedIn:1
             });
         } else {
             var errors = req.flash('error');
