@@ -261,56 +261,57 @@
           <div class="panel panel-default">
             <div class="panel-heading">
               <span class="panel-title"><i class="fa fa-user"></i>Owner Profile</span>
-              <button name="ownereditbtn" id="ownereditbtn" class="btn btn-primary btn-sm pull-right" title "Edit" data-toggle="modal" data-target="#editowner">
+              <button name="ownereditbtn" id="ownereditbtn" class="btn btn-primary btn-sm pull-right" title "Edit"  data-target="#editowner">
                 <i class="fa fa-edit"></i>
               </button>
             </div>
             <div class="panel-body table-responsive">
               <table class="table table-striped borderless">
                 <tr>
-                  <td>Last Name:</td>
-                  <td>Izadpanah</td>
+                  <td>First Name:</td>
+                  <td id="firstname"></td>
                 </tr>
                 <tr>
-                  <td>First Name:</td>
-                  <td>Amir</td>
+                  <td>Last Name:</td>
+                  <td id="lastname"></td>
                 </tr>
                 <tr>
                   <td>DOB:</td>
-                  <td>04 Mar 1980</td>
+                  <td id="dateofbirth"></td>
                 </tr>
                 <tr>
                   <td>Sex:</td>
-                  <td>Male</td>
+                  <td id="ownSex"></td>
                 </tr>
                 <tr>
                   <td>Address:</td>
-                  <td>2151 Michelson Dr. #168</td>
+                  <td id="ownAddress"></td>
                 </tr>
                 <tr>
                   <td>City:</td>
-                  <td>Irvine</td>
+                  <td id="ownCity"></td>
                 </tr>
                 <tr>
                   <td>State:</td>
-                  <td>California</td>
+                  <td id="ownState"></td>
                 </tr>
                 <tr>
                   <td>Zip:</td>
-                  <td>92612</td>
+                  <td id="ownZip"></td>
                 </tr>
                 <tr>
                   <td>Phone:</td>
-                  <td>(949)419-7049</td>
+                  <td id="ownPhone"></td>
                 </tr>
                 <tr>
                   <td>Fax:</td>
-                  <td>N/A</td>
+                  <td id="ownFax"></td>
                 </tr>
               </table>
             </div>
           </div>
         </div>
+        {{> ownerTable}}
         <div class="col-sm-8">
           <div class="panel panel-default">
            {{> petsTable}}
