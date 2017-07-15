@@ -179,6 +179,19 @@ section {
   margin: 0 auto;
 }
 
+.tab-content {
+  padding: 0 !important;
+  min-height: 510px !important;
+}
+
+.panel-size {
+  height: 655px;
+}
+
+.btn-margin {
+  margin-bottom: 10px;
+}
+
 .footer {
   background-color: rgba(102, 102, 102, 0.9);
   color: #ccc;
@@ -214,6 +227,12 @@ section {
 
 .borderless tbody>tr>td+td {
   color: #333;
+}
+
+#petimg {
+  max-width: 200px;
+  max-height: 200px;
+  float: right;
 }
 
 .footer p {
