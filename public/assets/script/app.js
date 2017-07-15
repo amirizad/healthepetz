@@ -355,3 +355,26 @@ $(document).ready(function() {
 		localStorage.setItem("subSec", subSec);
     });
 });
+
+var getPetData=function() {
+     var queryURL="/api/pet/" + this.closest('tr').children.attribute("pet-data").text();
+     //+ this.closest('tr').children('td-petId').text();
+     console.log(queryURL);
+    //  $.getJSON(apiURL, function() {
+		// 	console.log('success');
+		// })
+     $.ajax({
+          url: queryURL,
+          type: "GET",
+          //dataType:"json"
+        })
+
+        .done(function(response) {
+          var results = response.data;
+            console.log(response);
+            console.log(results.length);
+        });
+
+    
+}
+		$('viewPet').click(getPetData);
