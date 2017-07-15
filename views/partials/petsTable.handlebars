@@ -485,47 +485,49 @@ $(document).ready(function() {
             //dataType:"json"
             })
             .done(function(response) {
-                var results = response[0];
-                //console.log(results.pet_name);
-                if (results===[]) {
-                       alert("Pet could not be found! Please refresh your browser.");
-                }
-                else {
-                    //console.log(results.pet_type);
-                      $("#pettable-td-id").text(results.id);
-                      $("#pettable-td-name").text(results.pet_name);
-                      $("#pettable-td-type").text(results.pet_type);
-                      $("#pettable-td-breed").text(results.pet_breed);
-                      $("#pettable-td-color").text(results.pet_color);
-                      $("#pettable-td-dob").text(results.pet_dob);
-                      $("#pettable-td-sex").text(results.pet_sex);
-                      $("#pettable-td-microchip").text(results.microchip_no);
-                      $("#pettable-td-spayedneutered").text(results.spayed_neutered_ind);
-                      $("#pettable-td-cond1").text(results.cond1);
-                      $("#pettable-td-cond2").text(results.cond2);
-                      $("#pettable-td-cond3").text(results.cond3);
-                      $("#pettable-td-med1").text(results.med1);
-                      $("#pettable-td-med2").text(results.med2);
-                      $("#pettable-td-med3").text(results.med3);
-                      $("#pettable-td-v1name").text(results.vet1_name);
-                      $("#pettable-td-v1spec").text(results.vet1_spec);
-                      $("#pettable-td-v1addr").text(results.vet1_addr);
-                      $("#pettable-td-v1city").text(results.vet1_city);
-                      $("#pettable-td-v1state").text(results.vet1_state);
-                      $("#pettable-td-v1zip").text(results.vet1_zip);
-                      $("#pettable-td-v1phone").text(results.vet1_phone);
-                      $("#pettable-td-v1email").text(results.vet1_email);
-                      $("#pettable-td-v1fax").text(results.vet1_fax);
-                      $("#pettable-td-v2name").text(results.vet2_name);
-                      $("#pettable-td-v2spec").text(results.vet2_spec);
-                      $("#pettable-td-v2addr").text(results.vet2_addr);
-                      $("#pettable-td-v2city").text(results.vet2_city);
-                      $("#pettable-td-v2state").text(results.vet2_state);
-                      $("#pettable-td-v2zip").text(results.vet_zip);
-                      $("#pettable-td-v2phone").text(results.vet2_phone);
-                      $("#pettable-td-v2email").text(results.vet2_email);
-                      $("#pettable-td-v2fax").text(results.vet2_fax);
-                }
+							var results = response[0];
+							//console.log(results.pet_name);
+							if (results===[]) {
+											alert("Pet could not be found! Please refresh your browser.");
+							}
+							else {
+									//console.log(results.pet_type);
+								$('#ownerdash').addClass('hide');
+								$('#petdash').removeClass('hide');
+								$("#pettable-td-id").text(results.id);
+								$("#pettable-td-name").text(results.pet_name);
+								$("#pettable-td-type").text(results.pet_type);
+								$("#pettable-td-breed").text(results.pet_breed);
+								$("#pettable-td-color").text(results.pet_color);
+								$("#pettable-td-dob").text(results.pet_dob);
+								$("#pettable-td-sex").text(results.pet_sex);
+								$("#pettable-td-microchip").text(results.microchip_no);
+								$("#pettable-td-spayedneutered").text(results.spayed_neutered_ind);
+								$("#pettable-td-cond1").text(results.cond1);
+								$("#pettable-td-cond2").text(results.cond2);
+								$("#pettable-td-cond3").text(results.cond3);
+								$("#pettable-td-med1").text(results.med1);
+								$("#pettable-td-med2").text(results.med2);
+								$("#pettable-td-med3").text(results.med3);
+								$("#pettable-td-v1name").text(results.vet1_name);
+								$("#pettable-td-v1spec").text(results.vet1_spec);
+								$("#pettable-td-v1addr").text(results.vet1_addr);
+								$("#pettable-td-v1city").text(results.vet1_city);
+								$("#pettable-td-v1state").text(results.vet1_state);
+								$("#pettable-td-v1zip").text(results.vet1_zip);
+								$("#pettable-td-v1phone").text(results.vet1_phone);
+								$("#pettable-td-v1email").text(results.vet1_email);
+								$("#pettable-td-v1fax").text(results.vet1_fax);
+								$("#pettable-td-v2name").text(results.vet2_name);
+								$("#pettable-td-v2spec").text(results.vet2_spec);
+								$("#pettable-td-v2addr").text(results.vet2_addr);
+								$("#pettable-td-v2city").text(results.vet2_city);
+								$("#pettable-td-v2state").text(results.vet2_state);
+								$("#pettable-td-v2zip").text(results.vet_zip);
+								$("#pettable-td-v2phone").text(results.vet2_phone);
+								$("#pettable-td-v2email").text(results.vet2_email);
+								$("#pettable-td-v2fax").text(results.vet2_fax);
+							}
             });
         });
     //
