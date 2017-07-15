@@ -44,7 +44,7 @@ const sessionStore = new MySQLStore({
     host:'ko86t9azcob3a2f9.cbetxkdyhwsb.us-east-1.rds.amazonaws.com',
     port:'3306',
     user:'cdj7xzlcrm7b1zyt',
-    password:'jlo8p3kzo6s9wvbu',
+    password:'jhvexppbhj1xqm5o',
     database:'fy1oiq0nn0ib9b0m'
 });
 
