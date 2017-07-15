@@ -2,33 +2,288 @@
 <html lang="en">
 
 <head>
-	<meta charset="utf-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<title>Healthy Pets</title>
-	<link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
-	<link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/v/bs/dt-1.10.15/af-2.2.0/r-2.1.1/se-1.2.2/datatables.min.css"/>
-	<!--<link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.10.15/css/jquery.dataTables.min.css"/>-->
-	<link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-	<link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
-	<link rel="stylesheet" type="text/css" href="assets/dist/css/tooltipster.bundle.min.css">
-	<link rel="stylesheet" type="text/css" href="assets/dist/css/plugins/tooltipster/sideTip/themes/tooltipster-sideTip-light.min.css">
-	<link rel="stylesheet" type="text/css" href="assets/css/styles.css">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Healthy Pets</title>
+  <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
+  <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/v/bs/dt-1.10.15/af-2.2.0/r-2.1.1/se-1.2.2/datatables.min.css" />
+  <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.10.15/css/jquery.dataTables.min.css"/>
+  <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet" type="text/css" href="/assets/dist/css/tooltipster.bundle.min.css">
+  <link rel="stylesheet" type="text/css" href="/assets/dist/css/tooltipster-sideTip-light.min.css">
+  <link rel="stylesheet" type="text/css" href="/assets/dist/css/bootstrap.offcanvas.css">
+  {{{_sections.style}}}
+  <link rel="stylesheet" type="text/css" href="/assets/css/styles.css">
 </head>
-<body>
+
+<body class="body-offcanvas">
+
+  <input type="hidden" id="activesec" value="homesec">
+  <nav class="navbar navbar-default" role="navigation">
+    <div class="container-fluid">
+      <div class="navbar-header">
+        <a class="navbar-brand" href="#">Health-E-Petz</a>
+        <button type="button" class="navbar-toggle offcanvas-toggle pull-right" data-toggle="offcanvas" data-target="#js-bootstrap-offcanvas">
+          <span class="sr-only">Toggle navigation</span>
+          <span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </span>
+        </button>
+      </div>
+      <div class="navbar-offcanvas navbar-offcanvas-touch" id="js-bootstrap-offcanvas">
+        <ul class="nav navbar-nav center-block">
+          <li class="navto active" id="homesecnav">
+            <a href="#">
+              <div class="row text-center">
+                <i class="fa fa-2x fa-home"></i>
+              </div>
+              <div class="row text-center">
+                <span class="">Home</span>
+              </div>
+            </a>
+          </li>
+          <li class="navto" id="findersecnav">
+            <a href="#">
+              <div class="row text-center">
+                <i class="fa fa-2x fa-stethoscope"></i>
+              </div>
+              <div class="row text-center">
+                <span class="">Vet Finder</span>
+              </div>
+            </a>
+          </li>
+          <li class="navto" id="pricesecnav">
+            <a href="#">
+              <div class="row text-center">
+                <i class="fa fa-2x fa-money"></i>
+              </div>
+              <div class="row text-center">
+                <span class="">Price Compare</span>
+              </div>
+            </a>
+          </li>
+          <li class="navto" id="virvsecnav">
+            <a href="#">
+              <div class="row text-center">
+                <i class="fa fa-2x fa-globe"></i>
+              </div>
+              <div class="row text-center">
+                <span class="">Virtual Vet</span>
+              </div>
+            </a>
+          </li>
+          <li class="navto" id="telesecnav">
+            <a href="#">
+              <div class="row text-center">
+                <i class="fa fa-2x fa-mobile"></i>
+              </div>
+              <div class="row text-center">
+                <span class="">TeleVet</span>
+              </div>
+            </a>
+          </li>
+          <li class="navto" id="hhubsecnav">
+            <a href="#">
+              <div class="row text-center">
+                <i class="fa fa-2x fa-heartbeat"></i>
+              </div>
+              <div class="row text-center">
+                <span class="">Health Hub</span>
+              </div>
+            </a>
+          </li>
+          <li class="navto" id="vetnsecnav">
+            <a href="#">
+              <div class="row text-center">
+                <i class="fa fa-2x fa-newspaper-o"></i>
+              </div>
+              <div class="row text-center">
+                <span class="">Vet News</span>
+              </div>
+            </a>
+          </li>
+          <li class="navto" id="profilesecnav">
+            <a href="#">
+              <div class="row text-center">
+                <i class="fa fa-2x fa-user"></i>
+              </div>
+              <div class="row text-center">
+                <span class="">Profile</span>
+              </div>
+            </a>
+          </li>
+        </ul>
+        <ul class="nav navbar-nav navbar-right">
+          <li class="navto" id="loginsecnav">
+            <a href="#">
+              <div class="row text-center">
+                <i class="fa fa-2x fa-sign-in"></i>
+              </div>
+              <div class="row text-center">
+                <span class="">Login</span>
+              </div>
+            </a>
+          </li>
+          <li class="navto" id="logoutnav">
+            <a href="/api/logout">
+              <div class="row text-center">
+                <i class="fa fa-2x fa-sign-out"></i>
+              </div>
+              <div class="row text-center">
+                <span class="">Logout</span>
+              </div>
+            </a>
+          </li>
+        </ul>
+      </div>
+      <!-- /.navbar-collapse -->
+    </div>
+    <!-- /.container-fluid -->
+  </nav>
+
+  <!-- Home Section and Slider -->
+  <section id="homesec" class="show">
+    <header>
+      <div id="pets-carousel" class="carousel slide" data-ride="carousel">
+        <ol class="carousel-indicators">
+          <li data-target="#pets-carousel" data-slide-to="0" class="active"></li>
+          <li data-target="#pets-carousel" data-slide-to="1"></li>
+          <li data-target="#pets-carousel" data-slide-to="2"></li>
+        </ol>
+        <div class="carousel-inner" role="listbox">
+          <div class="item active">
+            <img src="/assets/img/slide1.jpg" alt="">
+            <div class="carousel-caption">
+              <span>HealthEPetz is the Pet Owner’s Portal to help manage their pet’s health and healthcare costs</span>
+            </div>
+          </div>
+          <div class="item">
+            <img src="/assets/img/slide2.jpg" alt="">
+            <div class="carousel-caption">
+              <span>It’s difficult enough to afford your own medical costs, let along your pets</span>
+            </div>
+          </div>
+          <div class="item">
+            <img src="/assets/img/slide3.jpg" alt="">
+            <div class="carousel-caption">
+              <span>Use HealthEPetz provides tools to help optimize your pet’s health and lower costs for care</span>
+            </div>
+          </div>
+        </div>
+        <a class="left carousel-control" href="#pets-carousel" role="button" data-slide="prev">
+          <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+          <span class="sr-only">Previous</span>
+        </a>
+        <a class="right carousel-control" href="#pets-carousel" role="button" data-slide="next">
+          <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+          <span class="sr-only">Next</span>
+        </a>
+      </div>
+    </header>
+    <div class="container">
+      <div class="row text-center">
+        <h1 class="">HealthEPetz provides tools to help optimize your pet’s health and lower costs for care including:</h1>
+        <ul>
+          <li>Track your pet’s medical and vaccination history</li>
+          <li>Vaccination and other important pet care reminders</li>
+          <li>Find a licensed vet</li>
+          <li>Compare prices for vet services</li>
+          <li>Chat with a virtual vet</li>
+          <li>Schedule a televet or home vet visit appointment</li>
+          <li>Get latest pet health news and tips</li>
+          <li>Get information on coupons and specials from local and online pet supply stores</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- Vet Finder Section -->
+  <section id="findersec">
+    <div class="container-fluid">
+      <div class="row">
+        <div class="container">
+          <div class="row">
+            <input type="hidden" id="data-input" value="">
+            <h3 class="modal-title"><span class="fa fa-stethoscope"></span> Vet Locations</h3>
+          </div>
+          <div class="row">
+            <form class="form-inline">
+              <div class="form-group">
+                <div class="input-group">
+                  <div class="input-group-addon"><span class="fa fa-map-signs"></span></div>
+                  <input type="text" class="form-control" id="addresstext" placeholder="Address">
+                </div>
+                <button id="findlocation" type="button" class="btn btn-primary"><span class="fa fa-map-marker" title="Find on map"></span></button>
+                <button id="recenter" type="button" class="btn btn-primary" title="Recenter"><span class="fa fa-dot-circle-o"></span></button>
+                <button id="loc-confirm" type="button" class="btn btn-primary" title="Confirm location"><span class="fa fa-check"></span></button>
+              </div>
+            </form>
+          </div>
+          <div class="row">
+            <div id="mapinfo">
+              <p id="address"></p>
+              <p>
+                <font>Lat: <span id="baselat"></span>&nbsp;, &nbsp;Long: <span id="baselng"></span></font>
+              </p>
+              <p>
+                <button id="vetfinderbtn" name="vetfinderbtn" type="button" class="btn btn-primary" title="Find Vets"><span class="fa fa-check"></span></button>
+              </p>              
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div id="map"></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Price Compare Section -->
+  <section id="pricesec">
+  </section>
+
+  <!-- Virtual Vet Section -->
+  <section id="virvsec">
+  </section>
+
+  <!-- TeleVet Section -->
+  <section id="telesec">
+  </section>
+
+  <!-- Health Hub Section -->
+  <section id="hhubsec">
+  </section>
+
 	{{{body}}}
-	<div class="footer">
-		<div class="container">
-			<p class="text-center">&copy; Copyright
-				<script>
-					document.write(new Date().getFullYear())
-				</script>
-			</p>
-		</div>
-	</div>
-	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
-	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-	<script src="assets/dist/js/tooltipster.bundle.min.js"></script>
-	<script src="https://cdn.datatables.net/v/bs/dt-1.10.15/af-2.2.0/r-2.1.1/se-1.2.2/datatables.min.js"></script> 
-	<script src="assets/script/app.js"></script>
+
+  <!-- Under Construction Section -->
+  <section id="ucsec">
+    <img id="ucimg" src="/assets/img/uc.jpg" class="img-responsive" alt="Under Construction">
+  </section>
+
+  <!-- Page Footer -->
+  <div class="footer">
+    <div class="container">
+      <p class="text-center">&copy; Copyright
+        <script>
+          document.write(new Date().getFullYear())
+        </script>
+      </p>
+    </div>
+  </div>
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  <script src="/assets/dist/js/bootstrap.offcanvas.js"></script>
+  <script src="/assets/dist/js/tooltipster.bundle.min.js"></script>
+  <script src="https://cdn.datatables.net/v/bs/dt-1.10.15/af-2.2.0/r-2.1.1/se-1.2.2/datatables.min.js"></script>
+  <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDeky0w8gJWCxaJEY7sFZFE6I0toU8akok&amp;callback=hPetz.initMap" async defer></script>
+  {{{_sections.script}}}
+  <script src="/assets/script/app.js"></script>
+
 </body>
+
 </html>

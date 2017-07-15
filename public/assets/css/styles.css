@@ -1,7 +1,63 @@
-@import url('https://fonts.googleapis.com/css?family=Merriweather');
+@import url('https://fonts.googleapis.com/css?family=Merriweather|Pacifico');
 body {
   padding-bottom: 50px;
   font-family: 'Merriweather', serif;
+  height: 100%;
+}
+
+section {
+  display: none;
+  padding-top: 30px;
+}
+
+.navbar-brand {
+  font-family: 'Pacifico', cursive;
+  height: 70px !important;
+  font-size: 36px;
+  line-height: 40px;
+  color: #FFD700 !important;
+  margin-right: 20px
+}
+
+.navbar-default .navbar-nav>.active>a,
+.navbar-default .navbar-nav>.active>a:focus,
+.navbar-default .navbar-nav>.active>a:hover {
+  color: #000066;
+  background-color: #e7e7e7;
+}
+
+.navbar-default .navbar-nav>li>a:focus,
+.navbar-default .navbar-nav>li>a:hover {
+  color: #003399;
+  background-color: transparent;
+}
+
+.navbar-nav>li {
+  min-width: 100px;
+}
+
+.mycolor {
+  color: #000066;
+}
+
+#homesec {
+  height: 100vh;
+  padding-top: 0;
+  background-image: -webkit-linear-gradient(white, rgba(102, 102, 102, 0.8));
+  background-image: linear-gradient(white, rgba(102, 102, 102, 0.8));
+  filter: progid: DXImageTransform.Microsoft.gradient(startColorstr='#00000000', endColorstr='#80000000', GradientType=1);
+}
+
+#homesec h1 {
+  color: #000066;
+  margin: 25px 0;
+}
+
+#homesec ul>li {
+  color: #000066;
+  list-style-type: none;
+  font-size: 18px;
+  line-height: 36px;
 }
 
 .required_notification {
@@ -41,7 +97,7 @@ body {
   border-color: #b03535
 }
 
-.form-group {
+.form-inline .form-group {
   margin-bottom: 10px;
 }
 
@@ -50,12 +106,36 @@ body {
   color: #FFD700;
 }
 
+.carousel-caption {
+  font-size: 23px;
+  font-family: 'Pacifico', cursive;
+  background-color: rgba(0, 0, 0, 0.3);
+  border-radius: 10px;
+  margin-bottom: 10px;
+}
+
 .carousel-indicators li {
   border: 1px solid #FFD700;
 }
 
 .carousel-indicators .active {
   background-color: #FFD700;
+}
+
+.carousel-control.right {
+  background-image: -webkit-linear-gradient(left, rgba(255, 215, 0, .0001) 0, rgba(255, 215, 0, .5) 100%);
+  background-image: -webkit-gradient(linear, left top, right top, from(rgba(255, 215, 0, .0001)), to(rgba(255, 215, 0, .5)));
+  background-image: linear-gradient(to right, rgba(255, 215, 0, .0001) 0, rgba(255, 215, 0, .5) 100%);
+  filter: progid: DXImageTransform.Microsoft.gradient(startColorstr='#00000000', endColorstr='#80000000', GradientType=1);
+  background-repeat: repeat-x;
+}
+
+.carousel-control.left {
+  background-image: -webkit-linear-gradient(left, rgba(255, 215, 0, .5) 0, rgba(255, 215, 0, .0001) 100%);
+  background-image: -webkit-gradient(linear, left top, right top, from(rgba(255, 215, 0, .5)), to(rgba(255, 215, 0, .0001)));
+  background-image: linear-gradient(to right, rgba(255, 215, 0, .5) 0, rgba(255, 215, 0, .0001) 100%);
+  filter: progid: DXImageTransform.Microsoft.gradient(startColorstr='#80000000', endColorstr='#00000000', GradientType=1);
+  background-repeat: repeat-x;
 }
 
 .info-icon {
@@ -79,52 +159,25 @@ body {
 }
 
 .message {
-	display: none;
-	font-size: 14px;
-	color: red;
-	background-color: rgba(255, 0, 0, 0.1);
-	padding: 10px;
-	margin-bottom: 20px;
-	border-radius: 10px;
-	text-align: center;
-	font-weight: bold;
+  font-size: 14px;
+  color: red;
+  background-color: rgba(255, 0, 0, 0.1);
+  padding: 10px;
+  margin-bottom: 20px;
+  border-radius: 10px;
+  text-align: center;
+  font-weight: bold;
 }
 
-@media (min-width: 768px) {
-  .required_notification {
-	margin: 5px 0 0 0;
-  }
-  .tab-content {
-	padding: 70px 0 40px 0;
-	min-height: 590px;
-  }
-  .form-horizontal .control-label {
-	padding-top: 7px;
-	margin-bottom: 0;
-	text-align: right;
-	display: block;
-	margin: 0 auto;
-  }
-  .form-field input[type=text],
-  .form-field input[type=email],
-  .form-field input[type=password],
-  .form-field select,
-  .form-field textarea {
-	border: 1px solid #aaa;
-	box-shadow: 0px 0px 3px #ccc, 0 10px 15px #eee inset;
-	border-radius: 2px;
-	padding-right: 30px;
-	-moz-transition: padding .25s;
-	-webkit-transition: padding .25s;
-	-o-transition: padding .25s;
-	transition: padding .25s;
-  }
+#map {
+  height: 400px;
+  width: 100%;
+  margin: 10px 0;
 }
 
-
-/*DataTable*/
-
-/***********/
+#ucimg {
+  margin: 0 auto;
+}
 
 .footer {
   background-color: rgba(102, 102, 102, 0.9);
@@ -140,4 +193,62 @@ body {
 
 .footer p {
   margin: 0;
+}
+
+@media (min-width: 768px) {
+  #map {
+    height: 600px;
+  }
+  .required_notification {
+    margin: 5px 0 0 0;
+  }
+  .tab-content {
+    padding: 50px 0 40px 0;
+    min-height: 590px;
+  }
+  .form-horizontal .control-label {
+    padding-top: 7px;
+    margin-bottom: 0;
+    text-align: right;
+    display: block;
+    margin: 0 auto;
+  }
+  .form-field input[type=text],
+  .form-field input[type=email],
+  .form-field input[type=password],
+  .form-field select,
+  .form-field textarea {
+    border: 1px solid #aaa;
+    box-shadow: 0px 0px 3px #ccc, 0 10px 15px #eee inset;
+    border-radius: 2px;
+    padding-right: 30px;
+    -webkit-transition: padding .25s;
+    transition: padding .25s;
+  }
+}
+
+.navbar-toggle {
+  margin-top: 18px;
+}
+
+.navbar {
+  margin-bottom: 0;
+}
+
+@media screen and (max-width: 1024px) and (min-width: 760px) {
+  .navbar-toggle {
+    display: block;
+  }
+  .container-fluid>.navbar-header {
+    width: 100%;
+  }
+  .navbar-right {
+    float: none !important;
+  }
+}
+
+@media screen and (max-width: 1000px) {
+  .carousel-caption {
+    display: none;
+  }
 }
