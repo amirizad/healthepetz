@@ -9,7 +9,7 @@
 					<li ><a class='indexTab' id="forgottab" href="#forgot" aria-controls="forgot" role="tab" data-toggle="tab">Forgot</a></li>
 				</ul>
 				<span class="required_notification">* Denotes Required Field</span>
-				<div class="tab-content">
+				<div class="tab-content portal">
 					<!--************************ Register **************************-->
 					<div id="signup" class="tab-pane fade">
 						<form class="form-horizontal form-field register" action="/api/register" role="form" name="registerfrm" id="registerfrm" method="POST" autocomplete="off">
@@ -311,10 +311,9 @@
             </div>
           </div>
         </div>
-        {{> ownerTable}}
+          {{> ownerTable}}
         <div class="col-sm-8">
-          <div class="panel panel-default">
-           {{> petsTable}}
+          {{> petsTable}}
         </div>
       </div>
     </div>
@@ -374,7 +373,7 @@
                       <td>Sex:</td>
                       <td id="pettable-td-sex">Female</td>
                     </tr>
-					<tr>
+					          <tr>
                       <td colspan="2">License:</td>
                       <td id="pettable-td-license">234523534</td>
                     </tr>
@@ -506,8 +505,8 @@
         </div>
       </div>
     </div>
-    <!-- editowner Modal -->
-    <div class="modal fade" id="editowner" tabindex="-1" role="dialog" aria-labelledby="editownerlbl">
+    <!-- editpet Modal -->
+    <div class="modal fade" id="editpet" tabindex="-1" role="dialog" aria-labelledby="editpetlbl">
       <div class="modal-dialog" role="document">
         <div class="modal-content">
           <div class="modal-header">

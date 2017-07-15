@@ -99,7 +99,7 @@
               </div>
             </a>
           </li>
-          <li class="navto" id="vetnsecnav">
+          <li class="navto" id="petnewssecnav">
             <a href="#">
               <div class="row text-center">
                 <i class="fa fa-2x fa-newspaper-o"></i>
@@ -237,9 +237,9 @@
               <p>
                 <font>Lat: <span id="baselat"></span>&nbsp;, &nbsp;Long: <span id="baselng"></span></font>
               </p>
-              <p>
+             {{!-- <p>
                 <button id="vetfinderbtn" name="vetfinderbtn" type="button" class="btn btn-primary" title="Find Vets"><span class="fa fa-check"></span></button>
-              </p>              
+              </p> --}}
             </div>
           </div>
         </div>
@@ -266,7 +266,16 @@
   <section id="hhubsec">
   </section>
 
-	{{{body}}}
+  <!-- Health Hub Section -->
+  <section id="petnewssec">
+    <div class="container">
+      <div class="row">  
+        <div id="rss-feeds"></div>
+      </div>
+    </div>    
+  </section>
+	
+  {{{body}}}
 
   <!-- Under Construction Section -->
   <section id="ucsec">
@@ -286,7 +295,7 @@
 
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-  <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDeky0w8gJWCxaJEY7sFZFE6I0toU8akok&amp;callback=hPetz.initMap" async defer></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.8.4/moment.min.js"></script>
   <script src="/assets/dist/js/bootstrap.offcanvas.js"></script>
   <script src="/assets/dist/js/tooltipster.bundle.min.js"></script>
   <script src="https://cdn.datatables.net/v/bs/dt-1.10.15/af-2.2.0/r-2.1.1/se-1.2.2/datatables.min.js"></script>
@@ -295,8 +304,8 @@
   {{{_sections.medTableScript}}}
   {{{_sections.vacTableScript}}}
   {{{_sections.ownTableScript}}}
-  <script src="/assets/script/app.js"></script> 
-
+  <script src="/assets/dist/js/jquery.rss.js"></script>
+  <script src="/assets/script/app.js"></script>
+  <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDeky0w8gJWCxaJEY7sFZFE6I0toU8akok&amp;callback=hPetz.initMap" async defer></script>
 </body>
-
 </html>

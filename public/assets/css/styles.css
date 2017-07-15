@@ -79,7 +79,6 @@ section {
   margin-top: 30px;
 }
 
-
 /* === HTML5 validation styles === */
 
 .form-field input:required,
@@ -171,6 +170,24 @@ section {
   border-radius: 10px;
   text-align: center;
   font-weight: bold;
+}
+
+.viewPet{
+  cursor: pointer;
+}
+
+.fixpanel{
+  width: 30%;
+  min-width: 279px;
+  min-height: 525px;
+  float: left;
+  margin: 10px;
+}
+
+.fixpanel h3{
+  color: #000066;
+  margin-top: 0;
+  text-align: center;
 }
 
 #map {

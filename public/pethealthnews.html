@@ -1,0 +1,51 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Pet Health News</title>
+	<link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+	<link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+	<link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+  <!-- <script src="https://code.jquery.com/jquery-1.6.4.min.js"></script> -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.8.4/moment.min.js"></script>
+  <script src="assets/dist/js/jquery.rss.js"></script>
+  <style>
+    .fixpanel{
+      width: 30%;
+      min-width: 279px;
+      min-height: 520px;
+      float: left;
+      margin: 10px;
+    }
+    .fixpanel h3{
+      color: #000066;
+      margin-top: 0;
+      text-align: center;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="container">
+    <div class="row">  
+      <div id="rss-feeds"></div>
+    </div>
+  </div>
+  <script>
+    var test =`<div class="panel panel-default fixpanel"><div class="panel-body">
+      <h3>{title}<br><small>({date})</small></h3><p>{shortBody}... 
+      <a href="{url}" target="_blank">Read More.</a></p>
+      <img class="img-responsive" src="{teaserImageUrl}">
+      </div></div>`
+    $("#rss-feeds").rss("http://www.vetstreet.com/rss/news-feed.jsp?Categories=siteContentTags:symptom-center:health-issues:seasonal-dangers:symptoms:adult-dog-health-conditions,dogBreedTags=health-issues",
+    {
+    limit: 12,
+    dateFormat: 'MMMM Do, YYYY',
+    entryTemplate: test
+    })      
+  </script>
+</body>
+</html>
