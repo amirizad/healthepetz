@@ -75,6 +75,10 @@ section {
   display: none;
 }
 
+#signup {
+  margin-top: 30px;
+}
+
 
 /* === HTML5 validation styles === */
 
