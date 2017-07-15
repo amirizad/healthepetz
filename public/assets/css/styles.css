@@ -173,10 +173,14 @@ section {
   font-weight: bold;
 }
 
+.viewPet{
+  cursor: pointer;
+}
+
 .fixpanel{
   width: 30%;
   min-width: 279px;
-  min-height: 520px;
+  min-height: 525px;
   float: left;
   margin: 10px;
 }

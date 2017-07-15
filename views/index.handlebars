@@ -311,10 +311,9 @@
             </div>
           </div>
         </div>
-        {{> ownerTable}}
+          {{> ownerTable}}
         <div class="col-sm-8">
-          <div class="panel panel-default">
-           {{> petsTable}}
+          {{> petsTable}}
         </div>
       </div>
     </div>
@@ -330,7 +329,7 @@
           <div class="panel panel-info panel-size">
             <div class="panel-heading">
               <span class="panel-title"><img src="assets/img/pets.png" alt="pets">Pet Profile</span>
-              <button name="ownereditbtn" id="ownereditbtn" class="btn btn-primary btn-sm pull-right" title "Edit" data-toggle="modal" data-target="#editowner">
+              <button name="peteditbtn" id="peteditbtn" class="btn btn-primary btn-sm pull-right" title "Edit" data-toggle="modal" data-target="#editpet">
                 <i class="fa fa-edit"></i>
               </button>
             </div>
@@ -374,7 +373,7 @@
                       <td>Sex:</td>
                       <td id="pettable-td-sex">Female</td>
                     </tr>
-					<tr>
+					          <tr>
                       <td colspan="2">License:</td>
                       <td id="pettable-td-license">234523534</td>
                     </tr>
@@ -506,8 +505,8 @@
         </div>
       </div>
     </div>
-    <!-- editowner Modal -->
-    <div class="modal fade" id="editowner" tabindex="-1" role="dialog" aria-labelledby="editownerlbl">
+    <!-- editpet Modal -->
+    <div class="modal fade" id="editpet" tabindex="-1" role="dialog" aria-labelledby="editpetlbl">
       <div class="modal-dialog" role="document">
         <div class="modal-content">
           <div class="modal-header">
