@@ -536,7 +536,6 @@ const nodemailer = require('nodemailer');
                     text: `Hi,\n
                     Your temporary recovery password is: ${tempPassword}.\n
                     Please be sure to enter a new password after logging in.`, // plain text body
-                    //html: `<b>Happy birthday, ${pet.pet_name}!!!!!</b>` // html body
                 };
             
                 // send mail with defined transport object
