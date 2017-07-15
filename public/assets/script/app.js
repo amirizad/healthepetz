@@ -118,27 +118,27 @@ var hPetz = {
 		})
 	},
 
-	renderTable: function(){
-		$('table.render').DataTable( {
-			"order": [[ 0, "desc" ]],
-			"paging":   true,
-			"ordering": true,
-			"info":     true,
-			"lengthMenu": [[5, 10, 25, -1], [5, 10, 25, "All"]],
-			stateSave: true
-			// ,"columnDefs": [
-			// 				{
-			// 						"targets": [ 2 ],
-			// 						"visible": false,
-			// 						"searchable": false
-			// 				},
-			// 				{
-			// 						"targets": [ 3 ],
-			// 						"visible": false
-			// 				}
-			// 		]
-		});
-	},
+	// renderTable: function(){
+	// 	$('table.render').DataTable( {
+	// 		"order": [[ 0, "desc" ]],
+	// 		"paging":   true,
+	// 		"ordering": true,
+	// 		"info":     true,
+	// 		"lengthMenu": [[5, 10, 25, -1], [5, 10, 25, "All"]],
+	// 		stateSave: true
+	// 		// ,"columnDefs": [
+	// 		// 				{
+	// 		// 						"targets": [ 2 ],
+	// 		// 						"visible": false,
+	// 		// 						"searchable": false
+	// 		// 				},
+	// 		// 				{
+	// 		// 						"targets": [ 3 ],
+	// 		// 						"visible": false
+	// 		// 				}
+	// 		// 		]
+	// 	});
+	// },
 
 	loadLoginJS: function(){
 		$("input.reqfield").prop("required",true);
