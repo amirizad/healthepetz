@@ -91,7 +91,7 @@ app.use(session({
     //if the user is not logged in don't save a session or add a cookie
     saveUninitialized: false,
     //To be enabled if using HTTPS
-    //   cookie: { secure: true }
+       cookie: { secure: true }
 }));
 
 //Sets up passport with express
@@ -118,7 +118,7 @@ app.use(function(error, req, res) {
 
 // Sync Database and Start the Server
 // =============================================================
-db.sequelize.sync({force: false}).then(()=>{
+db.sequelize.sync().then(()=>{
     app.listen(PORT,()=>{
         console.log('SERVER STARTED ON PORT ' + PORT);
     });
