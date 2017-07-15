@@ -110,7 +110,7 @@ var hPetz = {
 	},
 
 	loadProfJS: function(){
-		hPetz.renderTable();
+		// hPetz.renderTable();
 
 		$('#petslist').on('click', 'tbody tr', function(event) {
 			
