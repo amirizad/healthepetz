@@ -97,7 +97,7 @@
               </div>
             </a>
           </li>
-          <li class="navto" id="vetnsecnav">
+          <li class="navto" id="petnewssecnav">
             <a href="#">
               <div class="row text-center">
                 <i class="fa fa-2x fa-newspaper-o"></i>
@@ -259,7 +259,16 @@
   <section id="hhubsec">
   </section>
 
-	{{{body}}}
+  <!-- Health Hub Section -->
+  <section id="petnewssec">
+    <div class="container">
+      <div class="row">  
+        <div id="rss-feeds"></div>
+      </div>
+    </div>    
+  </section>
+	
+  {{{body}}}
 
   <!-- Under Construction Section -->
   <section id="ucsec">
@@ -279,6 +288,8 @@
 
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.8.4/moment.min.js"></script>
+  <script src="/assets/dist/js/jquery.rss.js"></script>      
   <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDeky0w8gJWCxaJEY7sFZFE6I0toU8akok&amp;callback=hPetz.initMap" async defer></script>
   <script src="/assets/dist/js/bootstrap.offcanvas.js"></script>
   <script src="/assets/dist/js/tooltipster.bundle.min.js"></script>
@@ -287,8 +298,6 @@
   {{{_sections.medTableScript}}}
   {{{_sections.vacTableScript}}}
   {{{_sections.ownTableScript}}}
-  <script src="/assets/script/app.js"></script> 
-
+  <script src="/assets/script/app.js"></script>
 </body>
-
 </html>

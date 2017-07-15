@@ -173,6 +173,20 @@ section {
   font-weight: bold;
 }
 
+.fixpanel{
+  width: 30%;
+  min-width: 279px;
+  min-height: 520px;
+  float: left;
+  margin: 10px;
+}
+
+.fixpanel h3{
+  color: #000066;
+  margin-top: 0;
+  text-align: center;
+}
+
 #map {
   height: 400px;
   width: 100%;
