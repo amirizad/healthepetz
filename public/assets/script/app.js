@@ -108,6 +108,15 @@ var hPetz = {
 	},
 
 	loadProfJS: function(){
+		hPetz.renderTable();
+		$('#back-owner').click(function(e){
+			e.preventDefault();
+			$('#petdash').addClass('hide');
+			$('#ownerdash').removeClass('hide');
+		})
+	},
+
+	renderTable: function(){
 		$('table.render').DataTable( {
 			"order": [[ 0, "desc" ]],
 			"paging":   true,
@@ -126,7 +135,7 @@ var hPetz = {
 			// 						"visible": false
 			// 				}
 			// 		]
-		});		
+		});
 	},
 
 	loadLoginJS: function(){

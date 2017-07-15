@@ -493,7 +493,7 @@
               </button>
             </div>
             <div class="panel-body table-responsive">
-              <table class="borderless table table-striped">
+              <table class="table table-striped borderless">
                 <tr>
                   <td>Last Name:</td>
                   <td>Izadpanah</td>
@@ -574,8 +574,253 @@
         </div>
       </div>
     </div>
-    <div id="petdash" class="container">
-
+    <div id="petdash" class="container hide">
+      <div class="row">
+        <div class="col-sm-12">
+          <button id="back-owner" class="btn btn-primary btn-margin"><span class="fa fa-arrow-left"></span> Owner Profile</button>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-md-5">
+          <div class="panel panel-info panel-size">
+            <div class="panel-heading">
+              <span class="panel-title"><img src="assets/img/pets.png" alt="pets">Pet Profile</span>
+              <button name="ownereditbtn" id="ownereditbtn" class="btn btn-primary btn-sm pull-right" title "Edit" data-toggle="modal" data-target="#editowner">
+                <i class="fa fa-edit"></i>
+              </button>
+            </div>
+            <div class="panel-body table-responsive">
+              <ul class="nav nav-tabs nav-justified" role="tablist">
+                <li role="presentation" class="active">
+                  <a href="#info" aria-controls="info" role="tab" data-toggle="tab"><span class="fa fa-info-circle"></span> Pet Info</a>
+                </li>
+                <li role="presentation">
+                  <a href="#vet1" aria-controls="vet1" role="tab" data-toggle="tab"><span class="fa fa-user-md"></span> Vet 1</a>
+                </li>
+                <li role="presentation">
+                  <a href="#vet2" aria-controls="vet2" role="tab" data-toggle="tab"><span class="fa fa-user-md"></span> Vet 2</a>
+                </li>
+              </ul>
+              <div class="tab-content">
+                <div role="tabpanel" class="tab-pane active" id="info">
+                  <table class="table table-striped borderless">
+                    <tr>
+                      <td>Name:</td>
+                      <td>Ginger</td>
+                      <td rowspan="6"><img id="petimg" src="https://www.dropbox.com/s/p0a5anlv6qv9jlx/ginger.jpg?raw=1" alt="Ginger"></td>
+                    </tr>
+                    <tr>
+                      <td>Type:</td>
+                      <td>Dog</td>
+                    </tr>
+                    <tr>
+                      <td>Breed:</td>
+                      <td>Cavapoo</td>
+                    </tr>
+                    <tr>
+                      <td>Color:</td>
+                      <td>Brown</td>
+                    </tr>
+                    <tr>
+                      <td>DOB:</td>
+                      <td>18 Dec 2015</td>
+                    </tr>
+                    <tr>
+                      <td>Sex:</td>
+                      <td>Female</td>
+                    </tr>
+                    <tr>
+                      <td colspan="2">Microchip:</td>
+                      <td>Yes</td>
+                    </tr>
+                    <tr>
+                      <td colspan="2">Spayed / Neutered:</td>
+                      <td>Yes</td>
+                    </tr>
+                    <tr>
+                      <td colspan="2">Condition 1:</td>
+                      <td>N/A</td>
+                    </tr>
+                    <tr>
+                      <td colspan="2">Condition 2:</td>
+                      <td>N/A</td>
+                    </tr>
+                    <tr>
+                      <td colspan="2">Condition 3:</td>
+                      <td>N/A</td>
+                    </tr>
+                    <tr>
+                      <td colspan="2">Medication 1:</td>
+                      <td>N/A</td>
+                    </tr>
+                    <tr>
+                      <td colspan="2">Medication 2:</td>
+                      <td>N/A</td>
+                    </tr>
+                    <tr>
+                      <td colspan="2">Medication 3:</td>
+                      <td>N/A</td>
+                    </tr>
+                  </table>
+                </div>
+                <div role="tabpanel" class="tab-pane" id="vet1">
+                  <table class="table table-striped borderless">
+                    <tr>
+                      <td>Name:</td>
+                      <td>Trinity Pet Hospital</td>
+                    </tr>
+                    <tr>
+                      <td>Specialty:</td>
+                      <td>All</td>
+                    </tr>
+                    <tr>
+                      <td>Address:</td>
+                      <td>24861 Alicia Pkwy Ste D</td>
+                    </tr>
+                    <tr>
+                      <td>City:</td>
+                      <td>Laguna Hills</td>
+                    </tr>
+                    <tr>
+                      <td>State:</td>
+                      <td>California</td>
+                    </tr>
+                    <tr>
+                      <td>Zip:</td>
+                      <td>92653</td>
+                    </tr>
+                    <tr>
+                      <td>Phone:</td>
+                      <td>949-232-1788</td>
+                    </tr>
+                    <tr>
+                      <td>Email:</td>
+                      <td>info@lagunapetvet.com</td>
+                    </tr>
+                    <tr>
+                      <td>Fax:</td>
+                      <td>949-768-5125</td>
+                    </tr>
+                  </table>
+                </div>
+                <div role="tabpanel" class="tab-pane" id="vet2">
+                  <table class="table table-striped borderless">
+                    <tr>
+                      <td>Name:</td>
+                      <td>Trinity Pet Hospital</td>
+                    </tr>
+                    <tr>
+                      <td>Specialty:</td>
+                      <td>All</td>
+                    </tr>
+                    <tr>
+                      <td>Address:</td>
+                      <td>24861 Alicia Pkwy Ste D</td>
+                    </tr>
+                    <tr>
+                      <td>City:</td>
+                      <td>Laguna Hills</td>
+                    </tr>
+                    <tr>
+                      <td>State:</td>
+                      <td>California</td>
+                    </tr>
+                    <tr>
+                      <td>Zip:</td>
+                      <td>92653</td>
+                    </tr>
+                    <tr>
+                      <td>Phone:</td>
+                      <td>949-232-1788</td>
+                    </tr>
+                    <tr>
+                      <td>Email:</td>
+                      <td>info@lagunapetvet.com</td>
+                    </tr>
+                    <tr>
+                      <td>Fax:</td>
+                      <td>949-768-5125</td>
+                    </tr>
+                  </table>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-7">
+          <div class="panel panel-warning panel-size">
+            <div class="panel-heading">
+              <span class="panel-title"><i class="fa fa-eyedropper"></i>Vaccinations</span>
+            </div>
+            <div class="panel-body table-responsive">
+              <table class="render table table-striped table-hover">
+                <thead>
+                  <tr>
+                    <td>Vaccine</td>
+                    <td>Last Vacc Dt.</td>
+                    <td>Next Vacc Dt.</td>
+                    <td>Vacc Img</td>
+                  </tr>
+                </thead>
+                <tr>
+                  <td>Rabbies</td>
+                  <td>05/11/2017</td>
+                  <td>05/11/2018</td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <td>Rabbies</td>
+                  <td>05/11/2016</td>
+                  <td>05/11/2017</td>
+                  <td></td>
+                </tr>
+              </table>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-sm-12">
+          <div class="panel panel-default">
+            <div class="panel-heading">
+              <span class="panel-title"><i class="fa fa-history"></i>Medical History</span>
+            </div>
+            <div class="panel-body table-responsive">
+              <table class="render table table-striped table-hover">
+                <thead>
+                  <tr>
+                    <td>Prov. Name</td>
+                    <td>Condition</td>
+                    <td>Bill Amt.</td>
+                    <td>Paid Amt.</td>
+                    <td>Notes</td>
+                    <td>Doc Type</td>
+                    <td>Doc Image</td>
+                  </tr>
+                </thead>
+                <tr>
+                  <td>Test Data</td>
+                  <td>Test Data</td>
+                  <td>Test Data</td>
+                  <td>Test Data</td>
+                  <td>Test Data</td>
+                  <td>Test Data</td>
+                  <td>Test Data</td>
+                </tr>
+                <tr>
+                  <td>Test Data</td>
+                  <td>Test Data</td>
+                  <td>Test Data</td>
+                  <td>Test Data</td>
+                  <td>Test Data</td>
+                  <td>Test Data</td>
+                  <td>Test Data</td>
+                </tr>
+              </table>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
     <!-- editowner Modal -->
     <div class="modal fade" id="editowner" tabindex="-1" role="dialog" aria-labelledby="editownerlbl">
