@@ -121,7 +121,7 @@ setInterval(emailer, millisecondDay);
 //run email scheduler on startup
 emailer();
 
-// Sync Database and Start the Server
+// Sync Database and Start the Serve
 // =============================================================
 db.sequelize.sync().then(()=>{
     app.listen(PORT,()=>{
