@@ -5,7 +5,7 @@
 <div class="panel panel-default" style="display:none;"  >
     <div class="panel-heading">
         <span class="panel-title"><i class="fa fa-user"></i>Owner Profile</span>
-        <button name="ownereditbtn" id="ownereditbtn" class="btn btn-primary btn-sm pull-right" title "Edit" data-toggle="modal" data-target="#editowner">
+        <button name="ownereditbtn" id="ownereditbtn" class="btn btn-primary btn-sm pull-right" title "Edit" data-target="#editowner">
         <i class="fa fa-edit"></i>
         </button>
     </div>
@@ -246,7 +246,6 @@ $(document).ready(function() {
     } );
  
     $('#ownereditbtn').on('click', () =>{
-        console.log("hi");
         oTable.row(':eq(0)').select();
         oTable.row().edit();
 
@@ -273,12 +272,6 @@ $(document).ready(function() {
     ownTable.on( 'onInitCreate', function () {
           ownTable
           .disable('id')
-    } );
-
-    // Use a record as a template
-    ownTable.on( 'onInitCreate', function () {
-    // Loop over the fields in the editor instance and use the `set` method or just statically assign them
-        ownTable.set( 'petId', {{petId}} );
     } );
     
 } );

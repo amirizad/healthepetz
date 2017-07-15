@@ -5,7 +5,7 @@
 <div class="panel panel-default">
     <div class="panel-heading">
         <span class="panel-title"><img src="assets/img/pets.png" alt="pets">Pets</span>
-        <button name="addpetbtn" id="ownereditbtn" class=" addPet btn btn-primary btn-sm pull-right" title "Add Pet" data-toggle="modal" data-target="#addpet">
+        <button name="addpetbtn" id="petsbtn" class=" addPet btn btn-primary btn-sm pull-right" title "Add Pet" data-target="#addpet">
         <i class="fa fa-plus"></i>
         </button>
     </div>
@@ -423,7 +423,7 @@ $(document).ready(function() {
         },
         "scrollX": true,
         buttons: [
-            { extend: 'create', editor: petsTable },
+            { extend: 'create', editor: petsTable , className:"hide"},
             { extend: 'edit',   editor: petsTable, className:"hide"},
              { extend: 'remove', editor: petsTable, className:"hide" }, 
             /*{
@@ -435,7 +435,28 @@ $(document).ready(function() {
              'selectNone'*/
         ]
     } );
+
+    $('#petsTable').on('click', 'a.uploadPet', function(e) {
+        console.log('wokring');
+        var client = filestack.init('ARHtTfIMcQkFEss5ka9CAz');
+        
+        client.pick({
+            accept: 'image/*',
+            maxFiles: 5
+        }).then(function(result) {
+            console.log(JSON.stringify(result.filesUploaded));
+        });
+    });
     
+    $('#petsbtn').on('click', () =>{
+        petsTable.create();
+
+    });
+
+    $('#petsEdit').on('click', () =>{
+        petsTable.edit(rowPetId -1);
+    });
+
     // Edit record
     $('#petsTable').on('click', 'a.editor_edit', function (e) {
         e.preventDefault();
