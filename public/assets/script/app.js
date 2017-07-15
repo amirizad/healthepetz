@@ -127,7 +127,7 @@ var hPetz = {
       <img class="img-responsive" src="{teaserImageUrl}">
 			</div></div>`;
 			
-		$("#rss-feeds").rss("https://www.vetstreet.com/rss/news-feed.jsp?Categories=siteContentTags:symptom-center:health-issues:seasonal-dangers:symptoms:adult-dog-health-conditions,dogBreedTags=health-issues",
+		$("#rss-feeds").rss("http://www.vetstreet.com/rss/news-feed.jsp?Categories=siteContentTags:symptom-center:health-issues:seasonal-dangers:symptoms:adult-dog-health-conditions,dogBreedTags=health-issues",
 		{
 			limit: 12,
 			dateFormat: 'MMMM Do, YYYY',
