@@ -94,19 +94,6 @@ div.DTE_Bubble {
 		        transform: rotate(-45deg);
 	}
 
-	&.DTE_Processing {
-		div.DTE_Bubble_Liner:after {
-			position: absolute;
-			content: ' ';
-			display: block;
-			top: 12px;
-			right: 18px;
-			height: 12px;
-			width: 17px;
-			background: url('../images/ajax-loader-small.gif') no-repeat top left;
-		}
-	}
-
 	&.below {
 		div.DTE_Bubble_Liner {
 			top: 10px;
